@@ -2,16 +2,20 @@
 \correctionfalse
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
-%\newcommand{\UPSTIidClasse}{12}
+%\newcommand{\UPSTIidClasse}{11}
 
 \exer{Mouvement R  $\star$ \label{C2:08:02}}
 \setcounter{numques}{0}
-\UPSTIcompetence[2]{C2-08}
-\UPSTIcompetence[2]{C2-09}
-\index{Compétence C2-08}
-\index{Compétence C2-09}
-\index{Torseur cinétique}
-\index{Torseur dynamique}
+\UPSTIcompetence[2]{B2-14}
+\UPSTIcompetence[2]{B2-15}
+\UPSTIcompetence[2]{C1-05}
+\index{Compétence B2-14}
+\index{Compétence B2-15}
+\index{Compétence C1-05}
+\index{Torseur des actions mécaniques transmissibles}
+\index{Torseur d’une action mécanique extérieure}
+\index{Principe fondamental de la statique}
+\index{PFS}
 \index{Mécanisme à 1 rotation}
 \ifcorrection
 \else
@@ -20,47 +24,37 @@
 
 \ifprof
 \else
-Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ avec $R=\SI{20}{mm}$. 
-On note $m_1$ la masse du solide 1, $B$ son centre d'inertie et $\inertie{G}{1}=\matinertie{A_1}{A_1}{A_1}{0}{0}{0}{\bas{1}}$.
+Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ avec $R=\SI{20}{mm}$. La liaison pivot est motorisée par un moteur modélisée dont l'action mécanique sur \textbf{1} est donnée par $\vect{C_m}=C_m \vect{k_0}$.
+On note $m_1$ la masse du solide 1 et $B$ son centre d'inertie. 
+ La pesanteur est telle que $\vect{g}=-g\vect{j_0}$.
+%On note $m_1$ la masse du solide 1, $B$ son centre d'inertie et $\inertie{G}{1}=\matinertie{A_1}{A_1}{A_1}{0}{0}{0}{\bas{1}}$.
 
 \begin{center}
 \includegraphics[width=\linewidth]{02_R_01}
 \end{center}
 \fi
 
-\textbf{Méthode 1 -- Déplacement du torseur dynamique}
-
-\question{Exprimer le torseur cinétique $\torseurci{1}{0}$ en~$B$.}
+\question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer le torseur dynamique $\torseurdyn{1}{0}$ en $B$ puis en $A$.}
+\question{Donner le torseur de chacune des actions mécaniques.}
 \ifprof
 \else
 \fi
 
-\textbf{Méthode 2 -- Calcul en $A$}
 
-
-\question{Exprimer le torseur dynamique $\torseurdyn{1}{0}$ en $B$ puis en $A$.}
+\question{Simplifier les torseurs dans l'hypothèse des problèmes plans.}
 \ifprof
 \else
 \fi
 
-\textbf{Masse ponctuelle}
-
-On fait maintenant l'hypothèse que la masse est ponctuelle et concentrée en $B$.
-
-\question{Exprimer le torseur cinétique $\torseurci{1}{0}$ en~$B$.}
+\question{Proposer une démarche permettant de déterminer l'effort que doit développer le moteur pour maintenir \textbf{1} en équilibre.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer le torseur dynamique $\torseurdyn{1}{0}$ en $B$ puis en $A$.}
-\ifprof
-\else
-\fi
 
 
 \ifprof

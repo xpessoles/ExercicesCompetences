@@ -4,7 +4,7 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\exer{Parallélépipède$\star$ \label{B2:10:41}}
+\exer{Parallélépipède percé$\star$ \label{B2:10:41}}
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{B2-10}
 \index{Compétence B2-10}
@@ -17,10 +17,11 @@
 \ifprof
 \else
 La matrice d'inertie d'un cylindre d'axe $\axe{G}{k}$ de rayon $R$ et de hauteur $H$ et de masse $m$ est donnée en son centre d'inertie par 
-$\inertie{G}{1}=\matinertie{m\left(\dfrac{R^2}{4}+\dfrac{H^2}{12} \right)}{m\left(\dfrac{R^2}{4}+\dfrac{H^2}{12} \right)}{m\dfrac{R^2}{2}}{0}{0}{0}{\base{i}{j}{k}}$.
+$\inertie{G}{1}=\matinertie{A}{A}{C}{0}{0}{0}{\base{i}{j}{k}}$ avec $A=m\left(\dfrac{R^2}{4}+\dfrac{H^2}{12} \right)$ et $C=m\dfrac{R^2}{2}$. 
 
-La matrice d'inertie d'un parallélépipède de cotés $a$, $b$ et $c$ et de masse $m$ est donnée en son centre d'inertie par 
-$\inertie{G}{1}=\matinertie{m\dfrac{b^2+c^2}{12}}{m\dfrac{a^2+c^2}{12}}{m\dfrac{a^2+b^2}{12}}{0}{0}{0}{\base{i}{j}{k}}$.
+
+La matrice d'inertie d'un parallélépipède rectangle de cotés $a$, $b$ et $c$ et de masse $m$ est donnée en son centre d'inertie par 
+$\inertie{G}{1}=\matinertie{A}{B}{C}{0}{0}{0}{\base{i}{j}{k}}$ avec $A={m\dfrac{b^2+c^2}{12}}$, $B={m\dfrac{a^2+c^2}{12}}$, $C={m\dfrac{a^2+b^2}{12}}$.
 
 Soit la pièce suivante. 
 \begin{figure}[H]

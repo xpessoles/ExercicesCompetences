@@ -2,16 +2,20 @@
 \correctionfalse
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
-%\newcommand{\UPSTIidClasse}{12}
+%\newcommand{\UPSTIidClasse}{11}
 
-\exer{Mouvement RT  $\star$ \label{C2:08:06}}
+\exer{Mouvement RT  $\star$ \label{C1:05:06}}
 \setcounter{numques}{0}
-\UPSTIcompetence[2]{C2-08}
-\UPSTIcompetence[2]{C2-09}
-\index{Compétence C2-08}
-\index{Compétence C2-09}
-\index{Torseur cinétique}
-\index{Torseur dynamique}
+\UPSTIcompetence[2]{B2-14}
+\UPSTIcompetence[2]{B2-15}
+\UPSTIcompetence[2]{C1-05}
+\index{Compétence B2-14}
+\index{Compétence B2-15}
+\index{Compétence C1-05}
+\index{Torseur des actions mécaniques transmissibles}
+\index{Torseur d’une action mécanique extérieure}
+\index{Principe fondamental de la statique}
+\index{PFS}
 \index{Mécanisme à 1 translation et 1 rotation}
 \ifcorrection
 \else
@@ -23,20 +27,36 @@
 Soit le mécanisme suivant. On a $\vect{AB}=\lambda(t)\vect{i_0}$ et $\vect{BC}=R\vect{i_2}$ avec $R=\SI{30}{mm}$.
 De plus :
 \begin{itemize}
-\item $G_1=B$ désigne le centre d'inertie de \textbf{1}, on note $m_1$ la masse de \textbf{1} et $\inertie{G_1}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\bas{1}}$; 
-\item $G_2=C$ désigne le centre d'inertie de \textbf{2}, on note $m_2$ la masse de \textbf{2} et $\inertie{G_2}{2}=\matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\bas{2}}$.
+\item $G_1=B$ désigne le centre d'inertie de \textbf{1}, on note $m_1$ la masse de \textbf{1};% et $\inertie{G_1}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\bas{1}}$; 
+\item $G_2=C$ désigne le centre d'inertie de \textbf{2}, on note $m_2$ la masse de \textbf{2}.% et $\inertie{G_2}{2}=\matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\bas{2}}$.
 \end{itemize}
+
+Un vérin électrique positionné entre \textbf{0} et \textbf{1} permet de maintenir \textbf{1} en équilibre.
+Un moteur électrique positionné entre \textbf{1} et \textbf{2} permet de maintenir \textbf{2} en équilibre.
+
+L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
+
 \begin{center}
 \includegraphics[width=\linewidth]{06_TR_01}
 \end{center}
 \fi
 
-\question{Exprimer le torseur dynamique $\torseurdyn{1}{0}$ en $B$.}
+\question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
 \else
 \fi
 
-\question{Déterminer $\vectrd{1+2}{0}\cdot \vect{i_0}$}
+\question{Donner le torseur de chacune des actions mécaniques.}
+\ifprof
+\else
+\fi
+
+\question{Simplifier les torseurs dans l'hypothèse des problèmes plans.}
+\ifprof
+\else
+\fi
+
+\question{Proposer une démarche permettant de déterminer le couple et l'effort que doivent développer chacun des actionneurs  pour maintenir le mécanisme en équilibre.}
 \ifprof
 \else
 \fi
@@ -44,6 +64,6 @@ De plus :
 \ifprof
 \else
 \begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:08:06}.}
+\footnotesize{Corrigé  voir \ref{C1:05:06}.}
 \end{flushright}%
 \fi
