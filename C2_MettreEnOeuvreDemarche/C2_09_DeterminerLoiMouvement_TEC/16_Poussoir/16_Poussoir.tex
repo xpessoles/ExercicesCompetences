@@ -19,29 +19,41 @@
 \ifprof
 \else
 Soit le mécanisme suivant. On a $\vect{AC}=L\vect{i_0}+H\vect{j_0}$, $\vect{AB}=\lambda(t)\vect{i_1}$ et $\vect{BC}=\mu(t)\vect{j_0}$. De plus, 
-$H=\SI{120}{mm}$, $L=\SI{40}{mm}$.
+$H=\SI{120}{mm}$, $L=\SI{40}{mm}$. De plus, on note :
+\begin{itemize}
+\item $G_1$ le centre d'inertie du solide \textbf{1} tel que $\vect{AG_1}={R} \vi{1}$, $m_1$ sa masse et $\inertie{G_1}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\rep{1}}$ sa matrice d'inertie;
+\item $G_2$ le centre d'inertie du solide \textbf{2} tel que $\vect{CG_2}=-\ell b\vj{0}$, $m_2$ sa masse et $\inertie{G_2}{2}=\matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\rep{2}}$ sa matrice d'inertie.
+\end{itemize}
+On note $C_m\vk{0}$ le couple moteur agissant sur le solide \textbf{1} et $F_h\vj{0}$ l'action d'un fluide sur le solide 2.  L'accélération de la pesanteur est donnée par $\vect{g}=-g\vj{0}$.
 
 \begin{center}
 \includegraphics[width=\linewidth]{16_01}
 \end{center}
 \fi
 
-\question{Tracer le graphe des liaisons.}
+On rappelle que la loi entrée sortie est donnée par la relation *** établie à l'exercice \ref{C2:06:16}.
+
+\question{Tracer le graphe d'analyse en indiquant l'ensemble des actions mécaniques agissant sur les différents solides.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer $ \mu(t)$ en fonction de $\theta(t)$.}
+\question{Déterminer l'ensemble des puissances intérieures à l'ensemble \textbf{1+2}.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer $\dot{\mu}(t)$ en fonction de $\dot{\theta}(t)$.}
+\question{Déterminer l'ensemble des puissances extérieures à l'ensemble \textbf{1+2}.}
 \ifprof
 \else
 \fi
 
-\question{En utilisant Python, tracer $\dot{\mu}(t)$ en fonction de $\dot{\theta}(t)$. On considérera que la fréquence de rotation de la pièce \textbf{1} est de 10 tours par minute.}
+\question{Déterminer $\ec{1+2}{0}$.}
+\ifprof
+\else
+\fi
+
+\question{Déterminer la loi de mouvement en appliquant le théorème de l'énergie cinétique.}
 \ifprof
 \else
 \fi

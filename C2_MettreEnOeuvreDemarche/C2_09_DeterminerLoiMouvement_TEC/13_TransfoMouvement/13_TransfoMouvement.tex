@@ -20,40 +20,46 @@
 \ifprof
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ et $\vect{CA}=H\vect{j_0}$. De plus, 
-$R=\SI{10}{mm}$ et $H=\SI{60}{mm}$. Par ailleurs, on note $\vect{CB}=\lambda(t) \vect{i_2}$
+$R=\SI{10}{mm}$ et $H=\SI{60}{mm}$. Par ailleurs, on note $\vect{CB}=\lambda(t) \vect{i_2}$.
+De plus, on note :
+\begin{itemize}
+\item $G_1$ le centre d'inertie du solide \textbf{1} tel que $\vect{AG_1}=\dfrac{R}{2} \vi{1}$, $m_1$ sa masse et $\inertie{G_1}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\rep{1}}$ sa matrice d'inertie;
+\item $G_2$ le centre d'inertie du solide \textbf{2} tel que $\vect{CG_2}=\ell \vi{2}$, $m_2$ sa masse et $\inertie{G_2}{2}=\matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\rep{2}}$ sa matrice d'inertie;
+\item $G_3$ le centre d'inertie du solide \textbf{3} tel que $\vect{BG_3}=-a \vi{2}$, $m_3$ sa masse et $\inertie{G_3}{2}=\matinertie{A_3}{B_3}{C_3}{0}{0}{0}{\rep{3}}$ sa matrice d'inertie.
+\end{itemize}
+On note $C_m\vk{0}$ le couple moteur agissant sur le solide \textbf{2}, $F_h\vi{2}$ l'action du fluide sur \textbf{3} (le fluide agissant sur le solides  \textbf{2} et \textbf{3}). L'accélération de la pesanteur est donnée par $\vect{g}=-g\vj{0}$.
 
 \begin{center}
 \includegraphics[width=\linewidth]{13_01}
 \end{center}
 \fi
 
+On rappelle que la loi entrée sortie est donnée par la relation *** établie à l'exercice \ref{C2:06:13}.
 
-\question{Tracer le graphe des liaisons.}
+\question{Tracer le graphe d'analyse en indiquant l'ensemble des actions mécaniques agissant sur les différents solides.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer $\lambda(t)$ en fonction de $\theta(t)$.}
+\question{Déterminer l'ensemble des puissances intérieures à l'ensemble \textbf{1+2+3}.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer $\dot{\lambda}(t)$ en fonction de $\dot{\theta}(t)$.}
+\question{Déterminer l'ensemble des puissances extérieures à l'ensemble \textbf{1+2+3}.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer le débit instantané de la pompe.}
+\question{Déterminer $\ec{1+2+3}{0}$.}
 \ifprof
 \else
 \fi
 
-\question{En utilisant Python, donner le débit instantané de la pompe pour un tour de pompe pour un piston de diamètre $D=\SI{10}{mm}$.}
+\question{Déterminer la loi de mouvement en appliquant le théorème de l'énergie cinétique.}
 \ifprof
 \else
 \fi
-
-
 
 
 \ifprof

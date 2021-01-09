@@ -20,36 +20,46 @@
 \ifprof
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$, $\vect{CB}=L\vect{i_2}$ et $\vect{AC}=\lambda(t) \vect{j_0}$. 
+De plus, on note :
+\begin{itemize}
+\item $G_1 = A$ le centre d'inertie du solide \textbf{1}, $m_1$ sa masse et $\inertie{G_1}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\rep{1}}$ sa matrice d'inertie;
+\item $G_2$ le centre d'inertie du solide \textbf{2} tel que $\vect{CG_2}=\dfrac{L}{2} \vi{2}$, $m_2$ sa masse et $\inertie{G_2}{2}=\matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\rep{2}}$ sa matrice d'inertie;
+\item $G_3$ le centre d'inertie du solide \textbf{3} tel que $\vect{CG_3}=L_3 \vj{0}$, $m_3$ sa masse et $\inertie{G_3}{2}=\matinertie{A_3}{B_3}{C_3}{0}{0}{0}{\rep{3}}$ sa matrice d'inertie.
+\end{itemize}
+On note $C_m\vk{0}$ le couple moteur agissant sur le solide \textbf{1}, $F_h\vj{0}$ l'action du fluide sur \textbf{3}. L'accélération de la pesanteur est donnée par $\vect{g}=-g\vj{0}$.
 
 \begin{center}
 \includegraphics[width=\linewidth]{12_01}
 \end{center}
 \fi
 
-\question{Tracer le graphe des liaisons.}
+On rappelle que la loi entrée sortie est donnée par la relation *** établie à l'exercice \ref{C2:06:12}.
+
+\question{Tracer le graphe d'analyse en indiquant l'ensemble des actions mécaniques agissant sur les différents solides.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer $\lambda(t)$ en fonction de $\theta(t)$.}
+\question{Déterminer l'ensemble des puissances intérieures à l'ensemble \textbf{1+2+3}.}
 \ifprof
 \else
 \fi
 
-\question{Exprimer $\dot{\lambda}(t)$ en fonction de $\dot{\theta}(t)$.}
+\question{Déterminer l'ensemble des puissances extérieures à l'ensemble \textbf{1+2+3}.}
 \ifprof
 \else
 \fi
 
-\question{En utilisant Python, tracer la vitesse du piston en fonction du temps. La fréquence de rotation est $\dot{\theta}(t)=\SI{100}{rad.s^{-1}}$, on prendra $R=\SI{10}{mm}$ et $L=\SI{10}{mm}$, puis $L=\SI{20}{mm}$ et $L=\SI{30}{mm}$.}
+\question{Déterminer $\ec{1+2+3}{0}$.}
 \ifprof
 \else
 \fi
 
-\question{En utilisant Python, tracer l'accélération du piston en fonction du temps en utilisant les mêmes valeurs que dans la question précédente. On utilisera une dérivation numérique.}
+\question{Déterminer la loi de mouvement en appliquant le théorème de l'énergie cinétique.}
 \ifprof
 \else
 \fi
+
 
 
 \ifprof
