@@ -39,11 +39,32 @@ L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+\begin{center}
+\includegraphics[width=.5\linewidth]{06_TR_01_Cor}
+\end{center}
 \else
 \fi
 
 \question{Proposer une démarche permettant de déterminer les loi de mouvement de \textbf{1} et de \textbf{2} par rapport à $\rep{0}$.}
 \ifprof
+Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et $\theta(t)$. Il est donc nécessaire d'écrire, dans le meilleur des cas, deux équations :
+\begin{itemize}
+\item une équation traduisant la mobilité de 2 par rapport à 1, soit TMD appliqué à 2 en $B$ en projection sur $\vk{0}$;
+\item une équation traduisant la mobilité de 2+1 par rapport à 0, soit TRD appliqué à 1+2 en projection sur $\vi{0}$.
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{On isole 2.}
+\item \textbf{BAME :}
+\begin{itemize}
+\item actions de la liaison pivot $\torseurstat{T}{1}{2}$;
+\item action de la pesanteur $\torseurstat{T}{\text{pes}}{2}$.
+\end{itemize}
+\item \textbf{Théorème :} on applique le théorème du moment dynamique en $B$ au solide \textbf{2} en projection sur $\vk{0}$ : $\vectm{B}{\text{pes}}{2}\cdot \vk{0}  = \vectmd{B}{2}{0}\cdot \vk{0}$.
+\item \textbf{Calcul de la composante dynamique :} considérons le cas où la matrice d'inertie est donnée en $C$. On a donc 
+$\vectmd{C}{2}{0}= \deriv{\vectmc{C}{2}{0}}{\rep{0}}=\deriv{\inertie{C}{2}\vecto{2}{0}}{\rep{0}}$. De plus, 
+$\vectmd{B}{2}{0}=\vectmd{C}{2}{0}+\vect{BC}\wedge m_2 \vectg{C}{2}{0}$.
+\end{itemize}
 \else
 \fi
 
