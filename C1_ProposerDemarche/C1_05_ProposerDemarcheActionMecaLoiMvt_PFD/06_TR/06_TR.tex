@@ -53,6 +53,8 @@ Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et
 \item une équation traduisant la mobilité de 2+1 par rapport à 0, soit TRD appliqué à 1+2 en projection sur $\vi{0}$.
 \end{itemize}
 
+\vspace{.5cm}
+
 \begin{itemize}
 \item \textbf{On isole 2.}
 \item \textbf{BAME :}
@@ -63,7 +65,25 @@ Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et
 \item \textbf{Théorème :} on applique le théorème du moment dynamique en $B$ au solide \textbf{2} en projection sur $\vk{0}$ : $\vectm{B}{\text{pes}}{2}\cdot \vk{0}  = \vectmd{B}{2}{0}\cdot \vk{0}$.
 \item \textbf{Calcul de la composante dynamique :} considérons le cas où la matrice d'inertie est donnée en $C$. On a donc 
 $\vectmd{C}{2}{0}= \deriv{\vectmc{C}{2}{0}}{\rep{0}}=\deriv{\inertie{C}{2}\vecto{2}{0}}{\rep{0}}$. De plus, 
-$\vectmd{B}{2}{0}=\vectmd{C}{2}{0}+\vect{BC}\wedge m_2 \vectg{C}{2}{0}$.
+$\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
+\end{itemize}
+
+\vspace{.5cm}
+
+\begin{itemize}
+\item \textbf{On isole 1+2.}
+\item \textbf{BAME :}
+\begin{itemize}
+\item actions de la liaison glissière $\torseurstat{T}{0}{1}$;
+\item action de la pesanteur $\torseurstat{T}{\text{pes}}{1}$;
+\item action de la pesanteur $\torseurstat{T}{\text{pes}}{2}$;
+\item action du vérin $\torseurstat{T}{\text{ver}}{1}$;.
+\end{itemize}
+\item \textbf{Théorème :} on applique le théorème de la résultante dynamique à l'ensemble \textbf{1+2} en projection sur 
+$\vi{0}$ : 
+$\vectf{\text{ver}}{1}\cdot \vi{0}  = \vectrd{1+2}{0}\cdot \vi{0}$.
+\item \textbf{Calcul de la composante dynamique :} 
+$\vectrd{1+2}{0} = \vectrd{1}{0} +\vectrd{2}{0}$  $= m_1\vectg{G_1}{1}{0} +m_2 \vectg{G_2}{2}{0}$.
 \end{itemize}
 \else
 \fi
