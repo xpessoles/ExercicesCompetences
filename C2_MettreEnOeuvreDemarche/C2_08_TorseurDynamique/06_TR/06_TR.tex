@@ -33,16 +33,50 @@ De plus :
 
 \question{Exprimer le torseur dynamique $\torseurdyn{2}{0}$ en $B$.}
 \ifprof
+
+\textbf{Expression de la résultante dynamique}
+$\vectrd{2}{0}=\vectg{G_2}{2}{0} = \dderiv{\vect{AC}}{\rep{0}}$ $= \dderiv{\vect{AB}}{\rep{0}}+\dderiv{\vect{BC}}{\rep{0}}$
+$= \ddot{\lambda}(t) \vect{i_0} + R \dderiv{\vi{2}}{\rep{0}}$
+$= \ddot{\lambda}(t) \vect{i_0} + R \deriv{\dot{\theta} \vj{2}}{\rep0}$
+$= \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right) $.
+
+
+
+\textbf{Méthode 1 : Calcul en $G_2=C$ puis déplacement du torseur dynamique}
+\begin{itemize}
+\item Calcul du moment cinétique en $G_2$ : $G_2=C$ est le centre de gravité donc $\vectmc{C}{2}{0}=\inertie{C}{2}\dot{\theta}\vect{k_0} = C_1  \dot{\theta} \vk{1}$.
+\item Calcul du moment dynamique en $G_2$ : $G_2=C$ est le centre de gravité donc $\vectmd{C}{2}{0}=\deriv{\vectmc{C}{2}{0}}{\rep{0}}= C_1  \ddot{\theta} \vk{1}$.
+\item Calcul du moment dynamique en $B$ : $\babard{B}{C}{2}{0} = C_1  \ddot{\theta} \vk{1} + R\vi{2}\wedge\left(  \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)\right)$
+$= C_1  \ddot{\theta} \vk{1} + R\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)$.
+\end{itemize}
+
+Au final, on a donc $\torseurdyn{2}{0}=\torseurl{\ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)}{C_1  \ddot{\theta} \vk{1} + R\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)}{B}$.
 \else
 \fi
 
 \question{Déterminer $\vectrd{1+2}{0}\cdot \vect{i_0}$}
 \ifprof
+
+On a $\vectrd{1+2}{0}=\vectrd{1}{0}+\vectrd{2}{0}=m_1\ddot{\lambda}(t)\vi{0}+\ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)$.
+On projette alors sur $\vect{i_0}$,
+$\vectrd{1+2}{0}\cdot \vect{i_0}=2m_1\ddot{\lambda}(t)- R \left(\ddot{\theta} \sin\theta(t) - \dot{\theta}^2 \cos\theta(t)\right) $
 \else
 \fi
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\torseurdyn{2}{0}=\torseurl{\ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)}{C_1  \ddot{\theta} \vk{1} + R\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)}{B}$.
+\item $\vectrd{1+2}{0}\cdot \vect{i_0}=2m_1\ddot{\lambda}(t)- R \left(\ddot{\theta} \sin\theta(t) - \dot{\theta}^2 \cos\theta(t)\right) $. 
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{C2:08:06}.}
 \end{flushright}%
