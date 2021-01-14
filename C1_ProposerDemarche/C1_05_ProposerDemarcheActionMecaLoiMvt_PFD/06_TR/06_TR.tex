@@ -40,7 +40,7 @@ L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
 \begin{center}
-\includegraphics[width=.5\linewidth]{06_TR_01_Cor}
+\includegraphics[width=.5\linewidth]{06_TR_02_Cor}
 \end{center}
 \else
 \fi
@@ -57,12 +57,26 @@ Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et
 
 \begin{itemize}
 \item \textbf{On isole 2.}
+\end{itemize}
+
+\begin{minipage}[c]{.6\linewidth}
+\begin{itemize}
 \item \textbf{BAME :}
 \begin{itemize}
 \item actions de la liaison pivot $\torseurstat{T}{1}{2}$;
+\item action du moteur $\torseurstat{T}{\text{mot}}{2}$;
 \item action de la pesanteur $\torseurstat{T}{\text{pes}}{2}$.
 \end{itemize}
-\item \textbf{Théorème :} on applique le théorème du moment dynamique en $B$ au solide \textbf{2} en projection sur $\vk{0}$ : $\vectm{B}{\text{pes}}{2}\cdot \vk{0}  = \vectmd{B}{2}{0}\cdot \vk{0}$.
+\end{itemize}
+\end{minipage} \hfil
+\begin{minipage}[c]{.35\linewidth}
+\begin{center}
+\includegraphics[width=.8\linewidth]{06_TR_03_Cor}
+\end{center}
+\end{minipage}
+
+\begin{itemize}
+\item \textbf{Théorème :} on applique le théorème du moment dynamique en $B$ au solide \textbf{2} en projection sur $\vk{0}$ : $C_{\text{mot}}+\vectm{B}{\text{pes}}{2}\cdot \vk{0}  = \vectmd{B}{2}{0}\cdot \vk{0}$.
 \item \textbf{Calcul de la composante dynamique :} considérons le cas où la matrice d'inertie est donnée en $C$. On a donc 
 $\vectmd{C}{2}{0}= \deriv{\vectmc{C}{2}{0}}{\rep{0}}=\deriv{\inertie{C}{2}\vecto{2}{0}}{\rep{0}}$. De plus, 
 $\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
@@ -72,6 +86,10 @@ $\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
 
 \begin{itemize}
 \item \textbf{On isole 1+2.}
+\end{itemize}
+
+\begin{minipage}[c]{.6\linewidth}
+\begin{itemize}
 \item \textbf{BAME :}
 \begin{itemize}
 \item actions de la liaison glissière $\torseurstat{T}{0}{1}$;
@@ -79,6 +97,15 @@ $\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
 \item action de la pesanteur $\torseurstat{T}{\text{pes}}{2}$;
 \item action du vérin $\torseurstat{T}{\text{ver}}{1}$;.
 \end{itemize}
+\end{itemize}
+\end{minipage} \hfil
+\begin{minipage}[c]{.35\linewidth}
+\begin{center}
+\includegraphics[width=\linewidth]{06_TR_04_Cor}
+\end{center}
+\end{minipage}
+
+\begin{itemize}
 \item \textbf{Théorème :} on applique le théorème de la résultante dynamique à l'ensemble \textbf{1+2} en projection sur 
 $\vi{0}$ : 
 $\vectf{\text{ver}}{1}\cdot \vi{0}  = \vectrd{1+2}{0}\cdot \vi{0}$.
