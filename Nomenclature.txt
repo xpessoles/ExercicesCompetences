@@ -37,3 +37,10 @@
 37_VisEcrou
 38_Treuil
 39_SeineMusicale
+40_Parallelepipede Percé
+41_Parallelepipede
+42_Cylindre
+43_Cylindre
+44_Disque
+45_Disque
+46_RR_RSG
