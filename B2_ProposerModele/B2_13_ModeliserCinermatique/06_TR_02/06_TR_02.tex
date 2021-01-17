@@ -1,5 +1,5 @@
 \normaltrue
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -23,23 +23,52 @@ Soit le mécanisme suivant. On a $\vect{AB}=\lambda(t)\vect{i_0}$ et $\vect{BC}=
 \fi
 
 \question{Déterminer $\vectv{C}{2}{0}$ par dérivation vectorielle ou par composition.}
-\ifprof
+\ifprof ~\\
+
+\textbf{Méthode 1 -- Dérivation vectorielle} ~\\
+
+$\vectv{C}{2}{0} =$
+$\deriv{\vect{AC}}{\rep{0}}= \deriv{\vect{AB}}{\rep{0}}+\deriv{\vect{BC}}{\rep{0}}$
+$= \dot{\lambda}(t) \vect{i_0} + R \deriv{\vi{2}}{\rep{0}}$
+$= \dot{\lambda}(t) \vect{i_0} + R \dot{\theta} \vj{2}$
+%$= \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right) $.
+
 \else
 \fi
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $C$.}
 \ifprof
+
+$\torseurcin{V}{2}{0}=\torseurl{\vecto{2}{0}=\dot{\theta}\vk{0}}{\vectv{C}{2}{0}}{C}$.
+
 \else
 \fi
 
 \question{Déterminer $\vectg{C}{2}{0}$.}
-\ifprof
+\ifprof ~\\
+
+$\vectg{C}{2}{0} =\deriv{\vectv{C}{2}{0}}{\rep{0}}$
+$= \ddot{\lambda}(t) \vect{i_0} + R \deriv{\dot{\theta} \vj{2}}{\rep0}$
+$= \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right) $.
 \else
 \fi
 
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\vectv{C}{2}{0} =\dot{\lambda}(t) \vect{i_0} + R \dot{\theta} \vj{2}$.
+\item $\torseurcin{V}{2}{0}=\torseurl{\vecto{2}{0}=\dot{\theta}\vk{0}}{\vectv{C}{2}{0}}{C}$.
+\item $\vectg{C}{2}{0} =\ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right) $.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:06:02}.}
 \end{flushright}%
