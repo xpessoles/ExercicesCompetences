@@ -1,0 +1,260 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctionfalse
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Quille pendulaire$\star$ \label{B2:07:48}}
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{B2-07}
+\index{Compétence B2-07}
+\index{Schéma-blocs}
+\index{Fonctions de transfert}
+\index{Quille pendulaire}
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+
+\ifprof 
+\else
+Le comportement d'un vérin est défini par le modèle continu ci-dessous.
+
+\footnotesize
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+
+\sbBloc[3]{b0}{$A_1$}{E}
+    \sbRelier[$Q(p)$]{E}{b0}
+
+
+\sbComp{c1}{b0}
+    \sbRelier{b0}{c1}
+
+\sbBloc[1]{b1}{$A_2$}{c1}
+    \sbRelier{c1}{b1}
+    
+\sbBloc[3]{b11}{$A_3$}{b1}
+    \sbRelier[$\Sigma(p)$]{b1}{b11}
+
+
+\sbComph{c2}{b11}
+    \sbRelier{b11}{c2}
+
+\sbBloc{b2}{$A_4$}{c2}
+    \sbRelier{c2}{b2}
+    
+
+\sbSortie[4]{S}{b2}
+    \sbRelier{b2}{S}
+    \sbNomLien[0.8]{S}{$X(p)$}
+  
+\sbRenvoi{b2-S}{c1}{}
+
+\draw [latex-] (c2) --++ (0,1) node[left] {$F_R(p)$};
+
+\end{tikzpicture}
+\end{center}
+\normalsize
+
+On a : 
+\begin{itemize}
+\item $q(t)=S\dfrac{\dd x(t)}{ \dd t}+\dfrac{V}{2B}\dfrac{\dd \sigma(t)}{\dd t}$ (a);
+\item $M\dfrac{\dd^2 x(t)}{\dd t^2} = S \sigma(t) - kx(t)-\lambda \dfrac{\dd x(t)}{\dd t} - f_R(t)$ (b).
+\end{itemize}
+
+On a :
+\begin{itemize}
+\item $\mathcal{L}\left(q(t)\right)=Q(p)$ : débit d’alimentation du vérin $\left[\text{m}^3\text{s}^{-1}\right]$;
+\item $\mathcal{L}\left(\sigma(t)\right)=\Sigma(p)$ : différence de pression entre les deux chambres du vérin $\left[\text{Pa}\right]$;
+\item $\mathcal{L}\left(x(t)\right)=X(p)$ : position de la tige du vérin $\left[\text{m}\right]$;
+\item $\mathcal{L}\left(f_R(t)\right)=F_R(p)$ : composante selon l'axe de la tige du vérin de la résultante du torseur d'inter-effort de la liaison pivot entre tige et quille $\left[\text{N}\right]$.
+\end{itemize}
+Les constantes sont les suivantes :
+\begin{itemize}
+\item $S$ : section du vérin $\left[\text{m}^2\right]$;
+\item $k$ : raideur mécanique du vérin $\left[\text{N\,m}^{-1}\right]$;
+\item $V$ : volume d'huile de référence $\left[\text{m}^{3}\right]$;
+\item $B$ : coefficient de compressibilité de l'huile $\left[\text{N\, m}^{-2}\right]$;
+\item $M$ : masse équivalente à l'ensemble des éléments mobiles ramenés sur la tige du vérin $\left[\text{kg}\right]$;
+\item $\lambda$ : coefficient de frottement visqueux$\left[\text{N\,m}^{-1}\text{s}\right]$.
+\end{itemize} 
+
+\fi
+\question{Donner les expressions des fonctions de transfert $A_1$, $A_2$, $A_3$ et $A_4$ en fonction de la variable
+complexe $p$ et des constantes.}
+\ifprof
+\begin{corrige}
+D'une part, on transforme les équations dans le domaine de Laplace : 
+$Q(p)=S p X(p)+\dfrac{V}{2B} p \Sigma(p)$ et
+$Mp^2 X(p) = S \Sigma(p) - kX(p)-\lambda p X(p) - F_R(p)$.
+
+En utilisant le schéma-blocs, on a $\Sigma(p)=A_2\left(A_1Q(p)-X(p)\right) = A_1A_2Q(p)-A_2X(p)$.
+
+Par ailleurs $\Sigma(p)=\dfrac{Q(p)-S p X(p)}{\dfrac{V}{2B} p}= Q(p)\dfrac{2B}{Vp}-  X(p)  \dfrac{S2B}{V} $. On a donc $A_2 = \dfrac{S2B}{V} $, $A_1 A_2 = \dfrac{2B}{Vp}$ soit $A_1  = \dfrac{2B}{Vp}\dfrac{V}{S2B}= \dfrac{1}{Sp}$. 
+
+
+On a aussi $X(p)=A_4\left(-F_R(p)+A_3\Sigma(p)\right) =-A_4F_R(p)+A_3A_4\Sigma(p)$. Par ailleurs,
+$X(p) \left(Mp^2  +\lambda p  + k\right)= S \Sigma(p) - F_R(p) \Leftrightarrow X(p) =  \dfrac{S \Sigma(p)}{Mp^2  +\lambda p  + k}-\dfrac{F_R(p)}{Mp^2  +\lambda p  + k}$. On a donc : $A_4 = \dfrac{1}{Mp^2  +\lambda p  + k}$ et $A_3 = S$.
+
+Au final,  $A_1=\dfrac{1}{Sp}$,  $A_2 = \dfrac{S2B}{V} $,  $A_3 = S$  et $A_4 = \dfrac{1}{Mp^2  +\lambda p  + k}$.
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
+
+Le schéma-blocs de la figure précédente peut se mettre sous la forme suivante. 
+
+\footnotesize
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+
+\sbBloc[3]{b1}{$H_1$}{E}
+    \sbRelier[$Q(p)$]{E}{b1}
+
+
+\sbComph{c1}{b1}
+    \sbRelier{b1}{c1}
+  
+\sbBloc{b2}{$H_2$}{c1}
+    \sbRelier{c1}{b2}
+
+\sbSortie{S}{b2}
+    \sbRelier{b2}{S}
+    \sbNomLien[0.8]{S}{$X(p)$}
+
+%\sbBloc[3]{b11}{$A_3$}{b1}
+%    \sbRelier[$\Sigma(p)$]{b1}{b11}
+%
+%
+%\sbSumh{c2}{b11}
+%    \sbRelier{b11}{c2}
+%
+%\sbBloc{b2}{$A_4$}{c2}
+%    \sbRelier{c2}{b2}
+%    
+%
+%\sbSortie[4]{S}{b2}
+%    \sbRelier{b2}{S}
+%    \sbNomLien[0.8]{S}{$X(p)$}
+%  
+%\sbRenvoi{b2-S}{c1}{}
+%
+\draw [latex-] (c1) --++ (0,1) node[left] {$F_R(p)$};
+
+\end{tikzpicture}
+\end{center}
+\normalsize
+
+\fi
+
+\question{Donner les expressions des fonctions de transfert $H_1$
+et $H_2$ en fonction de $A_1$, $A_2$, $A_3$ et $A_4$, puis de la variable $p$ et
+des constantes.}
+\ifprof
+\begin{corrige}
+\textbf{Méthode 1 : Utilisation des relations précédentes}
+On a $X(p)=\left(H_1Q(p)-F_R(p)\right)H_2(p)$. 
+
+Par ailleurs, on a vu que $X(p)=A_4\left(-F_R(p)+A_3\Sigma(p)\right) $ et $\Sigma(p)=A_2\left(A_1Q(p)-X(p)\right)$. 
+
+On a donc $X(p)=A_4\left(-F_R(p)+A_3  A_2\left(A_1Q(p)-X(p)\right)\right) $ $ \Leftrightarrow X(p)\left(1+A_2A_3A_4 \right)=A_4\left(-F_R(p)+A_3  A_2A_1Q(p)\right) $. On a donc 
+$H_1(p)=A_1  A_2A_3$ et $H_2 = \dfrac{A_4}{1+ A_2A_3A_4 }$.
+
+\textbf{Méthode 2 : Lecture directe du schéma-blocs}
+Revient à utiliser la méthode précédente. 
+
+\textbf{Méthode 3 : Algèbre de schéma-blocs}
+Le schéma-blocs proposé est équivalent au schéma suivant. 
+
+\footnotesize
+\begin{center}
+\begin{tikzpicture}
+\sbEntree{E}
+
+\sbBloc[3]{b0}{$A_1 A_2 A_3$}{E}
+    \sbRelier[$Q(p)$]{E}{b0}
+
+\sbComph{c2}{b0}
+    \sbRelier{b0}{c2}
+    
+\sbComp{c1}{c2}
+    \sbRelier{c2}{c1}
+
+\sbBloc{b1}{$A_4$}{c1}
+    \sbRelier{c1}{b1}
+    
+
+\sbSortie[4]{S}{b1}
+    \sbRelier{b1}{S}
+    \sbNomLien[0.8]{S}{$X(p)$}
+      
+      
+\sbDecaleNoeudy[4]{S}{U}
+\sbDecaleNoeudx[-2]{U}{U2}
+\sbBlocr{r1}{$A_2 A_3$}{U2}
+
+
+\sbRelieryx{b1-S}{r1}
+\sbRelierxy{r1}{c1}
+
+
+%    
+%\sbBloc[3]{b11}{$A_3$}{b1}
+%    \sbRelier[$\Sigma(p)$]{b1}{b11}
+%
+%
+%\sbComph{c2}{b11}
+%    \sbRelier{b11}{c2}
+%
+%\sbBloc{b2}{$A_4$}{c2}
+%    \sbRelier{c2}{b2}
+%    
+%
+%\sbRenvoi{b2-S}{c1}{}
+
+\draw [latex-] (c2) --++ (0,1) node[left] {$F_R(p)$};
+
+\end{tikzpicture}
+\end{center}
+\normalsize
+
+On retrouve le même résultat que précédemment. 
+
+
+$A_1=\dfrac{1}{Sp}$,  $A_2 = \dfrac{S2B}{V} $,  $A_3 = S$  et $A_4 = \dfrac{1}{Mp^2  +\lambda p  + k}$.
+
+
+En faisant le calcul on obtient : 
+$H_1(p)=\dfrac{2BS}{pV}  $ et $H_2 = \dfrac{\dfrac{1}{Mp^2  +\lambda p  + k}}{1+ \dfrac{2BS^2}{V}\dfrac{1}{Mp^2  +\lambda p  + k} }$  $= \dfrac{1}{Mp^2  +\lambda p  + k+ \dfrac{2BS^2}{V} }$.
+
+\end{corrige}
+\else
+\fi
+
+\question{Pour ce vérin non perturbé ($F_R=0$), donner sa fonction de transfert $X(p)/Q(p)$ en fonction de la variable $p$ et des constantes.}
+\ifprof
+\begin{corrige}
+Dans ce cas, $\dfrac{X(p)}{Q(p)}=H_1(p)H_2(p)\dfrac{2BS}{p\left(MVp^2  +\lambda pV  + kV+ 2BS^2\right) }$.
+\end{corrige}
+\else
+\fi
+
+
+
+
+
+
+
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{B2:07:47}.}
+\end{flushright}%
+\fi
