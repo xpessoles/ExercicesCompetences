@@ -46,15 +46,23 @@ $ dans le repère $\repere{A}{i_0}{j_0}{k_0}$.
 \else
 \fi
 
-On souhaite que le point $C$ réalise un cercle de centre $A$ et de rayon $R=\SI{10}{cm}$. 
+On souhaite que le point $C$ réalise un cercle de centre $A$ et de rayon $R=\SI{10}{cm}$ à la vitesse $v=\SI{0,01}{m.s^{-1}}$. 
 
-\question{Donner les expressions de $\lambda(t)$ et $\mu(t)$ permettant la réalisation de cette trajectoire à la vitesse $v=\SI{0,01}{m.s^{-1}}$ en fonction de $v$, $R$ et du temps}
+\question{Donner la relation liant $\theta(t)$, $v$ et $R$. }
+
+Par ailleurs la vitesse du point $C$ est donnée par $\vectv{C}{2}{0}=\deriv{\vect{AC}}{\rep{0}} = R\dot{\theta}\vect{e_\theta}$. 
+\ifprof  ~\\
+On a $v=R\dot{\theta}(t)$. Par intégration, $ \theta(t)=\dfrac{v}{R}t$ (avec $\theta(t)=\SI{0}{rad}$ pour $t=\SI{0}{s}$).
+
+\else
+\fi
+
+\question{Donner les expressions de $\lambda(t)$ et $\mu(t)$ permettant la réalisation de cette trajectoire  en fonction de $v$, $R$ et du temps.}
 \ifprof  ~\\
 Exprimons la trajectoire du point $C$ : $\vect{AC}=R\vect{e_r} = R\cos\theta(t) \vi{0}+ R\sin\theta(t)  \vj{0}$. Par identification 
 $ \lambda(t) = R\cos\theta(t)$ et $\mu(t) = R\sin\theta(t)$.
 
-Par ailleurs la vitesse du point $C$ est donnée par $\vectv{C}{2}{0}=\deriv{\vect{AC}}{\rep{0}} = R\dot{\theta}\vect{e_\theta}$. 
-On a donc $v=R\dot{\theta}(t)$. Par intégration, $ \theta(t)=\dfrac{v}{R}t$ (avec $\theta(t)=\SI{0}{rad}$ pour $t=\SI{0}{s}$). Au final, 
+Au final, 
 $\left\{
 \begin{array}{l}
 \lambda(t) = R\cos\left( \dfrac{v}{R}t\right)\\
@@ -119,6 +127,22 @@ plt.savefig("03_TT_02_c.pdf")
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item .
+\item $x_C(t)= \lambda(t)$ et $y_C(t)= \mu(t)$.
+\item $ \theta(t)=\dfrac{v}{R}t$.
+\item $\lambda(t) = R\cos\left( \dfrac{v}{R}t\right)$, $\mu(t) = R\sin\left( \dfrac{v}{R}t\right)$.
+\item .
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:03}.}
 \end{flushright}%
