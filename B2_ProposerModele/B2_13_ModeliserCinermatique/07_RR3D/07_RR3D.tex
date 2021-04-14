@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -24,13 +24,26 @@ Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ et $\vect{BC}=\ell\vect
 \end{center}
 \fi
 
-\question{Donner l'ensemble des positions accessibles par le point $B$.}
+\question{Donner l'ensemble des positions accessibles par le point $C$.}
 \ifprof
+Ça ressemble à un tore, mais c'est pas vraiment un tore :) (aussi bien l'intérieur que l'extérieur...)...
 \else
 \fi
 
-\question{Donner l'équation horaire (trajectoire en fonction du temps) du point $B$ dans le mouvement de \textbf{2} par rapport à \textbf{0}.}
-\ifprof
+\question{Donner l'équation du mouvement du point $C$ dans le mouvement de \textbf{2} par rapport à \textbf{0}.}
+\ifprof ~\\
+On a $\vect{AC}=\vect{AB}+\vect{BC} = R\vect{i_1} + \ell\vect{i_2}+r\vect{j_2}$. 
+Soit $\vect{AC} = \left(R+\ell\right)\left(\cos\theta\vi{0} + \sin\theta\vj{0}\right)  + r\left(\cos\varphi \vj{1}+\sin\varphi \vk{1}\right)$  $= \left(R+\ell\right)\left(\cos\theta\vi{0} + \sin\theta\vj{0}\right)  + r\left(\cos\varphi \left(  \cos\theta\vj{0} - \sin\theta\vi{0}\right)+\sin\varphi \vk{0}\right)$.
+
+On a donc :
+$\left\{
+\begin{array}{l}
+x_C(t)= \left(R+\ell\right)\cos\theta  - r\cos\varphi  \sin\theta\\
+y_C(t)= \left(R+\ell\right)\sin\theta  + r\cos\varphi \cos\theta \\
+z_C(t)=  r\sin\varphi \\
+\end{array}
+\right.
+$ dans le repère $\repere{A}{i_0}{j_0}{k_0}$.
 \else
 \fi
 
@@ -41,6 +54,21 @@ Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ et $\vect{BC}=\ell\vect
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item .
+\item $x_C(t)= \left(R+\ell\right)\cos\theta  - r\cos\varphi  \sin\theta$, 
+$y_C(t)= \left(R+\ell\right)\sin\theta  + r\cos\varphi \cos\theta$, 
+$z_C(t)=  r\sin\varphi$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:07}.}
 \end{flushright}%
