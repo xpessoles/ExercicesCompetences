@@ -1,5 +1,5 @@
 \normaltrue
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -15,7 +15,7 @@
 \fi
 
 \ifprof
-\else
+\else ~\\
 Soit le mécanisme suivant. On note $\vect{AB}=\lambda(t)\vect{i_0}$.
 \begin{center}
 \includegraphics[width=.6\linewidth]{01_T_01}
@@ -24,17 +24,34 @@ Soit le mécanisme suivant. On note $\vect{AB}=\lambda(t)\vect{i_0}$.
 
 \question{Donner le torseur cinématique $\torseurcin{V}{1}{0}$ au point $B$.}
 \ifprof
+$\torseurcin{V}{1}{0} = \torseurl{\vect{0}}{\dot{\lambda}(t)\vi{0}}{\forall P}$.
+
+$\vectv{B}{1}{0} = \deriv{\vect{AB}}{\rep{0}}=\dot{\lambda}(t)\vi{0}$.
 \else
 \fi
 
 \question{Déterminer $\vectg{B}{1}{0}$.}
-\ifprof
+\ifprof  ~\\
+ $\vectg{B}{1}{0} = \deriv{\vectv{B}{1}{0}}{\rep{0}}=\ddot{\lambda}(t)\vi{0}$.
 \else
 \fi
 
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\torseurcin{V}{1}{0} = \torseurl{\vect{0}}{\dot{\lambda}(t)\vi{0}}{\forall P}$.
+\item  $\vectg{B}{1}{0} = \deriv{\vectv{B}{1}{0}}{\rep{0}}=\ddot{\lambda}(t)\vi{0}$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:01:02}.}
 \end{flushright}%
