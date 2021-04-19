@@ -22,18 +22,68 @@ Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ et $\vect{BC}=\ell\vect
 \end{center}
 \fi
 
-\question{Déterminer $\vectv{C}{2}{0}$ par dérivation vectorielle ou par composition.}
-\ifprof
+\question{Déterminer $\vectv{C}{2}{0}$ par dérivation vectorielle.}
+\ifprof ~\\
+$\vectv{C}{2}{0}$ 
+$=\deriv{\vect{AC}}{\rep{0}}$ 
+$=\deriv{R\vi{1}+\ell\vi{2}+r\vj{2}}{\rep{0}}$.
+
+Calculons : 
+\begin{itemize}
+\item $\deriv{\vi{1}}{\rep{0}}$ $=\vecto{1}{0} \wedge \vi{1}$ $=\dot{\theta}\vk{0} \wedge \vi{1}$ $=\dot{\theta}\vj{1}$.
+\item $\deriv{\vi{2}}{\rep{0}}$ $=\dot{\theta}\vj{1}$ ($\vi{1}=\vi{2}$).
+\item $\deriv{\vj{2}}{\rep{0}}$ $=\vecto{2}{0} \wedge \vj{2}$ 
+$=\left(\dot{\theta}\vk{0}+ \dot{\varphi}\vi{1} \right) \wedge \vj{2}$
+$=\dot{\theta}\vk{1} \wedge \vj{2}+ \dot{\varphi}\vi{1}  \wedge \vj{2}$
+$=-\dot{\theta}\sin\varphi \vi{1} + \dot{\varphi}\vk{2} $.
+\end{itemize}
+
+On a donc, 
+$\vectv{C}{2}{0}= \left(R+\ell\right)\dot{\theta}\vj{1} -r\dot{\theta}\sin\varphi \vi{1} + r\dot{\varphi}\vk{2}$.
 \else
 \fi
 
+
+\question{Déterminer $\vectv{C}{2}{0}$ par composition.}
+\ifprof ~\\
+On a $\vectv{C}{2}{0}= \vectv{C}{2}{1}+\vectv{C}{1}{0}$.
+\begin{itemize}
+\item $\vectv{C}{2}{1}$ : on passe par $B$ car $B$ est le centre de la pivot entre 2 et 1 et que $\vectv{B}{2}{1}=\vect{0}$. 
+$\babarv{C}{B}{2}{1} =\left(-\ell\vi{2}-r\vj{2} \right)\wedge \dot{\varphi}\vi{1} $ 
+
+$=-\ell\vi{2}\wedge \dot{\varphi}\vi{1}-r\vj{2} \wedge \dot{\varphi}\vi{1}$.
+
+$=r\dot{\varphi}\vk{2}$.
+
+\item $\vectv{C}{1}{0}$ : on passe par $A$ car $A$ est le centre de la pivot entre 1 et 0 et que $\vectv{A}{1}{0}=\vect{0}$ est nul. 
+$\babarv{C}{A}{1}{0}$ 
+$=\left(-r\vj{2}-\ell\vi{2}-R\vi{1}\right)\wedge \left(\dot{\varphi}\vk{1}+\dot{\theta}\vj{1}\right)$
+
+%$=\left(-r\vj{2}-\ell\vi{2}-R\vi{1}\right)\wedge\dot{\varphi}\vk{1}
+%+\left(-r\vj{2}-\ell\vi{2}-R\vi{1}\right)\wedge \dot{\theta}\vj{1}$%%
+
+%$=\left(-r\vj{2}\wedge\dot{\varphi}\vk{1}-\ell\vi{2}\wedge\dot{\varphi}\vk{1}-R\vi{1}\wedge\dot{\varphi}\vk{1}\right)
+%+\left(-r\vj{2}\wedge \dot{\theta}\vj{1}-\ell\vi{2}\wedge \dot{\theta}\vj{1}-R\vi{1}\wedge \dot{\theta}\vj{1}\right)$%%
+
+$=-r\dot{\varphi}  \sin\varphi \vi{1} +\ell\dot{\varphi}\vj{1}+R\dot{\varphi}\vj{1}
++r\sin\varphi\dot{\theta}\vi{1}-\ell \dot{\theta}\vk{1}-R \dot{\theta}\vk{1}$%%
+\end{itemize}
+
+Au final, 
+ $\vectv{C}{2}{0}=r\dot{\varphi}\vk{2}-r\dot{\varphi}  \sin\varphi \vi{1} +\ell\dot{\varphi}\vj{1}+R\dot{\varphi}\vj{1}
++r\sin\varphi\dot{\theta}\vi{1}-\ell \dot{\theta}\vk{1}-R \dot{\theta}\vk{1}$.
+\else
+\fi
+
+$\vectv{C}{2}{0}= \left(R+\ell\right)\dot{\theta}\vj{1} -r\dot{\theta}\sin\varphi \vi{1} + r\dot{\varphi}\vk{2}$.
+
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $C$.}
-\ifprof
+\ifprof ~\\
 \else
 \fi
 
 \question{Déterminer $\vectg{C}{2}{0}$.}
-\ifprof
+\ifprof ~\\
 \else
 \fi
 
