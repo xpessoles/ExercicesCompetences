@@ -33,13 +33,23 @@ $= \dot{\lambda}(t) \vect{i_0} + R \deriv{\vi{2}}{\rep{0}}$
 $= \dot{\lambda}(t) \vect{i_0} + R \dot{\theta} \vj{2}$
 %$= \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right) $.
 
+\textbf{Méthode 2 -- Composition du torseur cinématique} ~\\
+$\vectv{C}{2}{0} =\vectv{C}{2}{1} +\vectv{C}{1}{0} $
+
+Pour tout point $P$, $\vectv{P}{1}{0}=\dot{\lambda}\vi{0}$.
+
+$\babarv{C}{B}{2}{1}=-R\vi{2}\wedge \dot{\theta}\vk{0}=R\dot{\theta}\vj{2}$.
+
+On a donc $\vectv{C}{2}{0}=\dot{\lambda}\vi{0}+R\dot{\theta}\vj{2}$.
+
 \else
 \fi
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $C$.}
 \ifprof
 
-$\torseurcin{V}{2}{0}=\torseurl{\vecto{2}{0}=\dot{\theta}\vk{0}}{\vectv{C}{2}{0}}{C}$.
+$\torseurcin{V}{2}{0}=\torseurl{\vecto{2}{0}=\dot{\theta}\vk{0}}{\vectv{C}{2}{0}=\dot{\lambda}\vi{0}+R\dot{\theta}\vj{2}}{C}$.
+
 
 \else
 \fi
