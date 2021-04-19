@@ -22,24 +22,60 @@ Soit le mécanisme suivant. On a $\vect{AB}=\lambda(t)\vect{i_1}$.
 \end{center}
 \fi
 
-\question{Déterminer $\vectv{C}{2}{0}$ par dérivation vectorielle ou par composition.}
-\ifprof
-\else
-\fi
-
-\question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $C$.}
-\ifprof
-\else
-\fi
-
-\question{Déterminer $\vectg{C}{2}{0}$.}
-\ifprof
+\question{Déterminer $\vectv{B}{2}{0}$ par dérivation vectorielle.}
+\ifprof  ~\\
+$\vectv{B}{2}{0} = \deriv{\vect{AB}}{\rep{0}}$ $=\deriv{\lambda(t)\vect{i_1}}{\rep{0}}$
+$=\dot{\lambda}(t)\vect{i_1}+\lambda(t)\dot{\theta}(t)\vect{j_1}$.
 \else
 \fi
 
 
+\question{Déterminer $\vectv{B}{2}{0}$ par composition.}
+\ifprof ~\\
+$\vectv{B}{2}{0}=\vectv{B}{2}{1}+\vectv{B}{1}{0}$.
+
+$\forall P$, $\vectv{P}{2}{1}=\dot{\lambda}(t)\vi{1}$.
+
+Par ailleurs $\babarv{B}{A}{1}{0}=-\lambda(t)\vi{1}\wedge\dot{\theta}(t)\vk{0}$
+$=\lambda(t)\dot{\theta}(t)\vj{1}$.
+
+Au final, $\vectv{B}{2}{0}=\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}$.
+
+\else
+\fi
+
+\question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $B$.}
+\ifprof  ~\\
+$\torseurcin{V}{2}{0} = \torseurl{\dot{\theta}(t)\vk{0}}{\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}}{B}$.
+\else
+\fi
+
+\question{Déterminer $\vectg{B}{2}{0}$.}
+\ifprof  ~\\
+$\vectg{B}{2}{0} = \deriv{\vectv{B}{2}{0}}{\rep{0}}$
+$ = \ddot{\lambda}(t)\vi{1}+  \dot{\lambda}(t)\dot{\theta}\vj{1}+\dot{\lambda}(t)\dot{\theta}\vj{1}-\lambda(t)\dot{\theta}(t)^2\vi{1}$
+$ = \left( \ddot{\lambda}(t)-\lambda(t)\dot{\theta}(t)^2\right)\vi{1}  +  \left( \dot{\lambda}(t)\dot{\theta}(t) +\dot{\lambda}(t)\dot{\theta}(t)\right) \vj{1}$.
+\else
+\fi
+
+
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\vectv{B}{2}{0} =\dot{\lambda}(t)\vect{i_1}+\lambda(t)\dot{\theta}(t)\vect{j_1}$.
+\item $\vectv{B}{2}{0}=\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}$.
+\item $\torseurcin{V}{2}{0} =\torseurl{\dot{\theta}(t)\vk{0}}{\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}}{B}$.
+\item $\vectg{B}{2}{0} =  \left( \ddot{\lambda}(t)-\lambda(t)\dot{\theta}(t)^2\right)\vi{1}  +  \left( \dot{\lambda}(t)\dot{\theta}(t) +\dot{\lambda}(t)\dot{\theta}(t)\right) \vj{1}$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:05:02}.}
 \end{flushright}%
