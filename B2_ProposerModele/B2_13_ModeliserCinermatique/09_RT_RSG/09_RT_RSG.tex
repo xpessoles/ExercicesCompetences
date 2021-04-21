@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -25,17 +25,34 @@ On fait l'hypothèse de roulement sans glissement au point $I$.
 
 
 \question{Déterminer $\vectv{B}{2}{0}$.}
-\ifprof
+\ifprof ~\\
+$\vectv{B}{2}{0}=\vectv{B}{2}{1}+\vectv{B}{1}{0}$.
+
+D'une part,  $\vectv{B}{2}{1}=\lambdap\vi{1}$.
+
+D'autre part, en utilisant le roulement sans glissement en $I$, 
+$\babarv{B}{I}{1}{0} $ $=\vect{0}+\left(-\lambda(t)\vi{1}-R\vj{0} \right)\wedge\thetap \vk{0}$
+$=-\thetap\left(\lambda(t)\vi{1}\wedge \vk{0}+R\vj{0}\wedge \vk{0} \right)$
+$=\thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)$.
+
+Au final, $\vectv{B}{2}{0} = \lambdap\vi{1} + \thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)$.
+
 \else
 \fi
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $B$.}
-\ifprof
+\ifprof ~\\
+$\torseurcin{V}{2}{0}=\torseurl{\thetap \vk{0}}{ \lambdap\vi{1} + \thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)}{B}$.
 \else
 \fi
 
 \question{Déterminer $\vectg{B}{2}{0}$.}
-\ifprof
+\ifprof ~\\
+$\vectg{B}{2}{0} = \deriv{\vectv{B}{2}{0}}{\rep{0}}$
+$ = \lambdapp\vi{1} +\lambdap\thetap\vj{1} 
++ \thetapp\left(\lambda(t)\vj{1}-R\vi{0} \right)
++ \thetap\left(\lambdap(t)\vj{1}-\lambda(t)\thetap\vi{1} \right)
+$.
 \else
 \fi
 
