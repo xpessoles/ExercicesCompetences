@@ -25,16 +25,63 @@ Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$, $\vect{CB}=L\vect{i_2}
 \fi
 
 \question{Tracer le graphe des liaisons.}
+\begin{center}
+\includegraphics[width=\linewidth]{12_01_c}
+\end{center}
 \ifprof
 \else
 \fi
 
 \question{Exprimer $\lambda(t)$ en fonction de $\theta(t)$.}
+En réalisant une fermeture géométrique, on obtient 
+$\vect{AB}+\vect{BC}+\vect{CA}=\vect{0}$ 
+$ \Leftrightarrow R\vect{i_1} - L\vect{i_2} - \lambda(t) \vect{j_0} = \vect{0}$.
+On projette alors cette expression dans $\rep{0}$ : 
+
+$
+\left\{
+\begin{array}{l}
+R\cos\theta(t)- L\cos\varphi(t) = 0 \\
+R\sin\theta(t) - L\sin\varphi(t) - \lambda(t) = 0 
+\end{array}
+\right.
+$.
+
+On cherche à éliminer $\varphi(t)$ : 
+
+$
+\left\{
+\begin{array}{l}
+R\cos\theta(t) = L\cos\varphi(t)  \\
+R\sin\theta(t)  - \lambda(t) = L\sin\varphi(t)
+\end{array}
+\right.
+$.
+
+En élevant au carré, on a donc 
+
+$\left\{
+\begin{array}{l}
+R^2\cos^2\theta(t) = L^2\cos^2\varphi(t)  \\
+\left(R\sin\theta(t)  - \lambda(t)\right)^2 = L^2\sin^2\varphi(t)
+\end{array}
+\right.
+$.
+
+En conséquence, 
+$R^2\cos^2\theta(t)  + \left(R\sin\theta(t)  - \lambda(t)\right)^2 = L^2$ et 
+
+$ \left(R\sin\theta(t)  - \lambda(t)\right)^2 = L^2 - R^2\cos^2\theta(t) $ 
+$\Rightarrow    \lambda(t) = \pm\sqrt{L^2 - R^2\cos^2\theta(t)} + R\sin\theta(t) $ .
+
+
 \ifprof
 \else
 \fi
 
 \question{Exprimer $\dot{\lambda}(t)$ en fonction de $\dot{\theta}(t)$.}
+
+$\lambdap(t) = \pm\left( \dfrac{R^2 \thetap(t) \cos\theta(t)\sin\theta(t)}{\sqrt{L^2 - R^2\cos^2\theta(t)}}\right) + \thetap(t)R\cos\theta(t) $ 
 \ifprof
 \else
 \fi
