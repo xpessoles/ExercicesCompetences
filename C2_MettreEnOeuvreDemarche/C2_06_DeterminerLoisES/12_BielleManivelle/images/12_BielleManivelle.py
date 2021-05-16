@@ -16,9 +16,20 @@ R = 0.01 # m
 L = 0.01 # m
 w = 100
 def calc_lambda(theta):
-    res = R*np.cos(theta)
-    res = res + np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))
+    #res = R*np.sin(theta)
+    #print(L*L-R*R*np.cos(theta)*np.cos(theta))
+    #res = res + np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))
+    res = np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))+R*np.sin(theta)
     return res
+
+def plot_lambda():
+    les_theta=np.linspace(-2*np.pi,2*np.pi,1000)
+    les_l = [calc_lambda(x) for x in les_theta]
+    plt.grid()
+    plt.plot(les_theta,les_l)
+    plt.show()
+    
+plot_lambda()
 
 def calc_lambdap(theta,w):
     res = R*R*w*np.cos(theta)*np.sin(theta)
@@ -38,9 +49,10 @@ def calc_lambdap_bis(les_t,les_lambda):
 def plot_debit():
     global L,R,w
     plt.cla()
-    les_t = np.linspace(0,1,1000)
+    les_t = np.linspace(0,4,1000)
     les_theta = w*les_t
-    les_lambdap = calc_lambdap(les_t,w)
+    les_lambda = calc_lambda(les_theta)
+    les_lambdap = calc_lambdap(les_t,les_theta)
     plt.plot(les_t,les_lambdap)
     plt.xlabel("Temps (s)")
     plt.ylabel("Vitesse (${m}s^{-1}$)")
@@ -48,4 +60,4 @@ def plot_debit():
     #plt.savefig("12_02_c.png")
     plt.show()
     
-plot_debit()
+#plot_debit()
