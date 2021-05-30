@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -27,15 +27,16 @@ $H=\SI{120}{mm}$ et $R=\SI{40}{mm}$.
 
 
 \question{Tracer le graphe des liaisons.}
+\ifprof
 
 \begin{center}
 \includegraphics[width=.3\linewidth]{14_01_C}
 \end{center}
-\ifprof
 \else
 \fi
 
 \question{Exprimer $ \varphi(t)$ en fonction de $\theta(t)$.}
+\ifprof
 On a $\vect{AB}+\vect{BC}+\vect{CA}=\vect{0}$ soit 
 $\lambda(t)\vi{2}-R\vi{1}-h\vj{0}=\vect{0}$.
 
@@ -64,12 +65,11 @@ $.
 
 En faisant le rapport des équations, on a donc : $\tan\varphi(t)=\dfrac{R\sin\theta(t)+h}{R \cos\theta(t)}$ (pour $\theta(t)\neq \dfrac{\pi}{2} \, mod \pi$).
 
-\ifprof
 \else
 \fi
 
 \question{Exprimer $\dot{\varphi}(t)$ en fonction de $\dot{\theta}(t)$.}
-
+\ifprof
 On a : $ \varphi(t)=\arctan \left( \dfrac{R\sin\theta(t)+h}{R \cos\theta(t)}\right)$.
 
 Pour commencer, $\left( R\sin\theta(t)+h\right)'$ $=R\thetap(t)\cos\theta(t) $
@@ -90,22 +90,20 @@ $ = \thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}$.
 
 Au final, 
 
-$ \varphip(t) =  \dfrac{\thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}}{1+\left( \dfrac{R\sin\theta(t)+h}{R \cos\theta(t)}\right)^2}$.
+$ \varphip(t) =  \dfrac{\thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}}{1+\left( \dfrac{R\sin\theta(t)+h}{R \cos\theta(t)}\right)^2}$
+$   \dfrac{\thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}}{1+ \dfrac{\left(R\sin\theta(t)+h\right)^2}{R^2 \cos^2\theta(t)}}$.
 
-$ \varphip(t) =  \dfrac{\thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}}{1+ \dfrac{\left(R\sin\theta(t)+h\right)^2}{R^2 \cos^2\theta(t)}}$.
+$ \varphip(t) =  R^2 \cos^2\theta(t) \dfrac{\thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}}{R^2 \cos^2\theta(t)+ \dfrac{\left(R\sin\theta(t)+h\right)^2}{R^2 \cos^2\theta(t)}}$
+$ =  \dfrac{R \thetap(t)\left(R+h\sin\theta(t)\right)}{R^2 \cos^2\theta(t)+ \left(R\sin\theta(t)+h\right)^2}$.
 
-$ \varphip(t) =  R^2 \cos^2\theta(t) \dfrac{\thetap(t)\dfrac{R+h\sin\theta(t)}{ R \cos^2\theta(t)}}{R^2 \cos^2\theta(t)+ \dfrac{\left(R\sin\theta(t)+h\right)^2}{R^2 \cos^2\theta(t)}}$.
+$ \varphip(t) =  \dfrac{R \thetap(t)\left(R+h\sin\theta(t)\right)}{R^2 \cos^2\theta(t)+ R^2\sin^2\theta(t)+h^2+2 Rh\sin\theta(t)}$
+$ =  \dfrac{R \thetap(t)\left(R+h\sin\theta(t)\right)}{R^2+h^2+2 Rh\sin\theta(t)}$.
 
-$ \varphip(t) =  \dfrac{R \thetap(t)\left(R+h\sin\theta(t)\right)}{R^2 \cos^2\theta(t)+ \left(R\sin\theta(t)+h\right)^2}$.
-
-$ \varphip(t) =  \dfrac{R \thetap(t)\left(R+h\sin\theta(t)\right)}{R^2 \cos^2\theta(t)+ R^2\sin^2\theta(t)+h^2+2 Rh\sin\theta(t)}$.
-
-$ \varphip(t) =  \dfrac{R \thetap(t)\left(R+h\sin\theta(t)\right)}{R^2+h^2+2 Rh\sin\theta(t)}$.
-\ifprof
 \else
 \fi
 
 \question{En utilisant Python, tracer $\dot{\varphi}(t)$ en fonction de $\dot{\theta}(t)$. On considérera que la fréquence de rotation de la pièce \textbf{1} est de 10 tours par minute.}
+\ifprof
 
 \begin{center}
 \includegraphics[width=.3\linewidth]{14_02_c}
@@ -173,7 +171,6 @@ for R in [0.03,0.06,0.09]:
 \end{lstlisting}
 \noindent\hrule
 
-\ifprof
 \else
 \fi
 
