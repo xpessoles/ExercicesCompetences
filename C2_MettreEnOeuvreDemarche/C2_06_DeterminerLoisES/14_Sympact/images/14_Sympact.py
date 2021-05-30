@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""12_BielleManivelle.py"""
+"""14_Sympact.py"""
 
 __author__ = "Xavier Pessoles"
 __email__ = "xpessoles.ptsi@free.fr"
@@ -12,16 +12,50 @@ import math as m
 from scipy.optimize import newton
 from scipy.optimize import fsolve
 
-R = 0.01 # m
-L = 0.03 # m
-w = 100
-def calc_lambda(theta):
-    #res = R*np.sin(theta)
-    #print(L*L-R*R*np.cos(theta)*np.cos(theta))
-    #res = res + np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))
-    res = np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))+R*np.sin(theta)
-    return res
+R = 0.03 # m
+H = 0.12     # m
+w = 10 # tours /min
+w = 10*2*m.pi/60  # rad/s
 
+def calc_phi(theta):
+    num = R*np.sin(theta)+H
+    den = R*np.cos(theta)
+    return np.arctan2(num,den)
+
+def calc_phip(theta):
+    num = R*w*(R+H*np.sin(theta))
+    den = R*R+H*H+2*R*H*np.sin(theta)
+    return np.arctan2(num,den)
+
+def plot_phi():
+    les_t = np.linspace(0,12,1000)
+    les_theta = w*les_t
+    les_phi = calc_phi(les_theta)
+    plt.grid()
+    plt.xlabel("Temps (s)")
+    plt.ylabel("Position angulaire ($rad$)")
+    #plt.plot(les_t,les_theta,label=str("$\\theta$, R=")+str(R)+" mm,"+str("H=")+str(H)+" mm")
+    plt.plot(les_t,les_phi,label=str("$\\varphi$, R=")+str(R)+" mm, "+str("H=")+str(H)+" mm")
+    plt.legend()
+    plt.show()
+
+
+def plot_phip():
+    les_t = np.linspace(0,12,1000)
+    les_theta = w*les_t
+    les_phip = calc_phip(les_theta)
+    
+    plt.grid()
+    plt.xlabel("Temps (s)")
+    plt.ylabel("Vitesse angulaire ($rad/s$)")
+    #plt.plot(les_t,les_theta,label=str("$\\theta$, R=")+str(R)+" mm,"+str("H=")+str(H)+" mm")
+    plt.plot(les_t,les_phip,label=str("$\\varphi$, R=")+str(R)+" mm, "+str("H=")+str(H)+" mm")
+    plt.legend()
+    plt.show()
+
+for R in [0.03,0.06,0.09]:
+    plot_phip()
+    
 def plot_lambda():
     les_theta=np.linspace(-2*np.pi,2*np.pi,1000)
     les_l = [calc_lambda(x) for x in les_theta]
@@ -86,4 +120,4 @@ def plot_acc():
 
 #plot_lambda()    
 #plot_debit()
-plot_acc()
+#plot_acc()
