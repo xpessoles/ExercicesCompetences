@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""11_PompePistonAxial.py"""
+"""12_BielleManivelle.py"""
 
 __author__ = "Xavier Pessoles"
 __email__ = "xpessoles.ptsi@free.fr"
@@ -13,7 +13,7 @@ from scipy.optimize import newton
 from scipy.optimize import fsolve
 
 R = 0.01 # m
-L = 0.01 # m
+L = 0.03 # m
 w = 100
 def calc_lambda(theta):
     #res = R*np.sin(theta)
@@ -26,10 +26,12 @@ def plot_lambda():
     les_theta=np.linspace(-2*np.pi,2*np.pi,1000)
     les_l = [calc_lambda(x) for x in les_theta]
     plt.grid()
-    plt.plot(les_theta,les_l)
+    plt.xlabel("Temps (s)")
+    plt.ylabel("Vitesse (${m}s^{-1}$)")
+    plt.plot(les_theta,les_l,label=str("R=")+str(R)+" mm,"+str("L=")+str(L)+" mm")
+    plt.legend()
     plt.show()
     
-plot_lambda()
 
 def calc_lambdap(theta,w):
     res = R*R*w*np.cos(theta)*np.sin(theta)
@@ -46,18 +48,42 @@ def calc_lambdap_bis(les_t,les_lambda):
     
     return les_lambdap
 
-def plot_debit():
+
+
+def plot_debit(): 
     global L,R,w
-    plt.cla()
-    les_t = np.linspace(0,4,1000)
+    #plt.cla()
+    les_t = np.linspace(0,.2,2000)
     les_theta = w*les_t
     les_lambda = calc_lambda(les_theta)
-    les_lambdap = calc_lambdap(les_t,les_theta)
-    plt.plot(les_t,les_lambdap)
+    #les_lambdap = calc_lambdap(les_t,les_lambda)
+    les_lambdap = calc_lambdap_bis(les_t,les_lambda)
+    plt.plot(les_t[:-1],les_lambdap,label=str("R=")+str(R)+" mm,"+str("L=")+str(L)+" mm")
     plt.xlabel("Temps (s)")
     plt.ylabel("Vitesse (${m}s^{-1}$)")
     plt.grid()
+    plt.legend()
     #plt.savefig("12_02_c.png")
     plt.show()
-    
+
+def plot_acc(): 
+    global L,R,w
+    #plt.cla()
+    les_t = np.linspace(0,.2,2000)
+    les_theta = w*les_t
+    les_lambda = calc_lambda(les_theta)
+    #les_lambdap = calc_lambdap(les_t,les_lambda)
+    les_lambdap = calc_lambdap_bis(les_t,les_lambda)
+    les_lambdapp = calc_lambdap_bis(les_t[:-1],les_lambdap)
+    plt.plot(les_t[:-2],les_lambdapp,label=str("R=")+str(R)+" mm,"+str("L=")+str(L)+" mm")
+    plt.xlabel("Temps (s)")
+    plt.ylabel("Vitesse (${m}s^{-1}$)")
+    plt.grid()
+    plt.legend()
+    #plt.savefig("12_02_c.png")
+    plt.show()
+
+
+#plot_lambda()    
 #plot_debit()
+plot_acc()

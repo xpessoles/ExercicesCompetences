@@ -25,14 +25,17 @@ Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$, $\vect{CB}=L\vect{i_2}
 \fi
 
 \question{Tracer le graphe des liaisons.}
+
+\ifprof
 \begin{center}
 \includegraphics[width=.4\linewidth]{12_01_c}
 \end{center}
-\ifprof
 \else
 \fi
 
 \question{Exprimer $\lambda(t)$ en fonction de $\theta(t)$.}
+
+\ifprof
 En réalisant une fermeture géométrique, on obtient 
 $\vect{AB}+\vect{BC}+\vect{CA}=\vect{0}$ 
 $ \Leftrightarrow R\vect{i_1} - L\vect{i_2} - \lambda(t) \vect{j_0} = \vect{0}$.
@@ -73,28 +76,73 @@ $R^2\cos^2\theta(t)  + \left(R\sin\theta(t)  - \lambda(t)\right)^2 = L^2$ et
 
 $ \left(R\sin\theta(t)  - \lambda(t)\right)^2 = L^2 - R^2\cos^2\theta(t) $ 
 $\Rightarrow    \lambda(t) = \pm\sqrt{L^2 - R^2\cos^2\theta(t)} + R\sin\theta(t) $ .
-
-
-\ifprof
 \else
 \fi
 
 \question{Exprimer $\dot{\lambda}(t)$ en fonction de $\dot{\theta}(t)$.}
-
-$\lambdap(t) = \pm\left( \dfrac{R^2 \thetap(t) \cos\theta(t)\sin\theta(t)}{\sqrt{L^2 - R^2\cos^2\theta(t)}}\right) + \thetap(t)R\cos\theta(t) $ 
 \ifprof
+$\lambdap(t) = \pm\left( \dfrac{R^2 \thetap(t) \cos\theta(t)\sin\theta(t)}{\sqrt{L^2 - R^2\cos^2\theta(t)}}\right) + \thetap(t)R\cos\theta(t) $ 
+
 \else
 \fi
 
-\question{En utilisant Python, tracer la vitesse du piston en fonction du temps. La fréquence de rotation est $\dot{\theta}(t)=\SI{100}{rad.s^{-1}}$, on prendra $R=\SI{10}{mm}$ et $L=\SI{10}{mm}$, puis $L=\SI{20}{mm}$ et $L=\SI{30}{mm}$.}
+\question{En utilisant Python, tracer la vitesse du piston en fonction du temps. La fréquence de rotation est $\dot{\theta}(t)=\SI{100}{rad.s^{-1}}$, on prendra $R=\SI{10}{mm}$ et $L=\SI{20}{mm}$ puis $L=\SI{30}{mm}$.}
+
 \ifprof
+\noindent\hrule
+\begin{lstlisting}
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""12_BielleManivelle.py"""
+__author__ = "Xavier Pessoles"
+__email__ = "xpessoles.ptsi@free.fr"
+
+import numpy as np
+import matplotlib.pyplot as plt
+import math as m
+from scipy.optimize import newton
+from scipy.optimize import fsolve
+
+R = 0.01 # m
+L = 0.03 # m
+w = 100
+def calc_lambda(theta):
+    #res = R*np.sin(theta)
+    #print(L*L-R*R*np.cos(theta)*np.cos(theta))
+    #res = res + np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))
+    res = np.sqrt(L*L-R*R*np.cos(theta)*np.cos(theta))+R*np.sin(theta)
+    return res
+
+def plot_lambda():
+    les_theta=np.linspace(-2*np.pi,2*np.pi,1000)
+    les_l = [calc_lambda(x) for x in les_theta]
+    plt.grid()
+    plt.xlabel("Temps (s)")
+    plt.ylabel("Vitesse (${m}s^{-1}$)")
+    plt.plot(les_theta,les_l,label=str("R=")+str(R)+" mm,"+str("L=")+str(L)+" mm")
+    plt.legend()
+    plt.show()
+    
+plot_lambda()
+\end{lstlisting}
+\noindent\hrule
+
+\begin{center}
+\includegraphics[width=.4\linewidth]{12_02_c}
+\end{center}
 \else
 \fi
 
 \question{En utilisant Python, tracer l'accélération du piston en fonction du temps en utilisant les mêmes valeurs que dans la question précédente. On utilisera une dérivation numérique.}
+
 \ifprof
+\begin{center}
+\includegraphics[width=.4\linewidth]{12_03_c}
+\end{center}
 \else
 \fi
+
 
 
 \ifprof
