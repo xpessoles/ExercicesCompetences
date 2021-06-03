@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -29,11 +29,12 @@ $R=\SI{40}{mm}$ et $H=\SI{60}{mm}$. Par ailleurs, on note $\vect{CB}=\lambda(t) 
 
 \question{Tracer le graphe des liaisons.}
 
+\ifprof
 
 \begin{center}
 \includegraphics[width=\linewidth]{13_01_c}
 \end{center}
-\ifprof
+
 \else
 \fi
 
@@ -221,6 +222,7 @@ plot_debit()
 
 
 \ifprof
+\else
 \footnotesize
 \begin{center}
 \begin{tabular}{|p{.9\linewidth}|}
@@ -236,7 +238,6 @@ Indications :
 \end{tabular}
 \end{center}
 \normalsize
-\else
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{C2:06:13}.}
 \end{flushright}%

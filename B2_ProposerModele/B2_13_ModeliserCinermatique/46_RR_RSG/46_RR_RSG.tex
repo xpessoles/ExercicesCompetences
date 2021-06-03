@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -17,7 +17,7 @@
 
 \ifprof
 \else
-Soit le mécanisme suivant. On a $\vect{IA}=R\vect{j_0}$ et $\vect{AB}=L\vect{i_1}$. De plus $R=\SI{15}{mm}$. On fait l'hypothèse de roulement sans glissement au point $I$.
+Soit le mécanisme suivant. On a $\vect{IA}=R\vect{j_0}$ et $\vect{AB}=L\vect{i_2}$. De plus $R=\SI{15}{mm}$. On fait l'hypothèse de roulement sans glissement au point $I$.
 \begin{center}
 \includegraphics[width=\linewidth]{46_RR_RSG_01}
 \end{center}
@@ -26,22 +26,62 @@ Soit le mécanisme suivant. On a $\vect{IA}=R\vect{j_0}$ et $\vect{AB}=L\vect{i_
 
 \question{Déterminer $\vectv{B}{2}{0}$.}
 \ifprof
+En utilisant la décomposition du vecteur vitesse : 
+$\vectv{B}{2}{0} = \vectv{B}{2}{1} +  \vectv{B}{1}{0}$.
+
+\begin{itemize}
+\item \textbf{Calcul de $ \vectv{B}{2}{1}$ :}  $\babarv{B}{A}{2}{1}$. 2 et 1 étant en pivot d'axe $\axe{A}{\vk{0}}$, on a $\vectv{B}{2}{1}=\vect{0}-L\vi{2}\wedge \varphip(t)\vk{0}$
+$=L\varphip(t)\vj{2}$.
+\item \textbf{Calcul de $ \vectv{B}{1}{0}$ :}  $\babarv{B}{I}{1}{0}$ $=\vect{0}-L\vi{1}\wedge \varphip(t)\vk{0}$. En utilisant l'hypothèse de roulement sans glissement : $ \vectv{B}{1}{0}$  $=\left(-L\vi{1}-R\vj{0}\right)\wedge \thetap(t)\vk{0}$  $=\thetap(t)\left(L\vj{1}-R\vi{0}\right)$.
+\end{itemize}
+
+Au final, $\vectv{B}{2}{0} = L\varphip(t)\vj{2} +\thetap(t)\left(L\vj{1}-R\vi{0}\right) $.
+
+
 \else
 \fi
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $B$.}
 \ifprof
+ $\torseurcin{V}{2}{0} = \torseurl{\vecto{2}{0}=\left( \varphip(t)+\thetap(t) \right) \vk{0} }{ L\varphip(t)\vj{2} +\thetap(t)\left(L\vj{1}-R\vi{0}\right)}{B}$.
+ 
+
 \else
 \fi
 
 \question{Déterminer $\vectg{B}{2}{0}$.}
+
 \ifprof
+$\vectg{B}{2}{0} = \deriv{\vectv{B}{2}{0}}{\rep{0}}$
+
+$ = \deriv{L\varphip(t)\vj{2}}{\rep{0}} + \deriv{\thetap(t)\left(L\vj{1}-R\vi{0}\right)}{\rep{0}}$
+
+$ = L\varphipp(t)\vj{2}-L\varphip(t)\left(\varphip(t)+\thetap(t) \right)\vi{2}  + \thetapp(t)\left(L\vj{1}-R\vi{0}\right) - L\thetap^2(t)\vi{1}$.
+
+
+
 \else
 \fi
 
 
 \ifprof
 \else
+
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications (à vérifier...) :
+\begin{enumerate}
+\item $\vectv{B}{2}{0} = L\varphip(t)\vj{2} +\thetap(t)\left(L\vj{1}-R\vi{0}\right) $.
+\item  $\torseurcin{V}{2}{0} = \torseurl{\vecto{2}{0}=\left( \varphip(t)+\thetap(t) \right) \vk{0} }{ L\varphip(t)\vj{2} +\thetap(t)\left(L\vj{1}-R\vi{0}\right)}{B}$.
+\item $\vectg{B}{2}{0} =  L\varphipp(t)\vj{2}-L\varphip(t)\left(\varphip(t)+\thetap(t) \right)\vi{2}  + \thetapp(t)\left(L\vj{1}-R\vi{0}\right) - L\thetap^2(t)\vi{1}$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:46}.}
 \end{flushright}%
