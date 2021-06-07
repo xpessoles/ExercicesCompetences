@@ -1,14 +1,14 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\exer{Pompe à pistons radiaux  $\star$ \label{B2:13:11}}
+\exer{Pompe à piston axial $\star$ \label{B2:13:11}}
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{B2-13}
 \index{Compétence B2-13}
-\index{Pompe à pistons radiaux}
+\index{Pompe à piston axial}
 \index{Arbre à cames}
 \ifcorrection
 \else
@@ -24,20 +24,36 @@ $e=\SI{10}{mm}$ et $R=\SI{20}{mm}$. Le contact entre \textbf{1} et \textbf{2} en
 \end{center}
 \fi
 
-Il est possible de mettre la loi entrée-sortie sous la forme *** (voir exercice \ref{C2:06:11}).
+Il est possible de mettre la loi entrée-sortie sous la forme $ \lambda(t) = e\sin\theta +R $
+ou encore $\lambdap (t)=e\thetap(t) \cos\theta (t)$  (voir exercice \ref{C2:06:11}).
 
-\question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $B$.}
+
+\question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $C$.}
 \ifprof
+$\torseurcin{V}{2}{0} = \torseurl{\vect{0}}{\lambdap (t)\vj{0}}{C}$.
 \else
 \fi
 
-\question{Déterminer $\vectg{B}{2}{0}$.}
+\question{Déterminer $\vectg{C}{2}{0}$.}
 \ifprof
+$\vectg{C}{2}{0} = \lambdapp (t)\vj{0}$.
 \else
 \fi
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\torseurcin{V}{2}{0} = \torseurl{\vect{0}}{\lambdap (t)\vj{0}}{C}$.
+\item $\vectg{C}{2}{0} = \lambdapp (t)\vj{0}$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:11}.}
 \end{flushright}%
