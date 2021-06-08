@@ -25,9 +25,77 @@ $R=\SI{10}{mm}$ et $L=\SI{20}{mm}$.
 \end{center}
 \fi
 
-Il est possible de mettre la loi entrée-sortie sous la forme *** (voir exercice \ref{C2:06:12}).
+Il est possible de mettre la loi entrée-sortie sous la forme  
+$\lambda(t) = \pm\sqrt{L^2 - R^2\cos^2\theta(t)} + R\sin\theta(t) $ 
+et 
+$\lambdap(t) = \pm\left( \dfrac{R^2 \thetap(t) \cos\theta(t)\sin\theta(t)}{\sqrt{L^2 - R^2\cos^2\theta(t)}}\right) + \thetap(t)R\cos\theta(t)$.
+ (à vérifier -- voir exercice \ref{C2:06:12}).
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $B$.}
+On commence par calculer $\vectv{B}{2}{0}$ = $\vectv{B}{2}{1}+\vectv{B}{1}{0}$ $=\vectv{B}{1}{0}$.
+\begin{itemize}
+\item \textbf{Méthode 1 -- dérivation vectorielle :}  $\vectv{B}{1}{0}$ $=\deriv{AB}{\rep{0}}$ 
+$=\deriv{R\vi{1}}{\rep{0}}$ 
+$= R\thetap(t) \vj{1}$. 
+\item \textbf{Méthode 2 -- formule de changement de point: }
+$\babarv{B}{A}{1}{0}$ 
+$= -R\vi{1}\wedge \thetap{t} \vk{0}$
+$= R\thetap(t) \vj{1}$.
+\end{itemize}
+
+On a alors, 
+$\torseurcin{V}{2}{0}$
+$=\torseurl{\varphip(t)\vk{0}}{R\thetap(t) \vj{1}}{B}$.
+
+\ifprof
+\else
+\fi
+
+\question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ et au point $C$.}
+
+On a, 
+$\torseurcin{V}{2}{0}$
+$=\torseurl{\varphip(t)\vk{0}}{\lambdap(t) \vj{0}}{C}$.
+
+Par ailleurs, on peut remarquer que 
+$\babarv{C}{B}{2}{0}$
+$= R\thetap(t) \vj{1} + L\vi{2}\wedge\varphip(t) \vk{0}$ 
+$= R\thetap(t) \vj{1} - L\varphip(t)\vj{2}$.
+
+On a donc nécessairement 
+$\lambdap(t) \vj{0}= R\thetap(t) \vj{1} - L\varphip(t)\vj{2}$
+
+$\Rightarrow \lambdap(t) \vj{0}= R\thetap(t) \left( \cos\theta(t)\vj{0}-\sin\theta(t)\vi{0} \right) - L\varphip(t)\left( \cos\varphi(t)\vj{0}-\sin\varphi(t)\vi{0}\right)$.
+
+On a donc :
+
+$
+\left\{
+\begin{array}{l}
+0= -R\thetap(t) \sin\theta(t)  + L\varphip(t)\sin\varphi(t) \\
+\lambdap(t) = R\thetap(t)  \cos\theta(t)- L\varphip(t)\cos\varphi(t)
+\end{array}
+\right.
+$
+
+$
+\Rightarrow \left\{
+\begin{array}{l}
+R\thetap(t) \sin\theta(t)  = L\varphip(t)\sin\varphi(t) \\
+\lambdap(t) - R\thetap(t)  \cos\theta(t)= L\varphip(t)\cos\varphi(t)
+\end{array}
+\right.
+$
+
+$\Rightarrow 
+\tan \varphi(t) = \dfrac{R\thetap(t) \sin\theta(t) }{\lambdap(t) - R\thetap(t)  \cos\theta(t)}
+$
+\ifprof
+\else
+\fi
+
+
+\question{Déterminer $\vectg{B}{2}{0}$.}
 \ifprof
 \else
 \fi
