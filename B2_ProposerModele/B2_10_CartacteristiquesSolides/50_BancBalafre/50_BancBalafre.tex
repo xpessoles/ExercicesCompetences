@@ -1,0 +1,64 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctionfalse
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{12}
+
+\exer{Banc Balafre $\star$ \label{B2:10:50}}
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{B2-10}
+\index{Compétence B2-10}
+\index{Banc Balafre}
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+
+
+
+\ifprof
+\else
+La figure suivante représente le paramétrage permettant de modéliser les actions mécaniques
+s’exerçant sur l’ensemble $S=\{JR+CB\}$. On nommera $G$ le centre d’inertie de l’ensemble
+$S$.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{50_01}
+\end{figure}
+\fi
+
+\textbf{Données et hypohèses}
+
+\begin{itemize}
+\item On note $\vect{BM}=z\vect{z_0}+R_J\vect{u}\left(\theta\right)$ où $R_J$ est le rayon du joint avec $R_J = \SI{175}{mm}$;
+\item la longueur du joint est $L_J = \SI{150}{mm}$. La position du point $B$, centre du joint est $\vect{OB}=z_B\vect{z_0}$ avec $z_B = \SI{425}{mm}$;
+\item Le coeur de butée a une masse $M_{CB} = \SI{40}{kg}$ et la position de son centre d’inertie $G_{CB}$ est paramétrée par $\vect{OG_{CB}}= L_{CB}\vect{z_0}$ avec $L_{CB} = \SI{193}{mm}$;
+\item L’ensemble $JR=\{Joint(rotor)+ Butée double\}$ a une masse $M_{JR} = \SI{100}{kg}$ et la
+position de son centre d’inertie $G_{JR}$ est paramétrée par $\vect{OG_{JR}}=L_{JR}\vect{z_0}$ avec $L_{JR}=
+\SI{390}{mm}$. On notera $\inertie{G_{JR}}{JR} = \matinertie{A_{JR}}{B_{JR}}{C_{JR}}{-D_{JR}}{-E_{JR}}{-F_{JR}}{\mathcal{B}_{JR}}$ la matrice d’inertie de l’ensemble $JR$ au point $G_{JR}$ exprimée dans une base $\mathcal{B}_{JR} = \left(\vect{x_{JR}},\vect{y_{JR}},\vect{z_{0}}\right)$ liée à $JR$ ;
+\item Les positions des points $A_4$ et $A_8$ sont paramétrées par $\vect{OA_4} = z_4\vect{z_0}-R_{CB}\vect{y_0}$ et
+$\vect{OA_8}=-R_{CB}\vect{y_0}$ avec $z_4 = \SI{280}{mm}$ et $R_{CB}=\SI{150}{mm}$.
+\end{itemize}
+
+\question{Déterminer l’expression de la coordonnée $z_G$ de $\vect{OG}$ selon $\vect{z_0}$. Faire l’application numérique.}
+\ifprof
+\else
+\fi
+
+
+\question{Sachant que l’ensemble $JR$ possède une symétrie de révolution par rapport à $\axe{O}{z_0}$, simplifier la matrice d’inertie $\inertie{G_{JR}}{JR}$.}
+\ifprof
+\else
+\fi
+
+
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé voir \ref{B2:10:50}.}
+\end{flushright}%
+\fi
