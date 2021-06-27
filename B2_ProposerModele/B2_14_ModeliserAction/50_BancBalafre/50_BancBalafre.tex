@@ -4,72 +4,55 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\exer{La Seine Musicale $\star$ \label{B2:14:39}}
+\exer{Banc Balafre $\star$ \label{B2:14:50}}
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{B2-14}
 \index{Compétence B2-14}
-\index{La Seine Musicale}
+\index{Banc Balafre}
 \ifcorrection
 \else
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
-
 \ifprof
 \else
-On choisit de représenter une demi-voile, de repère $\rep{v}\repere{O}{x_v}{y_v}{z}$, par une portion de demi-sphère (\autoref{fig_39_01}).
-On pourra remarquer qu’il n’y a pas de mouvement relatif entre les repères $\rep{C_G}\repere{C_G}{x_{C_G}}{y_{C_G}}{z}$ et $\rep{v}\repere{O}{x_v}{y_v}{z}$, 
-associé à la demi-voile. On rappelle que $\vect{OC_G}=R\vect{y_{C_G}}$, avec $R$ le rayon moyen de la voie de roulement.
+La figure suivante représente le paramétrage permettant de modéliser les actions mécaniques
+s’exerçant sur l’ensemble $S=\{JR+CB\}$. On nommera $G$ le centre d’inertie de l’ensemble
+$S$.
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{39_01}
-\caption{Paramétrage de la surface totale et élémentaire en coordonnées sphériques de la demi-voile \label{fig_39_01}}
+\includegraphics[width=\linewidth]{50_01}
 \end{figure}
-
-La figure \autoref{fig_39_02} présente l’orientation du vent par rapport au plan de symétrie de la demi-voile dans le plan $\angl{x_v}{y_v}$. La densité d’effort surfacique du vent sur la demi-voile, pour une vitesse de $\SI{9}{m.s^{-1}}$, est noté $\vect{f}_{\text{vent}}=f\vect{u}$ avec $f=\SI{54,7}{N.m^{-2}}$, l’orientation de $\vect{u}$ étant définie par l’angle constant $\alpha=\angl{x_v}{u}$.
-
-La base associée au système de coordonnées sphériques $\left(r,\theta,\varphi\right)$ est $\base{e_r}{e_{\theta}}{e_{\varphi}}$. La position du point $P$ appartenant
-à la demi-voile est définie par $\vect{OP}=R\vect{e_r}$ avec $R$ le rayon moyen de la voie de roulement ($R=\SI{22,75}{m}$).
-L’angle azimutal $\varphi$ évolue entre $-\dfrac{\pi}{8}$ et $\dfrac{\pi}{8}$ et l’élévation $\theta$ évolue entre 0 et $\dfrac{\pi}{2}$.
-On précise que, dans le cas présenté \autoref{fig_39_01}, la surface élémentaire en coordonnées sphériques est notée
-$\dd S =R^2 \sin \theta \dd\theta \dd \varphi$.
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\linewidth]{39_02}
-\caption{Paramétrage angulaire \label{fig_39_02}}
-\end{figure}
-
 \fi
 
+\textbf{Données et hypohèses}
+
+\begin{itemize}
+\item On note $\vect{BM}=z\vect{z_0}+R_J\vect{u}\left(\theta\right)$ où $R_J$ est le rayon du joint avec $R_J = \SI{175}{mm}$;
+\item la longueur du joint est $L_J = \SI{150}{mm}$. La position du point $B$, centre du joint est $\vect{OB}=z_B\vect{z_0}$ avec $z_B = \SI{425}{mm}$;
+\item Le coeur de butée a une masse $M_{CB} = \SI{40}{kg}$ et la position de son centre d’inertie $G_{CB}$ est paramétrée par $\vect{OG_{CB}}= L_{CB}\vect{z_0}$ avec $L_{CB} = \SI{193}{mm}$;
+%\item L’ensemble $JR=\{Joint(rotor)+ Butée double\}$ a une masse $M_{JR} = \SI{100}{kg}$ et la
+%position de son centre d’inertie $G_{JR}$ est paramétrée par $\vect{OG_{JR}}=L_{JR}\vect{z_0}$ avec $L_{JR}=
+%\SI{390}{mm}$. On notera $\inertie{G_{JR}}{JR} = \matinertie{A_{JR}}{B_{JR}}{C_{JR}}{-D_{JR}}{-E_{JR}}{-F_{JR}}{\mathcal{B}_{JR}}$ la matrice d’inertie de l’ensemble $JR$ au point $G_{JR}$ exprimée dans une base $\mathcal{B}_{JR} = \left(\vect{x_{JR}},\vect{y_{JR}},\vect{z_{0}}\right)$ liée à $JR$ ;
+\item Les positions des points $A_4$ et $A_8$ sont paramétrées par $\vect{OA_4} = z_4\vect{z_0}-R_{CB}\vect{y_0}$ et
+$\vect{OA_8}=-R_{CB}\vect{y_0}$ avec $z_4 = \SI{280}{mm}$ et $R_{CB}=\SI{150}{mm}$.
+\end{itemize}
 
 
+On souhaite déterminer la résultante des actions de pression du fluide sur le joint (rotor).
+On rappelle qu’un élément de surface $\dd S$ autour d’un point $M$ sur une surface cylindrique
+de rayon $R_J$ s’exprime $\dd S = R_J \dd \theta \dd z$.
 
-\question{Exprimer l’effort élémentaire du vent sur la demi-voile s’appliquant au point $P$ sur la surface $\dd S$, noté $\dd \vect{F}_{\text{vent}}$.}
+\question{Exprimer au point $M$ le torseur $\left\{\dd T_{f\rightarrow J_R} \right\}$ de l’action de pression du
+fluide sur un élément de surface $\dd S$ joint en fonction de $p(t)$, $\dd S$ et $\vect{u}\left( \theta \right)$.}
 \ifprof
 \else
 \fi
 
-\question{Déterminer par intégration l’expression du moment de l’action mécanique du vent selon l’axe $\axe{O}{z}$, $\vectm{O}{\text{vent}}{\text{demi-voile}} \cdot \vect{z}$ s’opposant à la rotation de la voile autour de l’axe $\axe{O}{z}$ en fonction de $R$, $f$ et $\alpha$.}
-\ifprof ~\\
-\else
-\fi
-
-\question{On définit ${F}_{\text{vent}}$ tel que 
-$\left(\vect{OC_G}\wedge {F}_{\text{vent}} \vect{x_{C_G}}\right)\cdot \vect{z} = \vectm{O}{\text{vent}}{\text{demi-voile}} \cdot \vect{z}$. 
-En déduire l’expression de ${F}_{\text{vent}}$ l’effort
-du vent au point $C_G$ s’opposant au déplacement du chariot central.}
-\ifprof ~\\
-\else
-~\\
-Afin de modéliser le déplacement de la voile dans le cas le plus défavorable, on souhaite déterminer la valeur
-maximale de $\left| {F}_{\text{vent}}\right| $.
-\fi
-
-\question{Pour quelle valeur de $\alpha$ cet effort est-il maximal ? Déterminer la valeur maximale de $\left| {F}_{\text{vent}}\right| $.}
-\ifprof ~\\
+\question{En déduire l’expression en $B$ du torseur $\left\{ T_{f\rightarrow J_R} \right\}$ de l’action de pression
+du fluide sur l’ensemble du joint.}
+\ifprof
 \else
 \fi
 
@@ -77,6 +60,6 @@ maximale de $\left| {F}_{\text{vent}}\right| $.
 \ifprof
 \else
 \begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:14:39}.}
+\footnotesize{Corrigé  voir \ref{B2:14:50}.}
 \end{flushright}%
 \fi
