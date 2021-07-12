@@ -51,6 +51,8 @@
 51_MCC
 52_Verin
 53_BancEpreuveHydraulique
+54_FauteuilRoulant
+55_Suspension
 
 500_Divers
 501_Divers
@@ -60,3 +62,5 @@
 505_Divers
 506_Divers
 507_Divers
+508_Divers
+509_Divers
