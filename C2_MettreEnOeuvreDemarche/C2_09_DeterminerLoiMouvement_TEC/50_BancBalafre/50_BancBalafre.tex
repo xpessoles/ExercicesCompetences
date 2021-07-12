@@ -20,8 +20,6 @@
 \ifprof
 \else
 
-\fi
-
 
 \begin{obj}
 L'objectif est de valider les exigences suivantes.
@@ -56,8 +54,8 @@ maximal du joint (rotor) selon l’axe de rotation est $J_{\text{joint}}= \SI{0,
 \item le moment d’inertie de l’ensemble bda=\{ butée double + arbre + fusible mécanique\} selon l’axe de rotation est $J_{bda} = \SI{0,092}{kg.m^2}$.
 \end{itemize}
 
-On considère l’ensemble de la ligne d’arbre (voir figure \autoref{fig_50_01})  $\Sigma=\{ arbre moteur + accouplement
-+ fusible mécanique + tube flexible + butée double + Joint (rotor) \}$.
+On considère l’ensemble de la ligne d’arbre (voir figure \autoref{fig_50_01})  $\Sigma=\{ \text{arbre moteur + accouplement
++ fusible mécanique + tube flexible + butée double + Joint (rotor)} \}$.
 On notera $\Omega$ la vitesse de rotation $\Omega\left(\Sigma/0\right)$ de la ligne d’arbre par rapport au bâti 0, et
 $J_{\Sigma}$  le moment d’inertie de $\Sigma$ par rapport à l’axe de rotation du moteur.
 
@@ -68,6 +66,8 @@ $J_{\Sigma}$  le moment d’inertie de $\Sigma$ par rapport à l’axe de rotati
 \caption{Représentation en coupe du banc BALAFRE \label{fig_50_01}}
 \end{figure}
 
+
+\fi
  
 \question{Exprimer le moment d’inertie $J_{\Sigma}$ en fonction des données fournies et calculer sa valeur numérique.}
 \ifprof
@@ -113,10 +113,14 @@ d’accélération.}
 \else
 \fi
 
+\ifprof
+\else
 En cas de perturbation de vitesse sur la ligne d’arbre pendant la phase d’accélération, il
 peut se produire un phénomène instable au niveau du film liquide à l’intérieur du joint
 testé. Ceci peut se traduire par une perturbation de couple pouvant aller jusqu’à une
 valeur $C_p = \SI{100}{Nm}$.
+\fi
+
 \question{Déterminer alors la valeur de $C_m$ pour le scénario le plus défavorable.}
 \ifprof
 \else

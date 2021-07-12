@@ -66,6 +66,9 @@ le glissement en fonctionnement nominal $g_N$ ainsi que le couple utile nominal 
 \else
 \fi
 
+\ifprof
+\else
+
 On donne sur la figure \autoref{fig_50_02} le modèle équivalent ramené au stator d’une phase du moteur.
 $L_0$ représente l’inductance de magnétisation et $L_c$ l’inductance des fuites totales d’une
 phase (rotorique ramenée au stator et stator). On note $g$ le glissement. On rappelle que la
@@ -87,7 +90,7 @@ avec les notations des nombres complexes.
 \includegraphics[width=\linewidth]{fig_50_02}
 \caption{Modèle équivalent ramené au stator d’une phase du moteur \label{fig_50_02}}
 \end{figure}
-
+\fi
 \question{Exprimer la puissance électromécanique $P_{EM}$ fournie au rotor en fonction
 de $U_S$ (valeur efficace de la tension $\underline{U_S}$), de la résistance $R$, du glissement $g$ de l’inductance
 $L_c$ et de la pulsation d’alimentation $\omega$ du moteur.}
@@ -115,6 +118,9 @@ utile disponible sur l’arbre moteur est $C_u = \dfrac{3pU_S^2}{\omega}\cdot\df
 \else
 \fi
 
+\ifprof
+\else
+
 À l’aide de cette équation, on obtient la figure \autoref{fig_50_03} qui représente l’allure de la courbe de
 couple en fonction de la vitesse de rotation $N$ de l’arbre moteur.
 
@@ -124,6 +130,7 @@ couple en fonction de la vitesse de rotation $N$ de l’arbre moteur.
 \caption{Allure de la courbe de couple utile du moteur en fonction de la vitesse de
 rotation de l’arbre \label{fig_50_03}}
 \end{figure}
+\fi
 
 \question{À l’aide des points A, B, C et D, identifier sur cette courbe 
 %\begin{itemize}
@@ -140,11 +147,13 @@ la zone de fonctionnement instable du moteur.}
 \else
 \fi
 
+\ifprof
+\else
 
 Le constructeur précise le rapport du couple maximal sur couple nominal : $C_M/C_N = 3,5$.
 On rappelle que le couple utile est maximal pour une valeur du glissement telle que
 $R/g = L_c\omega$.
-
+\fi
 \question{En déduire l’expression de $L_c$ en fonction de $p$, $U_S$, $C_M$ et $\omega$ et faire
 l’application numérique.}
 \ifprof
@@ -157,6 +166,9 @@ $C_N$, du glissement nominal $g_N$, de $p$, $U_S$ et de $\omega$.}
 \ifprof
 \else
 \fi
+
+\ifprof
+\else
 
 \begin{rem}
 On fera l’application numérique en prenant $g_N = 1,4 \times 10^{-2}$ et $C_N =\SI{213}{Nm}$.
@@ -174,6 +186,7 @@ en fonction de la vitesse de rotation pour différentes valeurs de fréquence de
 \caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
 fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
 \end{figure}
+\fi
 
 \question{Déterminer quelle fréquence doit être imposée
 par le variateur pour maintenir une vitesse de \SI{6000}{tr.min^{-1}} en présence d’un couple
