@@ -53,6 +53,8 @@
 53_BancEpreuveHydraulique
 54_FauteuilRoulant
 55_Suspension
+56_RobotAvion ?
+57_PeseCamion
 
 500_Divers
 501_Divers
@@ -64,3 +66,6 @@
 507_Divers
 508_Divers
 509_Divers
+510_Divers
+511_Divers
+512_Divers
