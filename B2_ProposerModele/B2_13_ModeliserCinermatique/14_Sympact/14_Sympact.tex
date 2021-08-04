@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -26,23 +26,24 @@ $H=\SI{120}{mm}$ et $R=\SI{40}{mm}$.
 
 
 \question{Calculer $\vectv{B}{1}{0}$ ?}
+\ifprof
 $\babarv{B}{C}{1}{0}$ 
 $=\vect{0}-R\vi{1}\wedge\thetap\vk{0}$
 $=R\thetap\vj{1}$.
 
 (Possibilité d'utiliser la dérivation vectorielle.)
-\ifprof
 
 \else
 \fi
 
 \question{Calculer $\vectv{B}{2}{0}$ ?}
+\ifprof
 $\babarv{B}{A}{2}{0}$ 
 $=\vect{0}-\lambda \vi{2}\wedge\varphip\vk{0}$
 $=\lambda\varphip\vj{2}$.
 
 (\textbf{Impossibilité} d'utiliser la dérivation vectorielle.)
-\ifprof
+
 \else
 \fi
 
@@ -53,12 +54,12 @@ La liaison entre \textbf{2} et \textbf{1} est une liaison ponctuelle de normale 
 \fi
 
 \question{En déduire une relation cinématique entre les différentes grandeurs.}
-
+\ifprof
 En utilisant la décomposition du vecteur vitesse, on a
 $\vectv{B}{2}{1}\cdot \vj{2} =\left( \vectv{B}{2}{0} - \vectv{B}{1}{0}\right) \cdot \vj{2}$
 $ \Leftrightarrow {0} =\left( \lambda\varphip\vj{2} - R\thetap\vj{1}\right) \cdot \vj{2}$
 $ \Leftrightarrow {0} = \lambda\varphip - R\thetap \cos \left( \varphi - \theta\right)$
-\ifprof
+
 \else
 \fi
 
@@ -72,6 +73,21 @@ $ \Leftrightarrow {0} = \lambda\varphip - R\thetap \cos \left( \varphi - \theta\
 
 \ifprof
 \else
+\footnotesize
+\begin{center}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\vectv{B}{1}{0}=R\thetap\vj{1}$.
+\item $\vectv{B}{2}{0}=\lambda\varphip\vj{2}$.
+\item .
+\item $ \lambda\varphip - R\thetap \cos \left( \varphi - \theta\right)=0$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{center}
+\normalsize
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:13:14}.}
 \end{flushright}%
