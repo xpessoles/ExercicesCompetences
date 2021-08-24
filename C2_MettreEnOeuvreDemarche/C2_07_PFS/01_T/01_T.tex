@@ -4,16 +4,10 @@
 %\UPSTIidClasse{12} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Mouvement T -- $\star$ \label{C1:05:01} TO DO RESOUTION....}
+\exer{Mouvement T $\star$ \label{C2:07:01}}
 \setcounter{numques}{0}
-\UPSTIcompetence[2]{B2-14}
-\UPSTIcompetence[2]{B2-15}
-\UPSTIcompetence[2]{C1-05}
-\index{Compétence B2-14}
-\index{Compétence B2-15}
-\index{Compétence C1-05}
-\index{Torseur des actions mécaniques transmissibles}
-\index{Torseur d’une action mécanique extérieure}
+\UPSTIcompetence[2]{C2-07}
+\index{Compétence C2-07}
 \index{Principe fondamental de la statique}
 \index{PFS}
 \index{Mécanisme à 1 translation}
@@ -33,6 +27,11 @@ On note $G$ le centre d'inertie de \textbf{1} tel que $\vect{BG}=\ell \vect{j_1}
 \end{center}
 \fi
 
+On donne 
+$\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}+N_{01}\vk{1}}{A}$,
+$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{0}}{G}$, 
+$\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{G}$.
+
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
 \begin{center}
@@ -41,29 +40,16 @@ On note $G$ le centre d'inertie de \textbf{1} tel que $\vect{BG}=\ell \vect{j_1}
 \else
 \fi
 
-\question{Donner le torseur de chacune des actions mécaniques.}
 
+On isole \textbf{1} et on applique le théorème de la résultante statique en projection suivant $\vi{0}$.
+
+\question{Exprimer l'équation d'équilibre de la pièce~\textbf{1}.}
 \ifprof
-$\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}+N_{01}\vk{1}}{A}$
-
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{0}}{G}$
-
-$\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{G}$
 \else
 \fi
 
-
-\question{Simplifier les torseurs dans l'hypothèse des problèmes plans.}
+\question{Déterminer l'ensemble des inconnues de liaison.}
 \ifprof
-$\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}}{N_{01}\vk{1}}{A}$,
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{0}}{G}$,
-$\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{G}$.
-\else
-\fi
-
-\question{Proposer une démarche permettant de déterminer l'effort que doit développer le vérin pour maintenir \textbf{1} en équilibre.}
-\ifprof
-Mouvement de translation. On isole \textbf{1} et on applique le théorème de la résultante statique en projection suivant $\vi{0}$.
 \else
 \fi
 
@@ -71,27 +57,20 @@ Mouvement de translation. On isole \textbf{1} et on applique le théorème de la
 
 \ifprof
 \else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
-\begin{enumerate}
-\item .
-\item $\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}+N_{01}\vk{1}}{A}$,
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{0}}{G}$, 
-$\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{G}$.
-\item $\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}}{N_{01}\vk{1}}{A}$,
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{0}}{G}$,
-$\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{G}$.
-\item TRS suivant $\vi{0}$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
+%\footnotesize
+%\begin{center}
+%\begin{tabular}{|p{.9\linewidth}|}
+%\hline
+%Indications :
+%\begin{enumerate}
+%\item .
+%\end{enumerate} \\ \hline
+%\end{tabular}
+%\end{center}
+%\normalsize
 
 \begin{flushright}
-\footnotesize{Corrigé  voir \ref{C1:05:01}.}
+\footnotesize{Corrigé  voir \ref{C2:07:01}.}
 \end{flushright}%
 \fi
 

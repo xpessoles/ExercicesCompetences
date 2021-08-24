@@ -4,16 +4,11 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Mouvement R  $\star$ \label{C2:08:02} TO DO RESOUTION....}
+\exer{Mouvement R  $\star$ \label{C2:07:02} }
 \setcounter{numques}{0}
-\UPSTIcompetence[2]{B2-14}
-\UPSTIcompetence[2]{B2-15}
-\UPSTIcompetence[2]{C1-05}
-\index{Compétence B2-14}
-\index{Compétence B2-15}
-\index{Compétence C1-05}
-\index{Torseur des actions mécaniques transmissibles}
-\index{Torseur d’une action mécanique extérieure}
+\UPSTIcompetence[2]{C2-07}
+
+\index{Compétence C2-07}
 \index{Principe fondamental de la statique}
 \index{PFS}
 \index{Mécanisme à 1 rotation}
@@ -36,58 +31,52 @@ On note $m_1$ la masse du solide 1 et $B$ son centre d'inertie.
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+
 \begin{center}
 \includegraphics[width=.4\linewidth]{02_R_01_c}
 \end{center}
 \else
 \fi
 
-\question{Donner le torseur de chacune des actions mécaniques.}
-\ifprof
+On donne 
 $\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}}{A}$,
 $\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$, 
 $\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
+
+On isole \textbf{1} et on réalise un théorème du moment statique en $A$ en projection sur $\vk{0}$.
+
+\question{Donner l'équation d'équilibre de la pièce \textbf{1}.}
+\ifprof
 \else
 \fi
 
 
-\question{Simplifier les torseurs dans l'hypothèse des problèmes plans.}
+\question{Déterminer l'ensemble des inconnues de liaisons.}
 \ifprof
-$\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}}{M_{01}\vj{1}}{A}$,
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$,
-$\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
 \else
 \fi
 
-\question{Proposer une démarche permettant de déterminer l'effort que doit développer le moteur pour maintenir \textbf{1} en équilibre.}
-\ifprof
-On isole 1 et on réalise un théorème du moment statique en $A$ en projection sur $\vk{0}$.
-\else
-\fi
-
-
-
 \ifprof
 \else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
-\begin{enumerate}
-\item .
-\item $\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}}{A}$,
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$,
-$\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
-\item $\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}}{M_{01}\vj{1}}{A}$,
-$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$,
-$\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
-\item TMS en $A$ en projection sur $\vk{0}$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
+%\footnotesize
+%\begin{center}
+%\begin{tabular}{|p{.9\linewidth}|}
+%\hline
+%Indications :
+%\begin{enumerate}
+%\item .
+%\item $\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}}{A}$,
+%$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$,
+%$\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
+%\item $\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}}{M_{01}\vj{1}}{A}$,
+%$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$,
+%$\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
+%\item TMS en $A$ en projection sur $\vk{0}$.
+%\end{enumerate} \\ \hline
+%\end{tabular}
+%\end{center}
+%\normalsize
 \begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:08:02}.}
+\footnotesize{Corrigé  voir \ref{C2:07:02}.}
 \end{flushright}%
 \fi
