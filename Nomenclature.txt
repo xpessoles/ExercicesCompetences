@@ -1,4 +1,4 @@
-01_T
+﻿01_T
 02_R
 03_TT
 04_RR
@@ -55,6 +55,10 @@
 55_Suspension
 56_RobotAvion ?
 57_PeseCamion
+
+58_Oz440
+59_Levage
+60_Escalier
 
 500_Divers
 501_Divers
