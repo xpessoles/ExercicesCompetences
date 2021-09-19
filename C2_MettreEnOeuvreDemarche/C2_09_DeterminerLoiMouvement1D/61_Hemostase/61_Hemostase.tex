@@ -1,0 +1,80 @@
+\normaltrue
+\correctionfalse
+
+%\UPSTIidClasse{12} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{12}
+
+\exer{Automate d’exploration de l’hémostase $\star$ \label{C2:091D:61}}
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{C2-09}
+\index{Compétence C2-09}
+\index{Principe fondamental de la dynamique}
+\index{PFD}
+%\index{Mécanisme à 1 rotation}
+\index{Automate d’exploration de l’hémostase}
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+Afin de valider le choix des moteurs, on étudie le déplacement sur l’axe $\vect{x}$.% qui est le plus grand. 
+On note $V_x$ la vitesse selon cet axe.
+On rappelle que la distance maximum à parcourir est $x_M^{\text{max}} = \SI{550}{mm}$ en 1 seconde.
+La loi de commande sur chaque axe est définie par un trapèze de vitesse (\autoref{61_01})
+avec les temps d’accélération et de décélération ($T_a$) identiques. De plus, les moteurs se mettent en route et s’arrêtent en
+même temps. $T$ est la durée totale du déplacement. Nous allons chercher à optimiser cette loi de commande de sorte
+que le moteur fournisse une puissance instantanée minimale.
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[\linewidth]{61_01}
+\caption{\label{61_01} Loi de commande de vitesse en trapèze}
+\end{figure}
+
+Le modèle de calcul pour cette commande d’axe est le suivant :
+\begin{itemize}
+\item le mouvement de rotation du moteur (vitesse $\omega_m^x$) est transformé en mouvement de translation (vitesse $V^x$) ;
+\item le rapport de transmission de la chaîne cinématique est $\lambda = \dfrac{V^x}{\omega_m^x}$;
+\item la distance à parcourir est $x_M^{\text{max}}$;
+\item l’inertie équivalente de l’ensemble des pièces en mouvement ramenée à l’arbre moteur est $J_e$;
+\item les frottements et la pesanteur sont négligés, il n’y a donc pas de couple résistant.
+\end{itemize}
+
+
+
+\question{Exprimer la vitesse maximale $V_M^x$ en fonction de $x_M^{\text{max}}$, $T$ et $Ta$.}
+
+\question{Par application du théorème de l’énergie cinétique sur l’ensemble des pièces en mouvement,
+exprimer le couple moteur $C_m$ en fonction de $V_x$, $T_a$, $J_e$ et $\lambda$ durant les trois phases du
+mouvement.}
+
+\question{Préciser à quel(s) instant(s) $t$ la puissance fournie par le moteur est maximale ($P_{\text{max}}$)}.
+
+\question{Exprimer cette puissance $P_{\text{max}}$ en fonction de $V_M^x$, $\lambda$, $J_e$, et $T_a$.}
+
+\question{Donner alors l’expression de $P_{\text{max}}$ en fonction de $x_M^{\text{max}}$, $\lambda$, $J_e$, et $T_a$.}
+
+\question{À partir de cette expression, montrer que $P_{\text{max}}$ est minimale pour un réglage du
+temps d’accélération $T_a$ tel que $T_a=\dfrac{T}{3}$.}
+
+Pour cette nouvelle commande avec $T_a=\dfrac{T}{3}$, on cherche à valider le choix du moteur en étudiant le
+déplacement maximum suivant $\vect{x}$. Les caractéristiques de la chaîne cinématique sont :
+\begin{itemize}
+\item vitesse maximale du moteur : $N_{\text{max}}^{\text{mot}}=\SI{4150}{tr.min^{-1}}$;
+\item rapport de réduction du réducteur $k=\dfrac{1}{10}$;
+\item rayon de poulie $R_p= \SI{20}{mm}$.
+\end{itemize}
+
+\question{Déterminer la vitesse de rotation maximum $\omega^x_{\text{max}}$ que doit atteindre le moteur. Le
+choix de celui-ci est-il validé ?}
+
+
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{C2:091D:61}.}
+\end{flushright}%
+\fi
