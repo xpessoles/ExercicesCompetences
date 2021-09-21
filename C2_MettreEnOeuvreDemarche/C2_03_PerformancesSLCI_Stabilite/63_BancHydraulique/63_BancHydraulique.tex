@@ -3,7 +3,7 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Banc hydraulique $\star$ \label{C2:03:prec:63} 
+\exer{Banc hydraulique $\star$ \label{C2:03:prec:63}}
 %% CCP MP 2010
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{C2-03}
@@ -27,13 +27,13 @@ La pression d’eau à l’intérieur du tube est mesurée par un capteur de pre
 \end{center}
 
  
- \begin{tabular}{ll}
+ \begin{tabular}{lp{5cm}}
 $P_{\text{con}}(p)$ : & 	pression de consigne d’eau dans le tube (Pa) \\
 $P_e(p)$ : & 	pression d’eau dans le tube (Pa) \\
 $U_c(p)$ : & 	tension de commande du régulateur de pression (V)\\
 $P_r(p)$ : &	pression d’huile régulée (Pa)\\
 $\Delta Q_e(p)$ :& 	débit de fuite (\si{m^3s^{-1}})\\
-$Um(p) 	:	tension de mesure du capteur (V)\\
+$U_m(p)$ 	:&	tension de mesure du capteur (V)\\
 \end{tabular}
  
  Hypothèses :
@@ -41,14 +41,14 @@ $Um(p) 	:	tension de mesure du capteur (V)\\
 \item Ll’ensemble de mise sous pression {tube + distributeur + multiplicateur de pression} est défini par les transmittances suivantes : $H_{\text{pre}} (p)=\dfrac{K_m}{1+T_1 p}$	et	$H_{\text{fui}} (p)=\dfrac{K_f}{1+T_1 p}$ avec 	$K_m = 3,24$ ; 	$K_f = \SI{2,55e10}{Pa.m^{-3}.s}$ ; 	$T_1  = \SI{10}{s}$.
 \item L’ensemble {pompe+régulateur de pression} est modélisé par la fonction de transfert :
 $H_{\text{pom}} (p)=\dfrac{K_{\text{pom}}}{1+T_2 p}$  avec 	$K_{\text{pom}} = \SI{1,234e7}{Pa/V}$; 	$T_2 = \SI{5}{s}$.
-\item Le capteur est modélisé par un gain pur :	$K_{\text{cap}} = \SI{2,5.10e-8}{V/Pa}$.
+\item Le capteur est modélisé par un gain pur :	$K_{\text{cap}} = \SI{2,5e-8}{V/Pa}$.
 \end{itemize}
-La pression de consigne est de $P_{\text{con}} = \SI{800}{bars}$ et les débits de fuite sont estimés à $\Delta Q_e = \SU{5e-4}{m3/s}$.
+La pression de consigne est de $P_{\text{con}} = \SI{800}{bars}$ et les débits de fuite sont estimés à $\Delta Q_e = \SI{5e-4}{m3/s}$.
 
  
 Le cahier des charges concernant le réglage de la pression de test est le suivant.
 \begin{center}
-\begin{tabular}{ll}
+\begin{tabular}{lp{5cm}}
 \hline 
 Stabilité :  & marge de phase de 60\degres  \\
   	  &  marge de gain de \SI{12}{dB} \\ \hline
