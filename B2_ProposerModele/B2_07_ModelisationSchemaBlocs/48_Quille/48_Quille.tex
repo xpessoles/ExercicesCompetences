@@ -86,7 +86,7 @@ Les constantes sont les suivantes :
 \question{Donner les expressions des fonctions de transfert $A_1$, $A_2$, $A_3$ et $A_4$ en fonction de la variable
 complexe $p$ et des constantes.}
 \ifprof
-\begin{corrige}
+
 D'une part, on transforme les équations dans le domaine de Laplace : 
 $Q(p)=S p X(p)+\dfrac{V}{2B} p \Sigma(p)$ et
 $Mp^2 X(p) = S \Sigma(p) - kX(p)-\lambda p X(p) - F_R(p)$.
@@ -100,7 +100,7 @@ On a aussi $X(p)=A_4\left(-F_R(p)+A_3\Sigma(p)\right) =-A_4F_R(p)+A_3A_4\Sigma(p
 $X(p) \left(Mp^2  +\lambda p  + k\right)= S \Sigma(p) - F_R(p) \Leftrightarrow X(p) =  \dfrac{S \Sigma(p)}{Mp^2  +\lambda p  + k}-\dfrac{F_R(p)}{Mp^2  +\lambda p  + k}$. On a donc : $A_4 = \dfrac{1}{Mp^2  +\lambda p  + k}$ et $A_3 = S$.
 
 Au final,  $A_1=\dfrac{1}{Sp}$,  $A_2 = \dfrac{S2B}{V} $,  $A_3 = S$  et $A_4 = \dfrac{1}{Mp^2  +\lambda p  + k}$.
-\end{corrige}
+
 \else
 \fi
 
@@ -157,7 +157,7 @@ Le schéma-blocs de la figure précédente peut se mettre sous la forme suivante
 et $H_2$ en fonction de $A_1$, $A_2$, $A_3$ et $A_4$, puis de la variable $p$ et
 des constantes.}
 \ifprof
-\begin{corrige}
+
 \textbf{Méthode 1 : Utilisation des relations précédentes}
 On a $X(p)=\left(H_1Q(p)-F_R(p)\right)H_2(p)$. 
 
@@ -233,15 +233,15 @@ $A_1=\dfrac{1}{Sp}$,  $A_2 = \dfrac{S2B}{V} $,  $A_3 = S$  et $A_4 = \dfrac{1}{M
 En faisant le calcul on obtient : 
 $H_1(p)=\dfrac{2BS}{pV}  $ et $H_2 = \dfrac{\dfrac{1}{Mp^2  +\lambda p  + k}}{1+ \dfrac{2BS^2}{V}\dfrac{1}{Mp^2  +\lambda p  + k} }$  $= \dfrac{1}{Mp^2  +\lambda p  + k+ \dfrac{2BS^2}{V} }$.
 
-\end{corrige}
+
 \else
 \fi
 
 \question{}\textit{Pour ce vérin non perturbé ($F_R=0$), donner sa fonction de transfert $X(p)/Q(p)$ en fonction de la variable $p$ et des constantes.}
 \ifprof
-\begin{corrige}
+
 Dans ce cas, $\dfrac{X(p)}{Q(p)}=H_1(p)H_2(p)\dfrac{2BS}{p\left(MVp^2  +\lambda pV  + kV+ 2BS^2\right) }$.
-\end{corrige}
+
 \else
 \fi
 
