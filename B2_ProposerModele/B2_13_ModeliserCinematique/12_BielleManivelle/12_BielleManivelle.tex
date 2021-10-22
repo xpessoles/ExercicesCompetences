@@ -32,6 +32,7 @@ $\lambdap(t) = \pm\left( \dfrac{R^2 \thetap(t) \cos\theta(t)\sin\theta(t)}{\sqrt
  (à vérifier -- voir exercice \ref{C2:06:12}).
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $B$.}
+\ifprof
 On commence par calculer $\vectv{B}{2}{0}$ = $\vectv{B}{2}{1}+\vectv{B}{1}{0}$ $=\vectv{B}{1}{0}$.
 \begin{itemize}
 \item \textbf{Méthode 1 -- dérivation vectorielle :}  $\vectv{B}{1}{0}$ $=\deriv{AB}{\rep{0}}$ 
@@ -47,12 +48,12 @@ On a alors,
 $\torseurcin{V}{2}{0}$
 $=\torseurl{\varphip(t)\vk{0}}{R\thetap(t) \vj{1}}{B}$.
 
-\ifprof
 \else
 \fi
 
 \question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ et au point $C$.}
 
+\ifprof
 On a, 
 $\torseurcin{V}{2}{0}$
 $=\torseurl{\varphip(t)\vk{0}}{\lambdap(t) \vj{0}}{C}$.
@@ -92,27 +93,26 @@ $\Rightarrow
 $
 
 Il resterait à supprimer $\varphi(t)$ pour (espérons-le) retomber sur la loi entrée-sortie cinématique.
-\ifprof
+
 \else
 \fi
 
 
 \question{Déterminer $\vectg{B}{2}{0}$.}
-
+\ifprof
 $\vectg{B}{2}{0}$
 $=\deriv{\vectv{B}{2}{0}}{\rep{0}}$
 $=\deriv{R\thetap(t) \vj{1}}{\rep{0}}$
 $=R\thetapp(t) \vj{1} - R\thetap^2(t) \vi{1}$.
-\ifprof
 \else
 \fi
 
 \question{Déterminer $\vectg{C}{2}{0}$.}
 
+\ifprof
 $\vectg{C}{2}{0}$
 $=\deriv{\vectv{C}{2}{0}}{\rep{0}}$
 $=\lambdapp(t) \vj{0} $.
-\ifprof
 \else
 \fi
 
