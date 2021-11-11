@@ -47,7 +47,6 @@ Le diagramme d’état du superviseur du banc Balafre est présenté sur la figu
 \includegraphics[width=\linewidth]{fig_50_01}
 \caption{Diagramme d’état du superviseur du banc Balafre. \label{fig_50_01}}
 \end{figure}
-\fi
 
 Les variables suivantes permettent de réaliser le suivi d’un processus de mesure :
 \begin{itemize}
@@ -68,7 +67,7 @@ faut \SI{5}{s} pour atteindre la vitesse de consigne ou revenir à l’arrêt.
 \end{itemize}
 \item Rafale est une variable qui vaut 1 si une rafale est en cours, et 0 sinon.
 \end{itemize}
-
+\fi
 
 
 
@@ -79,33 +78,33 @@ faut \SI{5}{s} pour atteindre la vitesse de consigne ou revenir à l’arrêt.
 \question{On souhaite réaliser un cycle de rafale de huit secondes. En suivant
 le diagramme d’état de la figure \ref{fig_50_01}, et en supposant que le contrôle soit réalisé en 1
 seconde et conclue à ce que tout soit en ordre de marche, compléter le chronogramme.}
+\ifprof
+\else
+\fi
 
-
+\ifprof
+\else
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{fig_50_02}
 %\caption{Diagramme d’état du superviseur du banc Balafre. \label{fig_50_02}}
 \end{figure}
 
-\ifprof
-\else
-\fi
-
 Pour un fonctionnement sûr de l’installation, le système doit arrêter les moteurs si les
 contrôles détectent une anomalie.
+\fi
 
 
-\question{Modifier le diagramme d’état ci-dessous
-pour prendre en compte ce cas de figure.}
+\question{Modifier le diagramme d’état ci-dessous pour prendre en compte ce cas de figure.}
+\ifprof
+\else
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{fig_50_03}
 %\caption{Diagramme d’état du superviseur du banc Balafre. \label{fig_50_03}}
 \end{figure}
-
-\ifprof
-\else
 \fi
+
 
 
 

@@ -16,7 +16,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
-
+\ifprof
+\else 
 
 Pour limiter l’erreur statique due aux fuites, on envisage d’asservir la pression d’eau dans le tube. 
 %L’objectif est ici de proposer un réglage du correcteur pour répondre aux critères du cahier des charges.
@@ -67,6 +68,7 @@ $t_e \cdot \omega_{\SI{0}{dB}}=3$ où $\omega_{\SI{0}{dB}}$ désigne la pulsatio
 \item $t_e = t_R$, temps de réponse à \SI{5}{\%} si le dépassement est nul ou inférieur à \SI{5}{\%}.
 \end{itemize}
 On envisage tout d’abord un correcteur de type proportionnel : $C(p)=K_p$. 
+\fi
 
 \question{Déterminer, en fonction de $K_p$ ,  $\varepsilon_{\text{con}}$ définie comme l’erreur statique pour une entrée consigne $P_{\text{con}}$ de type échelon, dans le cas où le débit de fuite est nul.}
 \ifprof

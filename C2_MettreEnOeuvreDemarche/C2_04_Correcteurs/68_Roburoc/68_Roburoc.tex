@@ -3,20 +3,23 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Système éclipse $\star$ \label{C2:04:68}}
-%% CCP MP 2007
+\exer{Roburoc $\star$ \label{C2:04:68}}
+%% CCMP 2009
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{C2-04}
 \index{Compétence C2-04}
 \index{Correcteur}
 \index{Correcteur proportionnel intégral}
-\index{Roburoce}
+\index{Roburoc}
 
 
 \ifcorrection
 \else
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
+
+\ifprof
+\else
 
 Soit le schéma-blocs suivant. 
 
@@ -40,6 +43,7 @@ Les diagrammes de Bode de la Fonction de Transfert en Boucle Ouverte $\text{FTBO
 \includegraphics[width=\linewidth]{68_02}
 \includegraphics[width=\linewidth]{68_03}
 \end{center}
+\fi
 
 \question{Le système étudié est-il stable théoriquement ? Justifier vos réponses.}
 \ifprof
@@ -70,8 +74,11 @@ correcteur avec $K_I = \SI{1}{s^{-1}}$ . Déterminer alors la valeur de $K_I$ ma
 \else 
 \fi
 
+\ifprof
+\else
 Afin d’évaluer analytiquement le temps de réponse à 5\%, Il est proposé d’adopter une modélisation simplifiée du
 comportement du moteur en conservant uniquement le mode associé au pôle << dominant >>. On donne $T_{5\% \text{mini}}\cdot \omega_0 = 3$ avec $\omega_0$ la pulsation propre non amortie d’un système fondamental du second ordre.
+\fi
 
 \question{En analysant les valeurs numériques des pôles de la fonction de transfert du moteur en poursuite $H_U( p)$,
 préciser quel est le pôle dominant et proposer alors un modèle simplifié de la fonction de transfert $H_U ( p)$.
@@ -83,7 +90,8 @@ entrée échelon en poursuite. Calculer alors la valeur approchée du temps de r
 
 \textbf{Etude des performances avec un correcteur proportionnel intégral : $C(p)=K_P \left( 1+\dfrac{1}{T_i p}\right)$}
 
-
+\ifprof
+\else
 Le correcteur est remplacé par un correcteur proportionnel intégral. Des réponses temporelles du système corrigé sont
 tracées avec :
 \begin{itemize}
@@ -96,6 +104,7 @@ tracées avec :
 \begin{center}
 \includegraphics[width=\linewidth]{68_04}
 \end{center}
+\fi
 
 \question{Parmi les différentes valeurs de $T_I$ , choisir celle qui assure le temps de réponse à 5\% le plus faible. Vous
 ferez apparaître ce temps de réponse sur la figure.}
@@ -103,6 +112,9 @@ ferez apparaître ce temps de réponse sur la figure.}
 \else 
 \fi
 
+
+\ifprof
+\else 
 La valeur de $T_I$ déterminée à la question précédente est retenue pour le réglage du correcteur proportionnel intégral.
 Il s’agit alors de choisir le gain du correcteur $K_p$ à partir des simulations proposées.
 
@@ -110,6 +122,7 @@ Il s’agit alors de choisir le gain du correcteur $K_p$ à partir des simulatio
 \includegraphics[width=\linewidth]{68_05}
 \includegraphics[width=\linewidth]{68_06}
 \end{center}
+\fi
 
 \question{Parmi les différentes valeurs de $K_p$ , choisir la valeur qui assure un temps de réponse à 5\% au plus près de
 la valeur fournie dans le cahier des charges.}
@@ -117,12 +130,14 @@ la valeur fournie dans le cahier des charges.}
 \else 
 \fi
 
+\ifprof
+\else 
+
 Avec le couple de valeurs ($T_I$ et $K_p$) obtenu, la réponse fréquentielle du système en boucle ouverte a été tracée.
-
-
 \begin{center}
 \includegraphics[width=\linewidth]{68_07}
 \end{center}
+\fi
 
 
 \question{Conclure quant à la capacité de ce correcteur à respecter tous les critères du cahier des charges.}

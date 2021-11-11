@@ -14,6 +14,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+\ifprof
+\else
 
 
 On s'intéresse à l'échelle pivotante équipant un camion de pompier.
@@ -22,7 +24,6 @@ On s'intéresse à l'échelle pivotante équipant un camion de pompier.
 \centering
 \includegraphics[width=\linewidth]{64_01}
 \end{figure}
-\fi
 
 Les deux vérins doivent être capables de déplacer l’ensemble du parc échelle et la plate-forme
 chargée.
@@ -43,6 +44,7 @@ $\base{x_0}{y_0}{z_0}$ : $\inertie{G_P}{6} = \matinertie{A}{B}{C}{0}{0}{0}{\base
 \textbf{Les vérins (3+4) :} leurs masses seront négligées devant les autres masses.
 Ils devront exercer un effort, modélisé par un glisseur de résultante $\vect{R}=R\vy{3}$ , permettant le
 déplacement $\theta$.
+\fi
 
 \question{Déterminer l’expression littérale du moment dynamique en $A$ de l’ensemble
 \{parc échelle + berceau\} \textbf{(5)} par rapport au châssis \textbf{(0)} : $\vectmd{A}{5}{0}$.}

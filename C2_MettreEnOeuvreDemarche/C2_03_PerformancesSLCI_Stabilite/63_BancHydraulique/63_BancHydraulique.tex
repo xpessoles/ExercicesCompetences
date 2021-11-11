@@ -16,7 +16,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
-
+\ifprof
+\else
 
 Pour limiter l’erreur statique due aux fuites, on envisage d’asservir la pression d’eau dans le tube. 
 %L’objectif est ici de proposer un réglage du correcteur pour répondre aux critères du cahier des charges.
@@ -72,7 +73,7 @@ On se propose de corriger le système avec le correcteur défini sur le schéma 
 \begin{center}
 \includegraphics[width=5cm]{63_02}
 \end{center}
-
+\fi
 
 \question{Déterminer la fonction de transfert $C(p)$ de ce correcteur.}
 \ifprof
@@ -116,6 +117,8 @@ On donne les diagrammes de Bode en gain et en phase de la fonction de transfert 
 \else 
 \fi
 
+\ifprof
+\else
 
 \begin{center}
 \includegraphics[width=\linewidth]{63_03}
@@ -125,6 +128,7 @@ On donne les diagrammes de Bode en gain et en phase de la fonction de transfert 
 \begin{center}
 \includegraphics[width=\linewidth]{63_04}
 \end{center}
+\fi
 
 \ifprof
 \else

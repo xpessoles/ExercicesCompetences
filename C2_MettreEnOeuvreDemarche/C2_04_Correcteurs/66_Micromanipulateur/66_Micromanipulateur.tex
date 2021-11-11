@@ -3,8 +3,8 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Système éclipse $\star$ \label{C2:04:66}}
-%% CCP MP 2007
+\exer{Micromanipulateur $\star$ \label{C2:04:66}}
+% CCP PSI 2009
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{C2-04}
 \index{Compétence C2-04}
@@ -18,6 +18,9 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+
+\ifprof
+\else
 Pour élever la température à c\oe{}ur du moteur, on alimente en tension tous les bobinages du moteur par l'intermédiaure d'un comparateur et d'un amplificateur. Cet ensemble élabore une tension, dépendant de la teion de consigne $u_c(t)$, provenant d'un dispositif non étudié ici, et de la tension $u_m(t)$ fournie par un capteur de température situé dans le stator du moteur. 
 
 \begin{center}
@@ -37,17 +40,22 @@ Le cahier des charges est le suivant.
 \begin{center}
 \includegraphics[width=\linewidth]{66_02}
 \end{center}
+\fi
 
 \question{Expliquez en quelques lignes pourquoi le retard engendé par le capteur risque de rendre le système non conforme au cahier des charges.}
 \ifprof
 \else 
 \fi
 
+
+\ifprof
+\else 
 Pour supprimer l'inflience du retard, on choisit d'unsatller un correcteur en série juste avant l'amplificateur, comme indiqué sur le schéma-blocs suivant. 
 
 \begin{center}
 \includegraphics[width=\linewidth]{66_03}
 \end{center}
+\fi
 
 \question{Déterminer l'expression littérale de la fonction de transfert en boucle fermée du système ainsi corrigé en fonction de $H(p)$, $A$, $C(p)$, $C_1(p)$, $\beta$ et $T_r$.}
 \ifprof
@@ -59,6 +67,9 @@ Pour supprimer l'inflience du retard, on choisit d'unsatller un correcteur en s�
 \else 
 \fi
 
+\ifprof
+\else 
+
 \begin{center}
 \includegraphics[width=\linewidth]{66_04}
 \end{center}
@@ -66,6 +77,7 @@ Pour supprimer l'inflience du retard, on choisit d'unsatller un correcteur en s�
 Grâce au correcteur $C(p)$ choisi précédemment, le retard n'a plus d'influence sur la commande du système. 
 
 On choisit comme fonction de transfert de la seconde partie du ocrrecteur $C(p)=K_i \dfrac{1+T_i p}{T_i p}$. 
+\fi
 
 \question{Justifier le choix de $C(p)$ en vous appuyant sur les exigences du cahier des charges.}
 \ifprof

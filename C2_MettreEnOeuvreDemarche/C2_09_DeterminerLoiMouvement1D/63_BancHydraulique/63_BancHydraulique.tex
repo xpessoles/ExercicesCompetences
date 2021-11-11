@@ -17,6 +17,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+\ifprof
+\else
 Un schéma cinématique simplifié du chariot arrière, ainsi que les grandeurs cinématiques et cinétiques,
 sont donnés figure suivante.
 La chaîne de puissance comporte un moteur hydraulique, un réducteur roue et vis sans fin, un réducteur à
@@ -53,6 +55,8 @@ lente (de $t_r$ à $t_f$) $c_{\text{lent}}= \SI{1,56}{m}$.
 \item On considérera que le module de l'accélération $a$ du chariot est identique pendant toutes les
 phases d'accélération et de décélération.
 \end{itemize}
+
+\fi
 
 \question{Exprimer $c_{\text{lent}}$ et $c_{\text{rap}}$ en fonction de $t_a$, $t_l$ et $t_r$.}
 \ifprof
@@ -110,8 +114,8 @@ On se propose de déterminer le couple nécessaire du moteur.
  \item $\omega_M = - \dfrac{VR_3}{rR_1R_p}$.
  \item $\omega_m = -\SI{406}{rad.s^{-1}}$ et  $\dot{\omega}_m= -\SI{158}{rad.s^{-2}}$.
  \item $\ec{\Sigma}{0} = \dfrac{1}{2}MV^2 + \dfrac{1}{2}\left( I_M + I_r \right)\omega_m^2$.
- \item $J_{\text{eq}} = I_M + I_r + M \left( \dfrac{rR_1 R_p}{}\right)^2 = \SI{0,00877}{kgm^2}$.
- \item $C_M \dfrac{J_{\text{eq} \dot{\omega}_m + F \dfrac{rR_1R_p}{R_3}}{\eta} = \SI{10,4}{Nm}$ (rendement à voir...).
+ \item $J_{\text{eq}} = I_M + I_r + M \left( \dfrac{rR_1 R_p}{R_3}\right)^2 = \SI{0,00877}{kg.m^2}$.
+ \item $C_M \dfrac{J_{\text{eq}} \dot{\omega}_m + F \dfrac{rR_1R_p}{R_3}}{\eta} = \SI{10,4}{Nm}$ (rendement à voir...).
 \end{enumerate}
 \normalsize
 

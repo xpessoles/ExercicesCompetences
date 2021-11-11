@@ -36,21 +36,21 @@ Les performances du système sont détaillées dans le diagramme des exigences p
 
 \question{Déterminer l'expression de la fonction de transfert en boucle ouverte $H_{\text{bo}}(p)=\left(\frac{Z(p)}{\varepsilon(p)}\right)_{C_r(p)=0}$ ainsi que la fonction de transfert $H_{\text{cr}}(p)=\left(\frac{Z(p)}{C_r(p)}\right)_{Z_c=0}$.}
 \ifprof
-\begin{corrige}~\\
+%\begin{corrige}~\\
 
 $H_{\text{bo}}(p) = H_{\text{cor}}(p) \dfrac{K_1}{p\left(1+T_m p\right)}$ $=  \dfrac{K_1 K_p}{p\left(1+T_m p\right)}$.
 
 $H_{\text{cr}}(p)= -K_2\dfrac{\dfrac{K_1}{p\left(1+T_m p\right)}}{1+H_{\text{cor}}(p) \dfrac{K_1}{p\left(1+T_m p\right)}}$
 $= -K_2\dfrac{K_1}{p\left(1+T_m p\right)+H_{\text{cor}}(p) K_1}$
 $= -\dfrac{K_1K_2}{p\left(1+T_m p\right)+K_p K_1}$
-\end{corrige}
+%\end{corrige}
 \else
 \fi
 
 \question{Déterminer l'erreur statique pour une entrée de type échelon d'amplitude $Z_{c0}$ dans l'hypothèse d'une perturbation nulle ($C_{r0}$). Déterminer ensuite l'erreur due à une perturbation constante $C_{r0}$, dans le cas d'une
 consigne de position nulle ($Z_c=0$). En déduire la valeur de $K_p$ pour satisfaire le critère de précision du cahier des charges.}
 \ifprof
-\begin{corrige}
+%\begin{corrige}
 Exprimons $\varepsilon(p)$ en fonction de $Z_c(p)$ et $C_{r}(p)$ :
 
 $
@@ -78,7 +78,7 @@ AN : $\varepsilon_s < \SI{1}{mm}$
 $\Leftrightarrow \dfrac{K_2 C_{r0}}{ K_p} < \SI{1}{mm}$  
 $\Leftrightarrow 
 2,78 \cdot 10^{-2} \times 2,7 \cdot 10^{-3} \times 10^3<  K_p$  soit $K_p >0,08$.
-\end{corrige}
+%\end{corrige}
 \else
 \fi
 
@@ -86,7 +86,7 @@ $\Leftrightarrow
 \question{Sur le document réponse %de la figure (\ref{bode_bo}) 
 compléter les diagrammes de Bode en gain et en phase de $H_{\text{bo}}(p)$ pour $K_p$ déterminé précédemment. Indiquer si le critère de stabilité est satisfait en justifiant votre démarche par des tracés nécessaires.}
 \ifprof
-\begin{corrige}~\\
+%\begin{corrige}~\\
 En ajoutant le gain de 0,08, il faut translater la courbe de gain vers le bas de 22 dB.
 
 \begin{center}
@@ -94,7 +94,7 @@ En ajoutant le gain de 0,08, il faut translater la courbe de gain vers le bas de
 \end{center}
 
 La marge de phase est supérieure à 60\degres.
-\end{corrige}
+%\end{corrige}
 \else
 \fi
 
@@ -102,15 +102,15 @@ Afin d'améliorer le comportement, on implante un correcteur Proportionnel Inté
 
 \question{Tracer le diagramme de Bode de la fonction de transfert en boucle ouverte avec ce correcteur avec $K_p=1$ et $T_i = \SI{1}{s}$.}% sur la figure \ref{bode_bo_PI}.}
 \ifprof
-\begin{corrige}
-\end{corrige}
+%\begin{corrige}
+%\end{corrige}
 \else
 \fi
 
 \question{On souhaite une marge de phase d'au moins $60^{\circ}$. Proposer un réglage de $K_p$ pour satisfaire au cahier des charges.}% Justifier vos calculs par les tracés nécessaires sur la figure \ref{bode_bo_PI}.}
 \ifprof
-\begin{corrige}
-\end{corrige}
+%\begin{corrige}
+%\end{corrige}
 \else
 \fi
 
@@ -118,7 +118,7 @@ Afin d'améliorer le comportement, on implante un correcteur Proportionnel Inté
 donne la réponse à un échelon de position de \SI{50}{mm} avec trois types de correcteurs. Vérifier qu'elle est conforme au cahier des charges. Justifier clairement vos réponses en donnant les valeurs numériques pour chaque critère.}
 \ifprof
 
-\begin{corrige} ~\\
+%\begin{corrige} ~\\
 \begin{center}
 \begin{tabular}{|l|c|c|c|}
 \hline
@@ -133,7 +133,7 @@ Précision < \SI{1}{mm} & Ok (?) & Ok & Ok \\ \hline
 \includegraphics[width=.5\linewidth]{cor_07}
 \end{center}
 
-\end{corrige}
+%\end{corrige}
 \else
 \fi
 
@@ -149,7 +149,7 @@ Précision < \SI{1}{mm} & Ok (?) & Ok & Ok \\ \hline
 
 \question{Analyser les résultats à l'aide du diagramme de Bode de la FTBO corrigé avec un PID optimisé.}% (figure \ref{bode_pid}.)}
 \ifprof
-\begin{corrige}~\\
+%\begin{corrige}~\\
 
 \begin{center}
 \includegraphics[width=.5\linewidth]{cor_08}
@@ -157,7 +157,7 @@ Précision < \SI{1}{mm} & Ok (?) & Ok & Ok \\ \hline
 
 La marge de phase est supérieure à 60\degres.
 
-\end{corrige}
+%\end{corrige}
 \else
 \fi
 
