@@ -1,0 +1,134 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctionfalse
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Système éclipse $\star$ \label{C2:04:67}}
+%% CCP MP 2007
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{C2-04}
+\index{Compétence C2-04}
+\index{Correcteur}
+\index{Correcteur proportionnel intégral}
+\index{Pompe turbo-moléculaire}
+
+
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+Afin de satisfaire les critères du cahier des charges, on envisage d'asservir le
+palier magnétique par un premier bouclage de stabilisation (retour $K_D p + K_P$).
+Un second retour unitaire associé à un correcteur $C(p)$ assure la régulation en
+position du palier. On utilisera par la suite les paramètres suivants : 
+$K_e = \SI{5000}{V.m^{-1}}$, $K_0 = \SI{190}{N.m^{-1}}$ et $m=\SI{10}{kg}$.
+On considère dans un premier temps le système sans correction : $C(p)=1$.
+
+\begin{center}
+\includegraphics[width=\linewidth]{67_01}
+\end{center}
+
+\begin{center}
+\includegraphics[width=\linewidth]{67_02}
+\end{center}
+
+\question{Déterminer la fonction de transfert de la boucle interne $H_{\text{PM I}}(p)=\dfrac{X(p)}{\varepsilon(p)}$, en fonction de $K_e$, $K_0$, $m$, $K_P$ et $K_D$. Préciser les conditions
+sur $K_D$ et $K_P$ pour que $H_{\text{PM I}}(p)$ soit stable en boucle ouverte.}
+\ifprof
+\else 
+\fi
+
+\question{En considérant l’ensemble de l’asservissement, déterminer la fonction de transfert $H_{\text{pert}}(p)=\dfrac{X(p)}{F_{\text{pert}}(p)}$, puis calculer les valeurs de $K_D$ et $K_P$
+permettant de respecter les spécifications du cahier des charges en terme de bande passante et d'amortissement.}
+\ifprof
+\else 
+\fi
+
+\begin{center}
+\includegraphics[width=\linewidth]{67_03}
+\end{center}
+
+\question{Tracer l'allure des diagrammes de Bode asymptotique et réel de la fonction
+de transfert de la boucle interne $H_{\text{PM I}}(p)$ et préciser la pulsation de coupure
+ainsi que les marges de gain et de phase. Valider les critères de stabilité du
+cahier des charges.}
+\ifprof
+\else 
+\fi
+
+L'ouverture et la fermeture des arrivées de gaz sont assurées par des « vannes
+guillotines ». À la suite de la fermeture de la guillotine, le palier est soumis à un
+effort bref mais violent, qui peut être modélisé par une perturbation d'effort en
+échelon d'amplitude $F_G$.
+
+\question{Conclure quant au critère de sensibilité vis-à-vis des perturbations.}
+\ifprof
+\else 
+\fi
+
+Afin d'améliorer les performances du système, on utilise un correcteur de fonction
+de transfert : $C(p)=K_i \left( 1+\dfrac{1}{T_i p}\right)$.
+
+\question{Quelle performance est directement améliorée par ce correcteur ? (justifier
+votre réponse sans calcul).}
+\ifprof
+\else 
+\fi
+
+\question{Tracer l'allure du diagramme de Bode du correcteur en précisant les
+valeurs caractéristiques. Expliquer comment choisir $K_i$ et $T_i$ afin de conserver
+des marges de gain, de phase, et une pulsation de coupure proches de celles obtenues
+sans correction ($C(p)=1$ ). Proposer des valeurs numériques.}
+\ifprof
+\else 
+\fi
+
+
+On admet que le correcteur influe peu sur le temps de réponse et les dépassements
+lorsque les marges de stabilité et la pulsation de coupure sont conservées.
+On garde par conséquent les valeurs de $K_P$ et $K_D$ obtenues précédemment.
+
+Conclusion : nous avons donc désormais dimensionné les deux boucles d'asservissement
+successives permettant d'obtenir les performances attendues du palier
+magnétique.
+
+Afin de préparer la prochaine partie, relative à l'étude dynamique du rotor, on
+recherche un modèle simple de l'effort du palier magnétique actif en fonction du
+déplacement $x$ de l'arbre, dans une gamme de vitesses de rotation raisonnables
+variant de $\SI{10000}{tr.min^{-1}}$ à $\SI{30000}{tr.min^{-1}}$.
+
+
+
+\question{Déterminer la fonction de transfert $K(p)$ telle que $F_T(p)=K(p)X(p)$.
+À partir de simplifications justifiées, montrer que dans la plage de fréquences
+considérée, l'effort $F_T(p)$ peut s'écrire sous la forme d'un modèle ressort amortisseur
+$F_T(t)=-kx(t)-c\dot{x}(t)$ où vous préciserez les valeurs numériques de $k$ et $c$. Comment évolue le modèle lorsque $\omega$ augmente au delà de cette plage de
+fréquences ?}
+\ifprof
+\else 
+\fi
+
+
+
+\ifprof
+\else
+
+\noindent\footnotesize
+ \fbox{\parbox{.9\linewidth}{
+Éléments de corrigé : 
+\begin{enumerate}
+\item $K_P>K_e$ et $K_D>0$.
+\item $K_P = 5900$ et $K_D = 5,5$.
+\item $\omega_{\text{c0}}=\SI{150}{rad.s^{-1}}$, $M_{\varphi}=\SI{110}{\degres}$.
+\item .
+\item .
+\item $K_i=1$ et $T_i = \SI{0,07}{s}$.
+\item .
+\end{enumerate}}}
+\normalsize
+
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{C2:04:67}.}
+\end{flushright}%
+\fi
