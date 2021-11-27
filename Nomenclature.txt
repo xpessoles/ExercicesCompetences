@@ -118,3 +118,5 @@
 1015_Dessin2D
 1016_Dessin2D
 1017_Dessin2D
+1018_BorneReglable
+1019_RobotPeinture
