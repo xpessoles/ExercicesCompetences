@@ -28,11 +28,22 @@ Soit le mécanisme suivant. On a $\vect{AB}=\lambda(t)\vect{i_1}$. De plus :
 \begin{center}
 \includegraphics[width=\linewidth]{05_RT_01}
 \end{center}
+
+Par ailleurs, on donne $\torseurcin{V}{2}{0} =\torseurl{\dot{\theta}(t)\vk{0}}{\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}}{B}$ et $\vectg{B}{2}{0} =  \left( \ddot{\lambda}(t)-\lambda(t)\dot{\theta}(t)^2\right)\vi{1}  +  \left( \dot{\lambda}(t)\dot{\theta}(t) +\dot{\lambda}(t)\dot{\theta}(t)\right) \vj{1}$.
+
 \fi
+
+
 
 \question{Exprimer le torseur dynamique $\torseurdyn{1}{0}$ en $A$.}
 \ifprof
+On a $\torseurdyn{1}{0} = \torseurl{\vectrd{1}{0}}{\vectmd{A}{1}{0}}{A}$
 \else
+
+\textbf{Calculons $\vectrd{1}{0}$}
+
+$\vectrd{1}{0} = m_1 \vectg{G_1}{1}{0}$ 
+
 \fi
 
 \question{Déterminer $\vectmd{A}{1+2}{0}\cdot \vect{k_0}$}
