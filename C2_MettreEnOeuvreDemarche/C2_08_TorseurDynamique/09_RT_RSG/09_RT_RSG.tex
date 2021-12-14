@@ -29,10 +29,50 @@ On fait l'hypothèse de roulement sans glissement au point $I$. De plus :
 \begin{center}
 \includegraphics[width=\linewidth]{09_RT_RSG_01}
 \end{center}
+
+On donne  $\vectv{B}{2}{0} = \lambdap\vi{1} + \thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)$
+et
+
+$\vectg{B}{2}{0}  = \lambdapp(t)\vi{1} %+\lambdap(t)\thetap\vj{1} 
++ \thetapp(t)\left(\lambda(t)\vj{1}-R\vi{0} \right)
++ \thetap(t)\left(2\lambdap(t)\vj{1}-\lambda(t)\thetap\vi{1} \right)
+$.
+
+
 \fi
+
+
 
 \question{Déterminer $\vectrd{2}{0}\cdot \vect{i_1}$}
 \ifprof
+
+Par définition, $\vectrd{2}{0} =  m_2 \vectg{G_2}{2}{0}=  m_2 \vectg{B}{2}{0}$.
+
+\vspace{.5cm}
+
+\textbf{Calcul de $ \vectv{B}{2}{0}$ :}
+
+$\vectv{B}{2}{0}=\vectv{B}{2}{1}+\vectv{B}{1}{0}$.
+
+D'une part,  $\vectv{B}{2}{1}=\lambdap\vi{1}$.
+
+D'autre part, en utilisant le roulement sans glissement en $I$, 
+$\babarv{B}{I}{1}{0} $ $=\vect{0}+\left(-\lambda(t)\vi{1}-R\vj{0} \right)\wedge\thetap \vk{0}$
+$=-\thetap\left(\lambda(t)\vi{1}\wedge \vk{0}+R\vj{0}\wedge \vk{0} \right)$
+$=\thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)$.
+
+Au final, $\vectv{B}{2}{0} = \lambdap\vi{1} + \thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)$.
+
+\vspace{.5cm}
+
+\textbf{Calcul de $ \vectg{B}{2}{0}$ :}
+
+$\vectg{B}{2}{0} = \deriv{\vectv{B}{2}{0}}{\rep{0}}$
+$ = \lambdapp(t)\vi{1} +\lambdap(t)\thetap\vj{1} 
++ \thetapp(t)\left(\lambda(t)\vj{1}-R\vi{0} \right)
++ \thetap(t)\left(\lambdap(t)\vj{1}-\lambda(t)\thetap\vi{1} \right)
+$.
+
 \else
 \fi
 
