@@ -98,7 +98,9 @@
 528_BrocheFraisage
 529_Passerelle
 530_BancHelico
-531_RdM [Déformée@
+531_RdM 
+532_MAM_Frottement_Cylindre
+533_MAM_Frottement_Cylindre
 
 1000_Dessin2D
 1001_Dessin2D
