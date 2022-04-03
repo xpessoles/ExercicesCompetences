@@ -1,6 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
-
+\correctiontrue
 %\UPSTIidClasse{12} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
@@ -35,11 +34,32 @@ Un ressort exerce une action mécanique entre les points $A$ et $B$.
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+\begin{center}
+\includegraphics[width=.7\linewidth]{09_RT_RSG_cor_01}
+\end{center}
+
 \else
 \fi
 
 \question{Proposer une démarche permettant de déterminer les loi de mouvement de \textbf{1} et de \textbf{2} par rapport à $\rep{0}$.}
 \ifprof
+Le système posède deux mobilités : 
+\begin{itemize}
+\item translation de 1 par rapport à 2 ($\lambda$);
+\item rotation de l'ensemble \{1+2\} autour du point $I$ (le roulement sans glissement permet d'écrire une relation entre la rotation de paramètre $\theta$ et le déplacement suivant $\vi{0}$.
+\end{itemize}
+
+On en déduit la stratégie suivante : 
+\begin{itemize}
+\item on isole 2 et on réalise un théorème de la résultante dynamique en projection suivant $\vi{1}$. BAME : 
+$\torseurstat{T}{1}{2}$, $\torseurstat{T}{1_{\text{ressort}}}{2}$ ($\vectf{1}{2}\cdot \vi{1}= 0$ et 
+$\vectf{1_{\text{ressort}}}{2}\cdot \vi{1}= 0$)
+$\torseurstat{T}{\text{Pesanteur}}{2}$.
+\item on isole \{1+2\} et on réalise un théorème du moment dynamique en $I$ en projection suivant $\vk{0}$. BAME : 
+$\torseurstat{T}{0}{1}$ ($\vectm{I}{0}{1}\cdot \vk{0}= 0$), 
+$\torseurstat{T}{\text{Pesanteur}}{1}$ et $\torseurstat{T}{\text{Pesanteur}}{2}$.
+
+\end{itemize}
 \else
 \fi
 
