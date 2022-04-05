@@ -19,7 +19,7 @@
 \else
 
 \begin{obj}
-L'objectif est de déterminer le couple articulaire C12 à appliquer sur le bras 2 afin de garantir l'effort de
+L'objectif est de déterminer le couple articulaire $C_{12}$ à appliquer sur le bras 2 afin de garantir l'effort de
 perçage et l’effort presseur.
 \end{obj}
 
@@ -39,7 +39,7 @@ perçage et l’effort presseur.
 
 
 
-\textbf*{Repérage et paramétrage}
+\textbf{Repérage et paramétrage}
 
 Le repère associé à l'embase fixe (0) est le repère $\rep{0}\repere{O_0}{x_0}{y_0}{z_0}$, $\vect{y_0}$ étant l'axe vertical
 ascendant.
@@ -74,7 +74,10 @@ L’extrémité de l’outil est définie par le point $P$ définie par $\vect{O
 
 Le torseur d’action mécanique lié au perçage sera noté : $\torseurstat{T}{\text{Tronçon (perçage)}}{E_1}=\torseurcol{-F}{0}{0}{0}{0}{0}{P, \rep{5}}$.
 Un effort presseur est de plus nécessaire pour le perçage optimal des deux tronçons. Le torseur
-d’action mécanique associé sera noté :$\torseurstat{T}{\text{Tronçon (presseur)}}{E_1}=\torseurcol{-P}{0}{0}{0}{0}{0}{P, \rep{5}}$..
+d’action mécanique associé sera noté :$\torseurstat{T}{\text{Tronçon (presseur)}}{E_1}=\torseurcol{-P}{0}{0}{0}{0}{0}{P, \rep{5}}$.
+
+Le torseur couple modélisant l'action du moteur sur la pièce \textbf{1} sur \textbf{2} : $\torseurstat{T}{1_m}{2}=\torseurl{\vect{0}}{C_{12}\vect{z_0}}{\forall P}$.
+
 
 La rotation entre les solides (0) et (1) est supposée bloquée dans la suite du sujet.
 
