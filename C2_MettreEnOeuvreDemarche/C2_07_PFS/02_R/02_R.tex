@@ -1,5 +1,5 @@
 \normaltrue
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -38,12 +38,16 @@ On note $m_1$ la masse du solide 1 et $B$ son centre d'inertie.
 \else
 \fi
 
+\ifprof
+
+\else
 On donne 
 %$\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{1}+Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}}{A}$,
 $\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$ et
 $\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$.
 
 On isole \textbf{1} et on réalise un théorème du moment statique en $A$ en projection sur $\vk{0}$.
+\fi
 
 \question{Donner l'équation d'équilibre de la pièce \textbf{1}.}
 \ifprof
@@ -55,9 +59,11 @@ On isole \textbf{1} et on réalise un théorème du moment statique en $A$ en pr
 \item $\torseurstat{F}{0}{1}=\torseurl{X_{01}\vi{0}+Y_{01}\vj{0}}{\vect{0}}{A}$;
 \item $\torseurstat{F}{\text{Mot}}{1}=\torseurl{\vect{0}}{C_m\vk{0}}{A}$;
 \item $\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{B}$ et 
-$\vectm{A}{\text{pes}}{1} = \vectm{B}{\text{pes}}{1} + \vect{AB}\wedge -m_1g\vj{0}$.
+$\vectm{A}{\text{pes}}{1} = \vectm{B}{\text{pes}}{1} + \vect{AB}\wedge -m_1g\vj{0}$
+$=  R\vi{1}\wedge -m_1g\vj{0}$ $=  -Rm_1g\vk{0}$.
 \end{itemize}
-\item 
+\item On réalise le théorème du moment statique en $A$ en projection sur $\vk{0}$ :
+$C_m  -Rm_1g = 0$.
 \end{itemize}
 \else
 \fi
@@ -65,6 +71,10 @@ $\vectm{A}{\text{pes}}{1} = \vectm{B}{\text{pes}}{1} + \vect{AB}\wedge -m_1g\vj{
 
 \question{Déterminer l'ensemble des inconnues de liaisons.}
 \ifprof
+
+On réalise le TRS en projection sur $\vi{0}$ : $X_{01}=0$.
+
+On réalise le TRS en projection sur $\vj{0}$ : $Y_{01}=m_1g$.
 \else
 \fi
 
