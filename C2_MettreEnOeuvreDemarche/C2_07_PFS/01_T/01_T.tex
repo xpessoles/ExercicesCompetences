@@ -1,5 +1,5 @@
 \normaltrue
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{12} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -16,7 +16,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
-
+\ifprof
+\else
 Soit le mécanisme suivant. On note $\vect{AB}=\lambda(t)\vect{i_0}$. On note $m_1$ la masse du solide \textbf{1}.
 On note $G$ le centre d'inertie de \textbf{1} tel que $\vect{BG}=\ell \vect{j_1}$ ($\vj{1}=\vj{0}$). La pesanteur est telle que $\vect{g}=-g\vect{i_0}$. Un vérin pneumatique positionné entre \textbf{1} et \textbf{0} permet de maintenir \textbf{1} en équilibre. 
 %On souhaite prendre en compte les frottements secs dans la liaison glissière.
@@ -30,6 +31,7 @@ On donne
 %$\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}+Z_{01}\vk{1}}{L_{01}\vi{1}+M_{01}\vj{1}+N_{01}\vk{1}}{A}$,
 $\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{0}}{G}$ et 
 $\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{A}$.
+\fi
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
@@ -39,9 +41,10 @@ $\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{A}$.
 \else
 \fi
 
-
+\ifprof
+\else
 On isole \textbf{1} et on applique le théorème de la résultante statique en projection suivant $\vi{0}$.
-
+\fi
 \question{Exprimer l'équation d'équilibre de la pièce~\textbf{1}.}
 \ifprof
 \begin{itemize}
@@ -52,7 +55,7 @@ On isole \textbf{1} et on applique le théorème de la résultante statique en p
 \item vérin : $\torseurstat{F}{\text{ver}}{1}=\torseurl{F_v\vi{1}}{\vect{0}}{A}$;
 \item liason glissière : $\torseurstat{F}{0}{1}=\torseurl{Y_{01}\vj{1}+Z_{01}\vj{1}}{L_{01}\vi{1}+M_{01}\vj{1}+N_{01}\vj{1}}{A}$.
 \end{itemize}
-En appliquant le théorème de la résultante statique en projection suivant $\vi{0}$, on a $-m_1g+F_v = 0$/ 
+En appliquant le théorème de la résultante statique en projection suivant $\vi{0}$, on a $-m_1g+F_v = 0$.
 
 \end{itemize}
 \else
@@ -60,6 +63,28 @@ En appliquant le théorème de la résultante statique en projection suivant $\v
 
 \question{Déterminer l'ensemble des inconnues de liaison.}
 \ifprof
+En $A$, on a 
+$\torseurstat{F}{\text{pes}}{1}=\torseurl{-m_1g\vi{1}}{\vect{AG}\wedge -m_1g\vi{1}}{A}$
+$=\torseurl{-m_1g\vi{1}}{\left(\lambda(t)\vi{0}+\ell \vj{1} \right)\wedge -m_1g\vi{1}}{A}$
+$=\torseurl{-m_1g\vi{1}}{\ell m_1g\vk{1}}{A}$
+En appliquant le PFS à 1, on a le TRS :
+$\left\{
+\begin{array}{l}
+0 -m_1 g   + F_v = 0 \\
+Y_{01} =  0 \\
+Z_{01} =  0 \\
+\end{array}
+\right.$
+et le TMS en A :
+$\left\{
+\begin{array}{l}
+L_{01} = 0 \\
+M_{01} =  0 \\
+N_{01} +\ell m_1g=  0 \\
+\end{array}
+\right.$.
+
+
 \else
 \fi
 
