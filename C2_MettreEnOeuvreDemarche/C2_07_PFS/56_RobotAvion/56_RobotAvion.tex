@@ -74,7 +74,7 @@ L’extrémité de l’outil est définie par le point $P$ définie par $\vect{O
 
 Le torseur d’action mécanique lié au perçage sera noté : $\torseurstat{T}{\text{Tronçon (perçage)}}{E_1}=\torseurcol{-F}{0}{0}{0}{0}{0}{P, \rep{5}}$.
 Un effort presseur est de plus nécessaire pour le perçage optimal des deux tronçons. Le torseur
-d’action mécanique associé sera noté :$\torseurstat{T}{\text{Tronçon (presseur)}}{E_1}=\torseurcol{-P}{0}{0}{0}{0}{0}{P, \rep{5}}$.
+d’action mécanique associé sera noté : $\torseurstat{T}{\text{Tronçon (presseur)}}{E_1}=\torseurcol{-P}{0}{0}{0}{0}{0}{P, \rep{5}}$.
 
 Le torseur couple modélisant l'action du moteur sur la pièce \textbf{1} sur \textbf{2} : $\torseurstat{T}{1_m}{2}=\torseurl{\vect{0}}{C_{12}\vect{z_0}}{\forall P}$.
 
@@ -93,17 +93,23 @@ La rotation entre les solides (0) et (1) est supposée bloquée dans la suite du
 \fi
 
 \question{Quel est l'ensemble $\Sigma$ à isoler afin de déterminer le couple $C_{12}$.}
+
 \ifprof
+En isolant l'ensemble $\Sigma = \{2+3+4+E_1\}$ on ne fera apparaître \textbf{QUE} $C_{12}$ et les actions mécaniques extérieures. Les actions de liaison 2--3, 3--4, 4--E1 \textbf{n'interviendont pas}. 
 \else
 \fi
 
 \question{Réaliser un bilan des actions mécaniques extérieures appliquées à $\Sigma$ et écrire les éléments de réduction de chaque torseur d'actions mécaniques.}
 \ifprof
+\begin{itemize}
+
+\end{itemize}
 \else
 \fi
 
 \question{Quel théorème doit-être appliqué et sur quel axe de projection, pour déterminer le couple $C_{12}$ ?}
 \ifprof
+Pour ne pas faire apparaître les actions de la liaison 1--2 il faudra réaliser un théorème du moment statique en $O_2$ en projection sur $\vect{z_2}$ (la liaison pivot n'a pas de composante en ce point et sur cette projection).
 \else
 \fi
 
