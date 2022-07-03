@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -20,7 +20,23 @@
  \fi
  
 \question{Tracer le diagramme de Bode de la fonction de transfert suivante : $F_1(p)=\dfrac{15}{1+10p}$.}
+
 \ifprof
+
+\textbf{Tracer asymptotique}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{tab_01}
+\end{center}
+
+
+\textbf{Positionnement du diagramme de gain}
+Lorsque que $\omega$ tend vers 0, le gain tend vers $20 \log 15 = \SI{23,5}{dB}$.
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{bode_01}
+\end{center}
+
 \else 
 \begin{center}
 \includegraphics[width=.9\linewidth]{510_01}
@@ -30,6 +46,22 @@
 
 \question{Tracer le diagramme de Bode de la fonction de transfert suivante : $F_2(p)=\dfrac{10}{\left(1+10p\right)\left(10+p\right)}$.}
 \ifprof
+\textbf{Tracer asymptotique}
+
+$F_2(p)=\dfrac{1}{\left(1+10p\right)\left(1+\dfrac{p}{10}\right)}$
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{tab_02}
+\end{center}
+
+
+\textbf{Positionnement du diagramme de gain}
+Lorsque que $\omega$ tend vers 0, le gain tend vers $20 \log 1 = \SI{0}{dB}$.
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{bode_02}
+\end{center}
+
 \else 
 \begin{center}
 \includegraphics[width=.9\linewidth]{510_01}
@@ -39,6 +71,21 @@
 
 \question{Tracer le diagramme de Bode de la fonction de transfert suivante : $F_3(p)=\dfrac{40}{p\left(1+300p\right)}$.}
 \ifprof
+
+\textbf{Tracer asymptotique}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{tab_03}
+\end{center}
+
+
+\textbf{Positionnement du diagramme de gain}
+Lorsque que $\omega$ tend vers 0, $F_3(p)\simeq \dfrac{40}{p}$. Cette asymptote de pente \SI{-20}{dB/decade} passe par le point $(40,0)$. 
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{bode_03}
+\end{center}
+
 \else 
 \begin{center}
 \includegraphics[width=.9\linewidth]{510_01}
