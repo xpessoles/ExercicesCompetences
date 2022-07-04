@@ -28,12 +28,24 @@ Soit la réponse à un échelon.
 
 \question{Déterminer la fonction de transfert du système.}
 \ifprof
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=\linewidth]{51_01_c}
-%\caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
-%fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
-%\end{figure}
+\begin{center}
+\includegraphics[width=8cm]{502_01_cor}
+\end{center}
+
+La tangente à l'origine est non nulle. Il n'y a pas de dépassement. On va donc identifier un système d'ordre 1 de la forme $H(p)=\dfrac{K}{1+\tau p}$.
+
+L'échelon d'entrée a une amplitude de 2. En régime permanent la valeur atteinte est de 7. On a donc $K = \dfrac{7}{2}=3,5$.
+
+Pour identifier la constante de temps, on peut : 
+\begin{itemize}
+\item regarder à quel temps a lieu l'intersection entre l'asympote en régime permanent et la tangente à l'origine;
+
+\item mesurer le temps de temps réponse à 63\,\%;
+
+\item mesurer le temps de temps réponse à 95\,\% et diviser cette valeur par 3.
+\end{itemize}
+
+On a donc $H(p)=\dfrac{3,5}{1+8p}$.
 \else
 \fi
 
@@ -50,19 +62,41 @@ Soit la réponse à un échelon d'amplitude 2,5.
 
 \question{Déterminer la fonction de transfert du système.}
 \ifprof
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=\linewidth]{51_01_c}
-%\caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
-%fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
-%\end{figure}
+\begin{center}
+\includegraphics[width=8cm]{502_02_cor}
+\end{center}
+
+La tangente à l'origine est nulle et il y a des dépassements. On modélise le système par un système d'ordre 2. 
+$H(p)=\dfrac{K}{1+\dfrac{2\xi}{\omega_0}p+\dfrac{p^2}{\omega_0^2}}$.
+
+On a $K= \dfrac{1,25}{2,5}=0,5$.
+
+On mesure un dépassement de 
+$1,38 = e^{\dfrac{-\pi \xi}{\sqrt{1-\xi^2}}}$
+$\Leftrightarrow \ln 1,38 = \dfrac{-\pi \xi}{\sqrt{1-\xi^2}}$
+$\Leftrightarrow \sqrt{1-\xi^2} \ln 1,38 = -\pi \xi$
+$\Leftrightarrow (1-\xi^2) (\ln 1,38)^2= \pi^2 \xi^2$
+$\Leftrightarrow (\ln 1,38)^2-\xi^2(\ln 1,38)^2 = \pi^2 \xi^2$
+$\Leftrightarrow (\ln 1,38)^2 = \pi^2 \xi^2 + \xi^2(\ln 1,38)^2$
+$\Leftrightarrow (\ln 1,38)^2 =\xi^2 \left(\pi^2  + (\ln 1,38)^2\right)$
+$\Leftrightarrow \dfrac{(\ln 1,38)^2}{\pi^2  + (\ln 1,38)^2} =\xi^2 $
+$\Leftrightarrow \xi = \sqrt{\dfrac{(\ln 1,38)^2}{\pi^2  +(\ln 1,38)^2}} =0,1 $.
+
+
+Par ailleurs, $\omega_0 = \dfrac{2\pi }{T_p \sqrt{1-\xi^2}} =\dfrac{2\pi }{0,44 \sqrt{1-0,1^2}} = \SI{14,25}{rad.s^{-1}}$.
+
+Au final, $H(p)=\dfrac{0,5}{1+\dfrac{2\times 0,1}{14,25}p+\dfrac{p^2}{14,25^2}}$.
 \else
 \fi
 
 
-
 \ifprof
 \else
+Indications :
+\begin{enumerate}
+\item  $H(p)=\dfrac{3,5}{1+8p}$.
+\item $H(p)=\dfrac{0,5}{1+\dfrac{2\times 0,1}{14,25}p+\dfrac{p^2}{14,25^2}}$.
+\end{enumerate}
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:06:502}.}
 \end{flushright}%
