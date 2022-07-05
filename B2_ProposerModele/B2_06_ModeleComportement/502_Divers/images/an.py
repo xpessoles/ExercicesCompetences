@@ -1,5 +1,5 @@
 import math as m
-num = m.log(1.38)
+num = m.log(0.38)
 num = num*num
 
 den = m.pi*m.pi+num
