@@ -1,6 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
-
+\correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
@@ -191,15 +190,81 @@ B  p
  + C(p)\dfrac{ K_8 k_t}{Rr\rho_1 } }
 $
 
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{
+\dfrac{R}{k_ek_t}\dfrac{K_8k_t}{R}}{
+p\left(B p +  1\right) 
+ + C(p)K_8 \dfrac{k_t}{R} \dfrac{R}{k_ek_t}
+ }
+- F_P(p)\dfrac{K_9\dfrac{Rr\rho_1}{  k_ek_t}}{
+p\left(
+B  p
+ + 1\right)
+ + C(p)\dfrac{Rr\rho_1}{  k_ek_t}\dfrac{ K_8 k_t}{Rr\rho_1 } }
+$
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{
+\dfrac{K_8}{k_e}}{
+p\left(B p +  1\right) 
+ + C(p) \dfrac{K_8 }{k_e}
+ }
+- F_P(p)\dfrac{K_9\dfrac{Rr\rho_1}{  k_ek_t}}{
+p\left(
+B  p
+ + 1\right)
+ + C(p)\dfrac{K_8}{  k_e} }
+$
 
 
-On montre $A=\dfrac{K_8}{k_e}$, $B=\dfrac{R\left(m+M\right)r^2\rho_1^2}{k_ek_t}$ et $D=\dfrac{r^2\rho_1^2R}{K_8k_t}$.
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{
+\dfrac{K_8}{k_e}}{
+p\left(B p +  1\right) 
+ + C(p) \dfrac{K_8 }{k_e}
+ }
+- F_P(p)\dfrac{ \dfrac{K_8}{  k_e} \dfrac{  k_e}{K_8}K_9\dfrac{Rr\rho_1}{  k_ek_t}}{
+p\left(
+B  p
+ + 1\right)
+ + C(p)\dfrac{K_8}{  k_e} }
+$
+
+
+
+On a donc $A=\dfrac{K_8}{k_e}$, $B=\dfrac{R\left(m+M\right)r^2\rho_1^2}{k_ek_t}$ et 
+$D = \dfrac{ K_9 Rr\rho_1}{  K_8k_t}$.
+%$D=\dfrac{r^2\rho_1^2R}{K_8k_t}$.
 %\end{corrige}
 \else
 \fi
 
 \ifprof
 \else
+\footnotesize
+\noindent
+\begin{tabular}{|p{\linewidth}|}
+\hline
+\begin{enumerate}
+\item ...
+\begin{itemize}
+\item  $K_2 = \dfrac{k_t}{R}$;
+\item $K_7 = k_e$;
+\item  $K_9 = \rho_1 r$ et $H_3(p)=\dfrac{1}{\left(M+m\right)r^2\rho_1^2 p}$;
+\item   $H_4(p)=\dfrac{1}{p}$; 
+\item $K_8  = \dfrac{2000}{2\pi}$;
+\item t $K_5=\rho_1$ et $K_6=r$ (à convertir en mètres);
+\item  $K_1 =\dfrac{K_8}{K_5 K_6}$.
+\end{itemize}
+\item $A=\dfrac{K_8}{k_e}$, $B=\dfrac{R\left(m+M\right)r^2\rho_1^2}{k_ek_t}$ et 
+$D = \dfrac{ K_9 Rr\rho_1}{  K_8k_t}$
+\end{enumerate} \\ \hline
+\end{tabular}
+\normalsize
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{47_02}
