@@ -56,44 +56,144 @@ On a :
 \else
 \fi
 
+
 \question{Montrer que le schéma-blocs peut être mis sous la forme suivante. On exprimera $A$, $B$ et $D$ en fonction des paramètres du système $r$, $\rho_1$, $k_t$, $k_e$, $R$, $M$, $m$ et $K_8$. }
 \ifprof
 %\begin{corrige}~\\
-%D'une part,
-%
-%$X(p)=\left(\left(X_C(p)-X(p)\right)C(p)-F_P(p) D \right)\dfrac{A}{p\left(Bp+1\right)}$
-%
-%$X(p)=\dfrac{A\left(X_C(p)-X(p)\right)C(p)}{p\left(Bp+1\right)}- \dfrac{AF_P(p) D}{p\left(Bp+1\right)}$
-%
-%$\Leftrightarrow X(p)+\dfrac{AX(p)C(p)}{p\left(Bp+1\right)}=\dfrac{AX_C(p)C(p)}{p\left(Bp+1\right)}- \dfrac{AF_P(p) D}{p\left(Bp+1\right)}$.
-%
-%$\Leftrightarrow X(p)\left(\dfrac{p\left(Bp+1\right)+AC(p)}{p\left(Bp+1\right)}\right)=\dfrac{AX_C(p)C(p)}{p\left(Bp+1\right)}+ \dfrac{AF_P(p) D}{p\left(Bp+1\right)}$
-%
-%$\Leftrightarrow X(p)=\dfrac{AX_C(p)C(p)}{p\left(Bp+1\right)+AC(p)}- \dfrac{AF_P(p) D}{p\left(Bp+1\right)+AC(p)}$.
-%
-%
-%D'autre part, 
-%$X(p)=\Omega_m(p)H_4(p)K_5K_6$, $U_m(p)=\left(X_c(p)K_1 - \theta_m(p)K_8\right)C(p)$, $\theta_m(p)=\Omega_m(p)H_4(p)$. 
-%
-%$\Omega_m(p) = \left(\left(U_m(p)-\Omega_m(p) K_7\right)K_2- F_P(p)K_9\right)H_3(p)$
-%
-%$\Leftrightarrow \Omega_m(p) \left(1+K_7K_2H_3(p)\right)= U_m(p)H_3(p)K_2- F_P(p)H_3(p)K_9$
-%
-%
-%$X(p)=\left( U_m(p)H_3(p)K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
-%
-%$\Leftrightarrow X(p)=\left( \left(X_c(p)K_1 - \theta_m(p)K_8\right)C(p)H_3(p)K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
-%
-%$\Leftrightarrow X(p)=\left( \left(X_c(p)K_1 - X(p)\dfrac{K_8}{K_5K_6}\right)C(p)H_3(p)K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
-%
-%$\Leftrightarrow X(p)=\left(\left(X_c(p) - X(p)\right)C(p)H_3(p)  K_1K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
-%
-%$\Leftrightarrow X(p)\left( 1+ C(p)H_3(p)  K_1K_2 \dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}\right)=\left(X_c(p) C(p)H_3(p)  K_1K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
-%
-%
-%$\Leftrightarrow X(p)\left( 1+K_7K_2H_3(p)+ C(p)H_3(p)  K_1K_2 H_4(p)K_5K_6\right)=\left(X_c(p) C(p)H_3(p)  K_1K_2- F_P(p)H_3(p)K_9 \right)H_4(p)K_5K_6$
+D'une part,
 
-%On montre $A=\dfrac{K_8}{k_e}$, $B=\dfrac{R\left(m+M\right)r^2\rho_1^2}{k_ek_t}$ et $D=\dfrac{r^2\rho_1^2R}{K_8k_t}$.
+$X(p)=\left(\left(X_C(p)-X(p)\right)C(p)-F_P(p) D \right)\dfrac{A}{p\left(Bp+1\right)}$
+
+$X(p)=\dfrac{A\left(X_C(p)-X(p)\right)C(p)}{p\left(Bp+1\right)}- \dfrac{AF_P(p) D}{p\left(Bp+1\right)}$
+
+$\Leftrightarrow X(p)+\dfrac{AX(p)C(p)}{p\left(Bp+1\right)}=\dfrac{AX_C(p)C(p)}{p\left(Bp+1\right)}- \dfrac{AF_P(p) D}{p\left(Bp+1\right)}$.
+$\Leftrightarrow X(p)\left(\dfrac{p\left(Bp+1\right)+AC(p)}{p\left(Bp+1\right)}\right)=\dfrac{AX_C(p)C(p)}{p\left(Bp+1\right)}+ \dfrac{AF_P(p) D}{p\left(Bp+1\right)}$
+
+\fbox{$\Leftrightarrow X(p)=\dfrac{AX_C(p)C(p)}{p\left(Bp+1\right)+AC(p)}- \dfrac{AF_P(p) D}{p\left(Bp+1\right)+AC(p)}$.}
+
+
+D'autre part, 
+$X(p)=\Omega_m(p)H_4(p)K_5K_6$, $U_m(p)=\left(X_c(p)K_1 - \theta_m(p)K_8\right)C(p)$, $\theta_m(p)=\Omega_m(p)H_4(p)$. 
+
+$\Omega_m(p) = \left(\left(U_m(p)-\Omega_m(p) K_7\right)K_2- F_P(p)K_9\right)H_3(p)$
+
+$\Leftrightarrow \Omega_m(p) \left(1+K_7K_2H_3(p)\right)= U_m(p)H_3(p)K_2- F_P(p)H_3(p)K_9$
+
+
+$X(p)=\left( U_m(p)H_3(p)K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
+
+$\Leftrightarrow X(p)=\left( \left(X_c(p)K_1 - \theta_m(p)K_8\right)C(p)H_3(p)K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
+
+$\Leftrightarrow X(p)=\left( \left(X_c(p)K_1 - X(p)\dfrac{K_8}{K_5K_6}\right)C(p)H_3(p)K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
+
+$\Leftrightarrow X(p)=\left(\left(X_c(p) - X(p)\right)C(p)H_3(p)  K_1K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
+
+$\Leftrightarrow X(p)\left( 1+ C(p)H_3(p)  K_1K_2 \dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}\right)=\left(X_c(p) C(p)H_3(p)  K_1K_2- F_P(p)H_3(p)K_9 \right)\dfrac{H_4(p)K_5K_6}{1+K_7K_2H_3(p)}$
+
+
+\fbox{$\Leftrightarrow X(p)\left( 1+K_7K_2H_3(p)+ C(p)H_3(p)  K_1K_2 H_4(p)K_5K_6\right)=\left(X_c(p) C(p)H_3(p)  K_1K_2- F_P(p)H_3(p)K_9 \right)H_4(p)K_5K_6$}.
+
+
+
+
+Par suite, 
+
+$\Leftrightarrow X(p)\left( 1+K_7K_2 \dfrac{1}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{1}{\left(M+m\right)r^2\rho_1^2 p}  \dfrac{K_8}{K_5 K_6} K_2 \dfrac{1}{p} K_5K_6\right)=\left(X_c(p) C(p)\dfrac{1}{\left(M+m\right)r^2\rho_1^2 p}  \dfrac{K_8}{K_5 K_6} K_2- F_P(p)\dfrac{1}{\left(M+m\right)r^2\rho_1^2 p} K_9 \right)\dfrac{1}{p}K_5K_6$
+
+$\Leftrightarrow X(p)\left( 1+ \dfrac{ \dfrac{k_ek_t}{R}}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{K_8 \dfrac{k_t}{R}}{\left(M+m\right)r^2\rho_1^2 p^2} \right)
+=
+\left(X_c(p) C(p)\dfrac{K_8}{\left(M+m\right)r^2\rho_1^2 p^2}  \dfrac{k_t}{R}- F_P(p)\dfrac{K_9}{\left(M+m\right)r\rho_1 p^2}  \right)$.
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{\dfrac{K_8}{\left(M+m\right)r^2\rho_1^2 p^2}  \dfrac{k_t}{R}}{\left( 1+ \dfrac{ \dfrac{k_ek_t}{R}}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{K_8 \dfrac{k_t}{R}}{\left(M+m\right)r^2\rho_1^2 p^2} \right)}
+- F_P(p)\dfrac{\dfrac{K_9}{\left(M+m\right)r\rho_1 p^2}}{\left( 1+ \dfrac{ \dfrac{k_ek_t}{R}}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{K_8 \dfrac{k_t}{R}}{\left(M+m\right)r^2\rho_1^2 p^2} \right)}
+$
+
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{\dfrac{K_8}{1}  \dfrac{k_t}{R}}{\left( \left(M+m\right)r^2\rho_1^2 p^2+ \dfrac{\left(M+m\right)r^2\rho_1^2 p^2 \dfrac{k_ek_t}{R}}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{ \left(M+m\right)r^2\rho_1^2 p^2K_8 \dfrac{k_t}{R}}{\left(M+m\right)r^2\rho_1^2 p^2} \right)}
+- F_P(p)\dfrac{\dfrac{K_9}{\left(M+m\right)r\rho_1 p^2}}{\left( 1+ \dfrac{ \dfrac{k_ek_t}{R}}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{K_8 \dfrac{k_t}{R}}{\left(M+m\right)r^2\rho_1^2 p^2} \right)}
+$
+
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{  \dfrac{K_8k_t}{R}}{
+ \left(M+m\right)r^2\rho_1^2 p^2
+ + p \dfrac{k_ek_t}{R} 
+ + C(p)K_8 \dfrac{k_t}{R}
+ }
+- F_P(p)\dfrac{\dfrac{K_9}{1}}{\left( \left(M+m\right)r\rho_1 p^2+ \dfrac{ \left(M+m\right)r\rho_1 p^2\dfrac{k_ek_t}{R}}{\left(M+m\right)r^2\rho_1^2 p} + C(p)\dfrac{ \left(M+m\right)r\rho_1 p^2K_8 \dfrac{k_t}{R}}{\left(M+m\right)r^2\rho_1^2 p^2} \right)}
+$
+
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{  \dfrac{K_8k_t}{R}}{
+ \left(M+m\right)r^2\rho_1^2 p^2
+ + p \dfrac{k_ek_t}{R} 
+ + C(p)K_8 \dfrac{k_t}{R}
+ }
+- F_P(p)\dfrac{K_9}{
+ \left(M+m\right)r\rho_1 p^2
+ + \dfrac{  pk_ek_t}{Rr\rho_1} 
+ + C(p)\dfrac{ K_8 k_t}{Rr\rho_1 } }
+$
+
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{
+\dfrac{K_8k_t}{R}}{
+p\dfrac{k_ek_t}{R}\left(\dfrac{R}{k_ek_t}
+ \left(M+m\right)r^2\rho_1^2 p
+ +  1\right) 
+ + C(p)K_8 \dfrac{k_t}{R}
+ }
+- F_P(p)\dfrac{K_9}{
+p\dfrac{  k_ek_t}{Rr\rho_1}\left(
+\dfrac{\left(M+m\right) Rr^2\rho_1^2}{  k_ek_t}  p
+ + 1\right)
+ + C(p)\dfrac{ K_8 k_t}{Rr\rho_1 } }
+$
+
+
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{
+\dfrac{K_8k_t}{R}}{
+p\dfrac{k_ek_t}{R}\left(B p
+ +  1\right) 
+ + C(p)K_8 \dfrac{k_t}{R}
+ }
+- F_P(p)\dfrac{K_9}{
+p\dfrac{  k_ek_t}{Rr\rho_1}\left(
+B  p
+ + 1\right)
+ + C(p)\dfrac{ K_8 k_t}{Rr\rho_1 } }
+$
+
+$\Leftrightarrow X(p)
+=
+X_c(p) C(p)\dfrac{
+\dfrac{K_8k_t}{R}}{
+p\dfrac{k_ek_t}{R}\left(B p
+ +  1\right) 
+ + C(p)K_8 \dfrac{k_t}{R}
+ }
+- F_P(p)\dfrac{K_9}{
+p\dfrac{  k_ek_t}{Rr\rho_1}\left(
+B  p
+ + 1\right)
+ + C(p)\dfrac{ K_8 k_t}{Rr\rho_1 } }
+$
+
+
+
+On montre $A=\dfrac{K_8}{k_e}$, $B=\dfrac{R\left(m+M\right)r^2\rho_1^2}{k_ek_t}$ et $D=\dfrac{r^2\rho_1^2R}{K_8k_t}$.
 %\end{corrige}
 \else
 \fi
