@@ -67,7 +67,7 @@
 67_PompeTurbo % CCS PSI 2009
 68_Roburoc %% CCMP 2009
 69_TrainA350 %% XENS 2020
-
+70_Hublex %% CCINP MP 2020
 500_Divers
 501_Divers
 502_Divers
