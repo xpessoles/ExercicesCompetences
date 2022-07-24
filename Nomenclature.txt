@@ -69,6 +69,7 @@
 69_TrainA350 %% XENS 2020
 70_Hublex %% CCINP MP 2020
 71_Robovolc % XENS 2017
+72_Tripteor % SIA 2010
 
 500_Divers
 501_Divers
