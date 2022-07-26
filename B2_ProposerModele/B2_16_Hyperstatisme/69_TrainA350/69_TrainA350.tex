@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
@@ -42,14 +42,36 @@ classe d’équivalence désignée « avion ».
 
 \fi
 
+On modélise chacune des 8 liaisons au sol par une liaison ponctuelle (sphère-plan).
 \question{Réaliser le graphe des liaisons.}
 \ifprof
+\begin{center}
+\includegraphics[width=5cm]{69_01_cor}
+\end{center}
 \else 
 \fi
 
 \question{Déterminer le degré d’hyperstatisme d’une modélisation de la liaison avion-sol
 dans laquelle chaque contact roue-sol serait considéré ponctuel.}
 \ifprof
+La liaison de l'avion avec le sol est assimilabe à une liaison appui-plan de normale $\vect{z}$. Il y a donc 3 mobilités (1 rotation autour de $\vect{z}$, 1 translation selon $\vect{x}$ et 1 translation suivant $\vect{y}$.
+
+En utilisant une méthode statique, on a $h=m-E_s+I_s$ avec : 
+\begin{itemize}
+\item  $m=3$;
+\item $E_s = 1\times 6 = 6$ (on ne peut isoler que l'avion);
+\item $I_s = 10 \times 1 = 10$ (8 liaisons ponctuelles avec 1 inconnue statique par liaison).
+\end{itemize}
+En conséquences, $h = 3-6+10 =7$. 
+
+En utilisant une méthode cinématique, on a $h=m-I_c+E_c$ avec : 
+\begin{itemize}
+\item  $m=3$;
+\item $E_c = \gamma \times 6 = (10-2+1) \times 6 = 54$ (on ne peut isoler que l'avion);
+\item $I_c = 10 \times 5 = 50$ (8 liaisons ponctuelles avec 5 inconnues cinématiques par liaison).
+\end{itemize}
+En conséquences, $h = 3-50+54 =7$. 
+
 \else 
 \fi
 
@@ -60,6 +82,23 @@ auxiliaire), $(P_g, \vect{z})$ (atterrisseur principal gauche) et $(P_d, \vect{z
 
 \question{Démontrer que ce modèle simplifié est isostatique.}
 \ifprof
+
+En utilisant une méthode statique, on a $h=m-E_s+I_s$ avec : 
+\begin{itemize}
+\item  $m=3$;
+\item $E_s = 1\times 6 = 6$ (on ne peut isoler que l'avion);
+\item $I_s = 3 \times 1 = 3$.
+\end{itemize}
+En conséquences, $h = 3-6+3 =0$. 
+
+En utilisant une méthode cinématique, on a $h=m-I_c+E_c$ avec : 
+\begin{itemize}
+\item  $m=3$;
+\item $E_c = \gamma \times 6 = (3-2+1) \times 6 = 12$ (on ne peut isoler que l'avion);
+\item $I_c = 3 \times 5 = 15$ (3 liaisons ponctuelles avec 5 inconnues cinématiques par liaison);
+\end{itemize}
+En conséquences, $h = 3-15+12 =0$. 
+
 \else 
 \fi
  
@@ -73,8 +112,8 @@ auxiliaire), $(P_g, \vect{z})$ (atterrisseur principal gauche) et $(P_d, \vect{z
  Éléments de corrigé : 
  \begin{enumerate}
 \item .
-%\item $h=8$.
-\item .
+\item $h=7$.
+\item $h=0$.
  \end{enumerate}}}
 \normalsize
 
