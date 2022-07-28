@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
@@ -43,16 +43,47 @@ Une boucle de position est représentée ci-dessous. On admet que :
  
 \question{Déterminer la valeur de $K_{BO}$ permettant de satisfaire cette condition.}
 \ifprof
+On souhaite une marge de phase de 45\degres. On cherche donc $\omega_{\varphi}$ tel que 
+$\varphi\left(\omega_{\varphi}\right)=-180+45 = -135\degres$.
+
+$\varphi(\omega)=-90-\arg\left(1+\tau_m j \omega \right) =-90-\arctan\left(\tau_m  \omega \right)  $.
+
+On a donc $\varphi\left(\omega_{\varphi}\right)=-135$
+$\Leftrightarrow -90-\arctan\left(\tau_m  \omega_{\varphi}\right)  = -135 $
+$\Leftrightarrow -\arctan\left(\tau_m  \omega_{\varphi} \right)  = -45 $
+$\Leftrightarrow \arctan\left(\tau_m  \omega_{\varphi} \right)  = 45 $
+$\Rightarrow \tau_m  \omega_{\varphi} = 1 $
+$\Rightarrow \omega_{\varphi}  = \dfrac{1}{\tau_m}= \dfrac{1}{5\times 10^{-3}}$
+$\Rightarrow \omega_{\varphi}  = \SI{200}{rad.s^{-1}}$.
+
+
+Par suite, il faut que le gain soit nul en $\omega_{\varphi}$.
+
+On a donc $\indice{G}{dB}(\omega)=20\log k_{BO}-20\log\omega-20\log\sqrt{1+\omega^2\tau_m^2}$.
+En $\omega_{\varphi} =  \dfrac{1}{\tau_m}$ :
+$\indice{G}{dB}(\omega_{\varphi})=0$ 
+$\Leftrightarrow 20\log k_{BO}-20\log \dfrac{1}{\tau_m}-20\log\sqrt{1+\dfrac{1}{\tau_m^2}\tau_m^2}=0$
+$\Leftrightarrow \log k_{BO}+\log \tau_m-\log\sqrt{2}=0$
+$\Leftrightarrow \log \dfrac{k_{BO} \tau_m}{\sqrt{2}}=0$
+$\Leftrightarrow \dfrac{k_{BO} \tau_m}{\sqrt{2}}=1$
+$\Leftrightarrow k_{BO}=\dfrac{\sqrt{2}}{\tau_m}$.
+
+(\textbf{A vérifier})
+$k_{BO}=282,8$.
+
 \else 
 \fi
 
 \question{En déduire la valeur du gain $K_c$ du correcteur. }
 \ifprof
+$k_{BO}=\dfrac{k_c k_m k_r}{N}$; donc 
+$k_c=\dfrac{Nk_{BO}}{ k_m k_r} = \dfrac{200 \times 282,8 }{4\times 30}=471$.
 \else 
 \fi
 
 \question{Déterminer l’écart de position.}
 \ifprof
+Il y a une intégration dans la correcteur. La FTBO est de classe 1 est le système est précis en position. 
 \else 
 \fi
 
@@ -65,9 +96,9 @@ Une boucle de position est représentée ci-dessous. On admet que :
 \fbox{\parbox{.9\linewidth}{
 Éléments de corrigé : 
 \begin{enumerate}
-  \item $k_{BO}=\sqrt{2}{\tau_m}$.
-    \item $k_c=\dfrac{\sqrt{2}N}{\tau_m k_m k_r} = 471,1$.
-    \item $\varepsilon_s=0$.
+  \item $k_{BO}=\dfrac{\sqrt{2}}{\tau_m}$.
+  \item $k_c=\dfrac{\sqrt{2}N}{\tau_m k_m k_r} = 471,1$.
+  \item $\varepsilon_s=0$.
 \end{enumerate}}}
 \normalsize
 
