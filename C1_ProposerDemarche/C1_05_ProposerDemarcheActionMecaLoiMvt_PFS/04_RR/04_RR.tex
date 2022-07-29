@@ -1,5 +1,5 @@
 \normaltrue
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -43,21 +43,45 @@ L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+\begin{center}
+\includegraphics[width=.6\linewidth]{04_RR_01_cor}
+\end{center}
 \else
 \fi
 
 \question{Donner le torseur de chacune des actions mécaniques.}
 \ifprof
+\begin{itemize}
+\item Pivot entre 0 et 1 : $\torseurstat{T}{0}{1}=\torseurl{X_{01}\vi{0}+Y_{01}\vj{0}+Z_{01}\vk{0}}{M_{01}\vj{0}+N_{01}\vk{0}}{A,\rep{0}}$.
+\item Pivot entre 1 et 2 : $\torseurstat{T}{1}{2}=\torseurl{X_{12}\vi{1}+Y_{12}\vj{1}+Z_{12}\vk{1}}{M_{12}\vj{1}+N_{12}\vk{1}}{B,\rep{0}}$.
+\item Pesanteur sur 1: $\torseurstat{T}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{G_1,\rep{0}}$.
+\item Pesanteur sur 2: $\torseurstat{T}{\text{pes}}{2}=\torseurl{-m_2g\vj{0}}{\vect{0}}{G_2,\rep{0}}$.
+\item Moteur entre 0 et 1 : $\torseurstat{T}{0_{m1}}{1}=\torseurl{\vect{0}}{C_1\vk{0}}{A,\rep{0}}$.
+\item Moteur entre 1 et 2 : $\torseurstat{T}{1_{m2}}{2}=\torseurl{\vect{0}}{C_2\vk{0}}{B,\rep{0}}$.
+\end{itemize}
 \else
 \fi
 
 \question{Simplifier les torseurs dans l'hypothèse des problèmes plans.}
 \ifprof
+\begin{itemize}
+\item Pivot entre 0 et 1 : $\torseurstat{T}{0}{1}=\torseurl{X_{01}\vi{0}+Y_{01}\vj{0}}{\vect{0}}{A,\rep{0}}$.
+\item Pivot entre 1 et 2 : $\torseurstat{T}{1}{2}=\torseurl{X_{12}\vi{1}+Y_{12}\vj{1}}{\vect{0}}{B,\rep{0}}$.
+\item Pesanteur sur 1: $\torseurstat{T}{\text{pes}}{1}=\torseurl{-m_1g\vj{0}}{\vect{0}}{G_1,\rep{0}}$.
+\item Pesanteur sur 2: $\torseurstat{T}{\text{pes}}{2}=\torseurl{-m_2g\vj{0}}{\vect{0}}{G_2,\rep{0}}$.
+\item Moteur entre 0 et 1 : $\torseurstat{T}{0_{m1}}{1}=\torseurl{\vect{0}}{C_1\vk{0}}{A,\rep{0}}$.
+\item Moteur entre 1 et 2 : $\torseurstat{T}{1_{m2}}{2}=\torseurl{\vect{0}}{C_2\vk{0}}{B,\rep{0}}$.
+\end{itemize}
 \else
 \fi
 
 \question{Proposer une démarche permettant de déterminer les couples que doivent développer chacun des moteurs  pour maintenir le mécanisme en équilibre.}
 \ifprof
+C'est une chaîne ouverte. On isole l'extrémité et on applique le théorème correspondant la mobilité : 
+\begin{itemize}
+\item on isole \textbf{2} et on réalise le théorème du moment statique en $A$ en projection sur $\vk{0}$;
+\item on isole \textbf{1+2} et on réalise le théorème du moment statique en $B$ en projection sur $\vk{0}$.
+\end{itemize}
 \else
 \fi
 
