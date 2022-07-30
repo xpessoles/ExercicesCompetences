@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -29,6 +29,10 @@ On s'intéresse à la liaison entre l'axe de la toue et le châssis du véhicule
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+\begin{center}
+\includegraphics[width=10cm]{55_01_cor}
+\end{center}
+
 \else
 \fi
 
@@ -36,6 +40,15 @@ On s'intéresse à la liaison entre l'axe de la toue et le châssis du véhicule
 
 \question{Peut-on résoudre complètement le système ? Pourquoi ?}
 \ifprof
+Calculons le degré d'hyperstatisme : 
+\begin{itemize}
+\item mobilités : $m=2$ (rotations autour de $\vect{a}$ et de $\vect{z}$);
+\item inconnues statiques : $I_s = 3 \times 4 = 12$;
+\item équations : $E_s = 2\times 6=12$. 
+\item $h = m-E_s + I_s= 2 -12 + 12 = 2$.
+\end{itemize}
+On ne peut donc pas déterminer toutes les actions mécaniques. 
+
 \else
 \fi
 \ifprof
