@@ -73,6 +73,8 @@
 73_Bassin % CCMP PSI 2021
 74_Chariot % BTS CPI E52 (2014 ?)
 75_TrainA380 % SIC 2009
+76_FixationSki
+
 
 500_Divers
 501_Divers
