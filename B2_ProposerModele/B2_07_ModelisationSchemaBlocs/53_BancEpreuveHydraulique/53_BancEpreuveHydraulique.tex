@@ -50,7 +50,6 @@ $Mp^2 Z(p))=S_hP_h(p)-S_eP_e(pt)-\dfrac{Mg}{p}-fpZ(p)$
 
 \ifprof
 \else
-
 On note :
 \begin{itemize}
 	\item $L(t)$ la position de l’équipage mobile repérée par rapport à sa position initiale;
@@ -61,21 +60,21 @@ On note :
 On néglige les variations de volume du tube dues à ses déformations. L’équation du débit s’écrit alors :
 	$$Q_e (t)=(S_a-S_b ).\dfrac{\text{d}L(t)}{\text{d}t}+\dfrac{V_t}{B_e}  \dfrac{\text{d}P_e (t)}{\text{d}t}.$$
 
-
 L’équation du mouvement de l’équipage mobile est donnée par : 
 $$
 m\ddot{L}(t)=-rL(t)+\left(S_a-S_b \right)p_e(t)-f'\dot{L}(t).
 $$
-
 \fi
-\question{En déduire, en tenant compte de l’équation du débit, deux équations liant $L(p)$, $P_e(p)$ et $Q_e(p)$, transformées de Laplace de $L(t)$, $P_e(t)$ et $Q_e(t)$. }
+
+\question{En déduire, en tenant compte de l’équation du débit, deux équations liant $L(p)$, $P_e(p)$ et $Q_e(p)$, transformées de Laplace de $L(t)$, $P_e(t)$ et $Q_e(t)$. Les conditions initiales sont supposées nulles.}
 \ifprof
 
-	$Q_e (p)=(S_a-S_b )p L(p)+\dfrac{V_t}{B_e}  p P_e(p)$
+$Q_e (p)=(S_a-S_b )p L(p)+\dfrac{V_t}{B_e}  p P_e(p)$ et 
+$mp^2{L}(p)=-rL(p)+\left(S_a-S_b \right)P_e(p)-f'p{L}(p)$.
 
 \else
+
 \fi
-Les conditions initiales sont supposées nulles.
 
 \question{Compléter le schéma-blocs de l’ensemble (sans le distributeur hydraulique), l’entrée étant la pression d’huile régulée $P_r(p)$ et la sortie la pression d’épreuve dans le tube $P_e(p)$.}
 \ifprof
@@ -84,6 +83,7 @@ Les conditions initiales sont supposées nulles.
 \fi
 
 \ifprof
+\includegraphics[height=\linewidth]{cor_01}
 \else
 \begin{center}
 \rotatebox{90}{\includegraphics[height=.8\linewidth]{fig_10}}
