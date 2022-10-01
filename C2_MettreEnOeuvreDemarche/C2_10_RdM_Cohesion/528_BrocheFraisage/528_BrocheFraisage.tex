@@ -16,7 +16,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
-
+\ifprof
+\else
 
 La figure suivante verso illustre la cinématique permettant la rotation d'une broche de fraisage sur un centre d'usinage multiaxes.
 On s'intéresse en particulier à l'arbre intermédiaire 2. Celui-ci est modélisé  par une poutre de diamètre $D$ et de longueur utile $L$. Les variations de diamètres seront négligées.
@@ -41,7 +42,7 @@ $\torseurstat{T}{4}{2}_2 = \torseurcol{X_{Q_2}}{Y_{Q_2}}{Z_{Q_2}}{0}{0}{0}{Q_2}$
 $\torseurstat{T}{3}{2} = \torseurcol{A_{32}}{-R_{32}}{T_{32}}{0}{0}{0}{P}$, 
 $\torseurstat{T}{1}{2} = \torseurcol{0}{-R_{12}}{-T_{12}}{0}{0}{0}{S}$.
 
-
+\fi
 
 \question{Proposer une méthode permettant de déterminer l'expression du torseur des efforts intérieurs au centre d'inertie de chaque section droite.}
 
