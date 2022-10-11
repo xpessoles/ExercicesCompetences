@@ -76,6 +76,7 @@
 76_FixationSki
 
 
+
 500_Divers
 501_Divers
 502_Divers
@@ -114,6 +115,7 @@
 535_CircuitElec
 536_CircuitElec
 537_CircuitElec
+538_Codeur
 
 
 1000_Dessin2D
@@ -137,3 +139,5 @@
 1018_BorneReglable
 1019_RobotPeinture
 1020_PompeEnsieta
+1021_Euler
+1022_Euler

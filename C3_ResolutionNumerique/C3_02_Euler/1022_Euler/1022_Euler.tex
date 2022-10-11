@@ -1,0 +1,73 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctionfalse
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Schéma d'Euler$\star$ \label{C3:02:1022}}
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{C3-02}
+\index{Compétence C3-02}
+\index{Schéma d'Euler explicite}
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+
+\question{Donner la méthode de résolution numérique des équations différentielles suivantes en utilisant le schéma d'Euler explicite.}
+
+%\begin{eqnarray}
+%\right\{
+$$
+\begin{array}{l}
+\ddot{\theta}(t) + \dfrac{g}{l}\sin \theta = 0\\
+\theta(0) = 0 \quad \dot{\theta}(0) = 0 \\
+\end{array} 
+$$
+%\right.
+%\end{eqnarray}
+
+
+\ifprof
+On pose $y_0(t) = \theta(t) $ et $y_1(t) = \dot{\theta}(t) = y'_0(t) $. On a donc 
+$$
+\left\{
+\begin{array}{l}
+y'_0(t) = y_1(t) \\
+y'_1(t) + \dfrac{g}{l} \sin y_0(t) = 0
+\end{array} 
+\right.
+$$
+
+Par ailleurs, $y_0(t) = 0 $ et $y_1(t) =0$.
+
+En discrétisant, on a donc :
+$$
+\left\{
+\begin{array}{l}
+\dfrac{y_{0,k+1}-y_{0,k}}{h} = y_{1,k} \\
+\dfrac{y_{1,k+1}-y_{1,k}}{h} + \dfrac{g}{l} \sin y_{0,k} = 0
+\end{array} 
+\right.
+\Longleftrightarrow
+\left\{
+\begin{array}{l}
+y_{0,k+1} = h y_{1,k} + y_{0,k}\\
+y_{1,k+1} = - h \dfrac{g}{l} \sin y_{0,k}  + y_{1,k}
+\end{array} 
+\right.
+$$
+\else
+\fi
+
+
+
+ 
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{C3:02:1022}.}
+\end{flushright}%
+\fi

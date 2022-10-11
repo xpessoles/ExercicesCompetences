@@ -103,10 +103,13 @@ os.chdir(folder_path)
 
 
 fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_01/DDS_01_liste.tex"
-
 liste_dds = read_liste_dds(fichier_dds)
-
 liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 1")
+
+fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_02/DDS_02_liste.tex"
+liste_dds = read_liste_dds(fichier_dds)
+liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 2")
+
 ecrire_csv(liste_exos,"liste_exos.csv")        
 
 import pandas as pd

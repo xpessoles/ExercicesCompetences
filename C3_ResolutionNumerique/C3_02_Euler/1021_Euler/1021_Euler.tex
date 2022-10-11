@@ -1,0 +1,55 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctionfalse
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Schéma d'Euler$\star$ \label{C3:02:1021}}
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{C3-02}
+\index{Compétence C3-02}
+\index{Schéma d'Euler explicite}
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+
+\question{Donner la méthode de résolution numérique des équations différentielles suivantes en utilisant le schéma d'Euler explicite.}
+\begin{eqnarray}
+\left\{
+\begin{array}{l}
+y'(t) + \alpha y(t) = \beta \\
+y(0) = \gamma
+\end{array}
+\right.
+\end{eqnarray}
+
+
+\ifprof
+
+\subsection*{Équation 1}
+On a :
+$$
+y'(t) \simeq \dfrac{y(t+h)-y(h)}{h}
+$$
+En discrétisant le problème, on a $y_k=y(kh)=y(t)$; donc : 
+$$
+\dfrac{y(t+h)-y(h)}{h} + \alpha y(t) = \beta \Longrightarrow 
+\dfrac{y_{k+1}-y_k}{h} + \alpha y_k = \beta \Longleftrightarrow 
+y_{k+1}  = \beta h - \alpha y_k + y_k \Longleftrightarrow 
+y_{k+1}  = \beta h + y_k\left(1 - \alpha \right) 
+$$
+\else
+\fi
+
+
+
+ 
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{C3:02:1021}.}
+\end{flushright}%
+\fi

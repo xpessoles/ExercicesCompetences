@@ -16,6 +16,7 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+
 On s'intéresse à la conception d'un banc d'essai de boite de transfert principale d'hélicoptère. 
 
 
@@ -27,6 +28,9 @@ On s'intéresse à la conception d'un banc d'essai de boite de transfert princip
 \item Concevoir la liaison pivot entre l’arbre de sortie et le bâti.
 \end{itemize}
 \end{obj}
+
+\ifprof
+\else
 
 Dans le cadre d’un essai de la BTP, les pales ne sont pas utilisées. Il est donc nécessaire de concevoir un arbre de sortie qui doit faire office de rotor principal. Cet arbre de sortie devra supporter des efforts équivalents à ceux engendrés par les efforts aérodynamiques. L’accouplement avec le reste du banc d’essai doit permettre de fournir un couple résistant. Par ailleurs, des vérins permettent de générer l’effort de portance. Une modélisation de l’arbre de sortie de la BTP est présentée sur la figure suivante.
 
@@ -60,6 +64,8 @@ On a :
 \item $\vect{AB}=l\vect{z}$ avec $l=\SI{200}{mm}$;
 \item $\vect{BD}=L\vect{y}-\dfrac{l}{2}\vect{z}$ avec $L=\SI{300}{mm}$.
 \end{itemize}
+
+\fi
 
 \subsection*{Dimensionnement de l’arbre}
 \begin{obj}	Déterminer le diamètre minimal de l’arbre et son matériau.
