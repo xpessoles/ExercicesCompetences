@@ -1,0 +1,100 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctionfalse
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Conception de la commande d’un robot chirurgical$\star$ \label{B2:07:78}}
+
+% Concours Mines Ponts MP -- PSI --  2013
+
+\setcounter{numques}{0}
+\UPSTIcompetence[2]{B2-07}
+\index{Compétence B2-07}
+\index{Schéma-blocs}
+\index{Robot}
+\ifcorrection
+\else
+\textbf{Pas de corrigé pour cet exercice.}
+\fi
+
+
+
+
+
+\subsection*{Présentation du système}
+\ifprof
+\else
+Afin d’améliorer les conditions d’opérations chirurgicales dites mini invasives (comme la précision d’opération
+et le confort du chirurgien), des robots chirurgicaux ont vu le jour. Cette étude s’intéresse à l’un d’entre eux : le
+robot Da Vinci. Le chirurgien peut atteindre sa cible grâce à des outils longs et fins traversant le patient grâce
+à une incision de l’ordre du centimètre.
+
+
+Le système étudié est composé de deux sous-systèmes principaux :
+\begin{itemize}
+\item l’ensemble \{console de commande + bras maîtres\} permet au chirurgien de visualiser et de commander les
+mouvements des outils adéquats à l’intérieur du patient via une caméra haute définition dont l’image est
+retransmise par l’intermédiaire d’écrans. Le chirurgien commande les mouvements des outils grâce à deux
+bras maîtres dont les extrémités sont maintenues dans chaque main ;
+\item les bras esclaves reçoivent les consignes issues du chirurgien par l’intermédiaire des bras maîtres. Il y a au
+total 3 bras esclaves : deux manipulent chacun un outil, le troisième manipule une caméra.
+\end{itemize}
+\begin{center}
+\includegraphics[width=\linewidth]{fig_02}
+%\textit{}
+\end{center}
+
+Le mouvement de l'axe 1 est régi par l'équation suivante : 
+$\Delta C_1(t)=J\dfrac{\dd^2 \Delta \theta_1(t)}{\dd t^2} - k_1 \dfrac{r_9'}{r_0}h_2 \Delta F_x(t)$ avec $J=\SI{1,98e-5}{kg.m^2}$, $k_1\dfrac{r_9'}{r_0}=0,00717$, $h_2=\SI{0,2}{m}$.
+
+Le couple moteur $\Delta C_1(t)$ est fourni par une machine à courant continu modélisée par les équations suivantes : 
+$u_1(t)=L\dfrac{\dd i_1(t)}{\dd t}  + Ri_1(t)+e_1(t)$, $e_1(t)=k_e \dfrac{\dd \Delta \theta_1(t)}{\dd t}$, $\Delta C_1(t) = k_t i_1(t)$ avec $u_1(t)$ la tension aux bornes du moteur, $i_1(t)$ l’intensité traversant le moteur et $e_1(t)$ la force contre
+électromotrice, avec $R=\SI{2,08}{\Omega}$, $k_t = \SI{0,0525}{N.m.A^{-1}}$ et $k_e = \SI{0,0525}{V.s.rad^{-1}}$.
+
+On fait l’hypothèse que l’influence de l’inductance $L$ est négligeable sur les performances attendues, soit $L=0$.
+
+La consigne est notée $\Delta \theta _{c1}(t)$. Le cahier des charges sélectif conduit à choisir un correcteur associant une anticipation (via la présence de $\sigma_4$ dans la relation suivante) et une correction PID. La tension de commande du moteur est donnée par : $U_1(p)=\left( \Delta \theta_{c1}(p)-\Delta \theta_1(p)\right) \left(\sigma_1 + \dfrac{\sigma_2}{p}\right)- \sigma_3p \Delta \theta_1(p)+\sigma_4\Delta \theta_{c1}(p)$
+avec $\Delta \theta_{c1}(p)$ la consigne de position angulaire exprimée dans le domaine symbolique.
+
+\question{Compléter le schéma-blocs.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+Pour la suite, on considère la perturbation nulle ($\Delta F_x(p)=0$).
+
+
+
+\question{À partir de ce schéma-blocs, en notant $H_{\text{processus}}=\dfrac{\Delta \theta_1(p)}{U_1(p)}=\dfrac{K}{p\left(1+\tau p \right)}$, exprimer $K$ et $\tau$ en fonction des données de l'énoncé.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\question{Exprimer la fonction de transfert en boucle fermée, sous sa forme canonique, notée $B_F(p) = \dfrac{\Delta \theta_1(p)}{\Delta \theta_{c1}(p)}$ en fonction de $K$, $\tau$, $\sigma_1$, $\sigma_2$, $\sigma_3$ et  $\sigma_4$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\begin{center}
+\rotatebox{90}{\includegraphics[height=.9\linewidth]{fig_03}}
+%\textit{Schéma-blocs de l'asservissement du dosseret \label{fig6}}
+\end{center}
+
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{B2:07:78}.}
+\end{flushright}%
+\fi
