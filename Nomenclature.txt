@@ -74,6 +74,9 @@
 74_Chariot % BTS CPI E52 (2014 ?)
 75_TrainA380 % SIC 2009
 76_FixationSki
+77_Piaggio
+78_MAV Machine à vendanger
+79_Roburoc 
 
 
 
