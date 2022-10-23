@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
@@ -19,14 +19,30 @@
 
 
 \question{Calculer l'hyperstatisme du modèle plan du mécanisme global de la pince (\autoref{fig_23}).}
+\ifprof
+Le graphe de liaisons est donné figure suivante. 
 
+\begin{center}
+\includegraphics[width=7cm]{71_01_Cor}
+\end{center}
+\begin{itemize}
+\item Dans le plan, on a $m=2$ : mobilité correspondant au serrage de la pièce et rotation de 6 autour de l'axe $\axe{Q}{z_p}$.
+\item $I_c = 6\times 1 + 1 \times 1 + 1 \times 3 = 10$ (6 pivots, 1 glissière et 1 ponctuelle dans le plan);
+\item $E_c = 3 \times 3 = 9$
+\item $h=m-I_c+E_c = 2-10+9 = 1$. 
+\end{itemize}
+\else
+\fi
+
+\ifprof
+\else
 \begin{figure}[H]
 \centering
 \includegraphics[width=.45\linewidth]{fig_23a.png}
 \includegraphics[width=.45\linewidth]{fig_23b.png}
 \caption{Pince utilisée sur le système ROBOVOLC et schéma cinématique associé \label{fig_23}}
 \end{figure} 
- 
+\fi 
 
 \ifprof
 \else
@@ -35,9 +51,9 @@
  \fbox{\parbox{.9\linewidth}{
  Éléments de corrigé : 
  \begin{enumerate}
-\item .
+\item $h=1$.
 %\item $h=8$.
-\item .
+%\item .
  \end{enumerate}}}
 \normalsize
 
