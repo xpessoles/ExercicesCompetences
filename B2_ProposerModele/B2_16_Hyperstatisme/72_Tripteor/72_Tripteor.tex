@@ -1,9 +1,9 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{ $\star$ \label{B2:16:72}}
+\exer{Triptéor $\star$ \label{B2:16:72}}
 %% CCP MP 2007
 \setcounter{numques}{0}
 \UPSTIcompetence[2]{B2-16}
@@ -17,6 +17,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+\ifprof
+\else
 Le triptéor est un centre d'Usinage Grande Vitesse à architecture parallèle, permettent d'envisager un usinage rapide et précis.
 
 
@@ -31,11 +33,26 @@ Le triptéor est un centre d'Usinage Grande Vitesse à architecture parallèle, 
 \includegraphics[width=\linewidth]{72_02.png}
 %\caption{Pince utilisée sur le système ROBOVOLC et schéma cinématique associé \label{fig_23}}
 \end{figure} 
+\fi
 
 \question{Réaliser le graphe de liaisons.}
+\ifprof
+\begin{center}
+\includegraphics[width=7cm]{72_01_Cor}
+\end{center}
+\else
+\fi
 
 \question{Calculer le degré d'hyperstatisme.}
-
+\ifprof
+\begin{itemize}
+\item $m=5$ : translations des 3 glissières et rotations des deux dernières pivot;
+\item $I_c=15$;
+\item $E_c = 12$;
+\item $h=m-I_c+E_c = 5 -15 + 12 = 2$.
+\end{itemize}
+\else
+\fi
  
 
 \ifprof
@@ -46,8 +63,7 @@ Le triptéor est un centre d'Usinage Grande Vitesse à architecture parallèle, 
  Éléments de corrigé : 
  \begin{enumerate}
 \item .
-%\item $h=8$.
-\item .
+\item $h=2$.
  \end{enumerate}}}
 \normalsize
 
