@@ -4,6 +4,7 @@ C:,GitHub,ExercicesCompetences,A3_AnalyseFonctionnelleStructurelle,A3_01_ChaineF
 C:,GitHub,ExercicesCompetences,A3_AnalyseFonctionnelleStructurelle,A3_01_ChaineFonctionnelle,60_Escalier,,60_Escalier.tex
 C:,GitHub,ExercicesCompetences,A3_AnalyseFonctionnelleStructurelle,A3_06_ChaineInfo,507_Divers,,507_Divers.tex
 C:,GitHub,ExercicesCompetences,A3_AnalyseFonctionnelleStructurelle,A3_06_ChaineInfo,50_BancBalafre,,50_BancBalafre.tex
+C:,GitHub,ExercicesCompetences,A3_AnalyseFonctionnelleStructurelle,A3_06_ChaineInfo,538_Codeur,,538_Codeur.tex
 C:,GitHub,ExercicesCompetences,A5_AnalysePPM,A5_05_Specifications,74_Chariot,,74_Chariot.tex
 C:,GitHub,ExercicesCompetences,A5_AnalysePPM,A5_05_Specifications,75_TrainA380,,75_TrainA380.tex
 C:,GitHub,ExercicesCompetences,A5_AnalysePPM,A5_05_Specifications,76_FixationSki,,76_FixationSki.tex
@@ -14,28 +15,33 @@ C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_06_ModeleComportement,504_Di
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_06_ModeleComportement,506_Divers,,506_Divers.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,500_Vierge.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,39_SeineMusicale,,39_SeineMusicale.tex,DDS 1
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,47_SysReeduc,,47_SysReeduc.tex,DDS 1,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,48_Quille,,48_Quille.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,500_Divers,,500_Divers.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,505_Divers,,505_Divers.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,47_SysReeduc,,47_SysReeduc.tex,DDS 1,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,48_Quille,,48_Quille.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,500_Divers,,500_Divers.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,505_Divers,,505_Divers.tex,DDS 1,DDS 2
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,512_Divers,,512_Divers.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,51_MCC,,51_MCC.tex,DDS 1
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,52_Verin,,52_Verin.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,53_BancEpreuveHydraulique,,53_BancEpreuveHydraulique.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,40_Parallelepipede,,40_Parallelepipede.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,41_Parallelepipede,,41_Parallelepipede.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,71_Robovolc,,71_Robovolc.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,77_ProtheseTibia,,77_ProtheseTibia.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,78_RobotDaVinci,,78_RobotDaVinci.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,79_Tuyere,,79_Tuyere.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_07_ModelisationSchemaBlocs,80_Clever,,80_Clever.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,40_Parallelepipede,,40_Parallelepipede.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,41_Parallelepipede,,41_Parallelepipede.tex,DDS 2
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,42_Cylindre,,42_Cylindre.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,43_Cylindre,,43_Cylindre.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,44_Disque,,44_Disque.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,45_Disque,,45_Disque.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,50_BancBalafre,,50_BancBalafre.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,50_BancBalafre,,50_BancBalafre.tex,DDS 2
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,64_EPAS,,64_EPAS.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_10_CartacteristiquesSolides,65_Eclipse,,65_Eclipse.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,01_T,,01_T.tex,DDS 1
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,02_R,,02_R.tex,DDS 1
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,03_TT,,03_TT.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,04_RR,,04_RR.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,05_RT,,05_RT.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,03_TT,,03_TT.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,04_RR,,04_RR.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,05_RT,,05_RT.tex,DDS 1,DDS 2
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,06_TR,,06_TR.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,07_RR3D,,07_RR3D.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,08_RR3D,,08_RR3D.tex
@@ -43,8 +49,8 @@ C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiq
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,1018_BorneReglable,,1018_BorneReglable.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,1019_RobotPeinture,,1019_RobotPeinture.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,1020_PompeEnsieta,,1020_PompeEnsieta.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,10_PompePalette,,10_PompePalette.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,11_PompePistonsRadiaux,,11_PompePistonsRadiaux.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,10_PompePalette,,10_PompePalette.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,11_PompePistonsRadiaux,,11_PompePistonsRadiaux.tex,DDS 2
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,12_BielleManivelle,,12_BielleManivelle.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,13_TransfoMouvement,,13_TransfoMouvement.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,14_Sympact,,14_Sympact.tex,DDS 1
@@ -55,14 +61,14 @@ C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiq
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,46_RR_RSG,,46_RR_RSG.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,513_Divers_Tabouret,,513_Divers_Tabouret.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_12_ModeliserSchemasCinematiques,514_Divers_Tabouret,,514_Divers_Tabouret.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,01_T,,01_T.tex,DDS 1,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,01_T_02,,01_T_02.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,02_R,,02_R.tex,DDS 1,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,02_R_02,,02_R_02.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,03_TT,,03_TT.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,03_TT_02,,03_TT_02.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,04_RR,,04_RR.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,04_RR_02,,04_RR_02.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,01_T,,01_T.tex,DDS 1,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,01_T_02,,01_T_02.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,02_R,,02_R.tex,DDS 1,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,02_R_02,,02_R_02.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,03_TT,,03_TT.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,03_TT_02,,03_TT_02.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,04_RR,,04_RR.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,04_RR_02,,04_RR_02.tex,DDS 2
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,05_RT,,05_RT.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,05_RT_02,,05_RT_02.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_13_ModeliserCinematique,06_TR,,06_TR.tex
@@ -119,10 +125,14 @@ C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_14_ModeliserAction_ModeleGlo
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_14_ModeliserAction_ModeleGlobal,519_MAM,,519_MAM.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_14_ModeliserAction_ModeleGlobal,520_MAM,,520_MAM.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_14_ModeliserAction_ModeleGlobal,521_MAM,,521_MAM.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,64_EPAS,,64_EPAS.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,69_TrainA350,,69_TrainA350.tex,DDS 2
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,71_Robovolc,,71_Robovolc.tex
-C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,72_Tripteor,,72_Tripteor.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,64_EPAS,,64_EPAS.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,69_TrainA350,,69_TrainA350.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,71_Robovolc,,71_Robovolc.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,71_Robovolc_02,,71_Robovolc_02.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,72_Tripteor,,72_Tripteor.tex,DDS 2
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,81_Piaggio,,81_Piaggio.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,82_MAV,,82_MAV.tex
+C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_16_Hyperstatisme,83_Roburoc,,79_Roburoc.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_17_Sequentiel,50_BancBalafre,,50_BancBalafre.tex
 C:,GitHub,ExercicesCompetences,B2_ProposerModele,B2_22_ModeliserConvertisseur,50_BancBalafre,,50_BancBalafre.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_02_ProposerDemarcheReglageCorrecteur,50_BancBalafre,,50_BancBalafre.tex
@@ -146,15 +156,15 @@ C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionM
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFD,STOCK,08_RR3D_02,08_RR3D_02.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,01_T,,01_T.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,02_R,,02_R.tex,DDS 1
-C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,03_TT,,03_TT.tex,DDS 2
-C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,04_RR,,04_RR.tex,DDS 2
+C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,03_TT,,03_TT.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,04_RR,,04_RR.tex,DDS 1,DDS 2
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,05_RT,,05_RT.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,06_TR,,06_TR.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,07_RR3D,,07_RR3D.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,08_RR3D,,08_RR3D.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,14_Sympact,,14_Sympact.tex,DDS 1
-C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,55_Suspension,,55_Suspension.tex,DDS 2
-C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,57_PeseCamion,,57_PeseCamion.tex
+C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,55_Suspension,,55_Suspension.tex,DDS 1
+C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,57_PeseCamion,,57_PeseCamion.tex,DDS 2
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,STOCK,01_T_02,01_T_02.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,STOCK,02_R_02,02_R_02.tex
 C:,GitHub,ExercicesCompetences,C1_ProposerDemarche,C1_05_ProposerDemarcheActionMecaLoiMvt_PFS,STOCK,03_TT_02,03_TT_02.tex
@@ -173,12 +183,12 @@ C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_02_DiagrammeBode,510
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_02_DiagrammeBode,511_Divers,,511_Divers.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI,501_Divers,,501_Divers.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI,509_Divers,,509_Divers.tex
-C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Precision,63_BancHydraulique,,63_BancHydraulique.tex,DDS 2
+C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Precision,63_BancHydraulique,,63_BancHydraulique.tex,DDS 1,DDS 2
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Precision,64_EPAS,,64_EPAS.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Precision,73_Bassin,,73_Bassin.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Stabilite,61_Hemostase,,61_Hemostase.tex
-C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Stabilite,62_Palettisation,,62_Palettisation.tex,DDS 2
-C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Stabilite,63_BancHydraulique,,63_BancHydraulique.tex,DDS 2
+C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Stabilite,62_Palettisation,,62_Palettisation.tex,DDS 1,DDS 2
+C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Stabilite,63_BancHydraulique,,63_BancHydraulique.tex,DDS 1,DDS 2
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_03_PerformancesSLCI_Stabilite,64_EPAS,,64_EPAS.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_04_Correcteurs,65_Eclipse,,65_Eclipse.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_04_Correcteurs,65_Eclipse_02,,65_Eclipse_02.tex
@@ -194,7 +204,7 @@ C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,14_Sympact,,14_Sympact.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,15_SympactGalet,,15_SympactGalet.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,16_Poussoir,,16_Poussoir.tex
-C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,17_4Barres,,17_4Barres.tex
+C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,17_4Barres,,17_4Barres.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,18_Maxpid,,18_Maxpid.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,19_Graham,,19_Graham.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_06_DeterminerLoisES,20_VariateurBilles,,20_VariateurBilles.tex
@@ -222,7 +232,7 @@ C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,01_T,,01_T.te
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,02_R,,02_R.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,14_Sympact,,14_Sympact.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,515_Divers_Potence,,515_Divers_Potence.tex,DDS 1
-C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,55_Suspension,,55_Suspension.tex,DDS 2
+C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,55_Suspension,,55_Suspension.tex,DDS 1
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,56_RobotAvion,,56_RobotAvion.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,57_PeseCamion,,57_PeseCamion.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_07_PFS,57_PeseCamion_02,,57_PeseCamion_02.tex
@@ -306,6 +316,9 @@ C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_10_RdM_Cohesion,529_
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_10_RdM_Cohesion,530_BancHelico,,530_BancHelico.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_10_RdM_Deformation,531_RdM,,531_RdM.tex
 C:,GitHub,ExercicesCompetences,C2_MettreEnOeuvreDemarche,C2_10_RdM_Deformation,532_RdM,,532_RdM.tex
+C:,GitHub,ExercicesCompetences,C3_ResolutionNumerique,C3_02_Euler,1021_Euler,,1021_Euler.tex
+C:,GitHub,ExercicesCompetences,C3_ResolutionNumerique,C3_02_Euler,1022_Euler,,1022_Euler.tex
+C:,GitHub,ExercicesCompetences,C3_ResolutionNumerique,C3_02_Euler,1023_Euler,,1023_Euler.tex
 C:,GitHub,ExercicesCompetences,E2_ProduireInformation,E2_05_Dessin2D,1000_Dessin2D,,1000_Dessin2D.tex
 C:,GitHub,ExercicesCompetences,E2_ProduireInformation,E2_05_Dessin2D,1001_Dessin2D,,1001_Dessin2D.tex
 C:,GitHub,ExercicesCompetences,E2_ProduireInformation,E2_05_Dessin2D,1002_Dessin2D,,1002_Dessin2D.tex
