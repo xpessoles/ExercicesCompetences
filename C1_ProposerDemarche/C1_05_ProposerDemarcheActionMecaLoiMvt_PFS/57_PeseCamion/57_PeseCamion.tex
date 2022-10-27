@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -35,6 +35,12 @@ L’action mécanique connue est caractérisée par : $\{\text{ext}\rightarrow 3
 
 \question{Tracer le graphe de structure. Définir le nombre d'inconnues statiques.}
 \ifprof
+
+\begin{center}
+\includegraphics[width=10cm]{57_01_Cor}
+\end{center}
+
+En faisant l'hypothèse de problème plan, on a 8 inconnues statiques. 
 \else
 \fi
 
@@ -42,6 +48,11 @@ L’action mécanique connue est caractérisée par : $\{\text{ext}\rightarrow 3
 
 \question{Donner la stratégie permettant de déterminer la valeur de $F$ en fonction de $M$.}
 \ifprof
+\begin{itemize}
+\item On commence par isoler \textbf{1} soumis à 2 glisseurs. D'après le PFS, les actions mécaniques en $A$ et en $C$ sont dirigées suivant la direction $\vect{x_0}$.
+\item On isole ensuite \textbf{2}. Le solide \textbf{2} étant en translation circulaire, on réalise un TRS suivant $\vect{y_0}$. 
+\item On isole enfint \textbf{3}. Le solide \textbf{3} étant en rotation autour de $\axe{B}{z_0}$ par rapport à \textbf{0},  on réalise un TMS en $B$ suivant $\vect{z_0}$. 
+\end{itemize}
 \else
 \fi
 \ifprof
