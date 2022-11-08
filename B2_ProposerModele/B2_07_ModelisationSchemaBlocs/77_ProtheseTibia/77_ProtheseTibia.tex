@@ -174,6 +174,23 @@ Le moteur électrique est régi par les équations électriques et de couplage �
 de transfert $H_1( p)$, $H_2 ( p)$, $H_3 ( p)$ et $H_6 ( p)$.}
 \ifprof
 \begin{corrige}
+On a d'une part, $C_M(p)=H_1(p)\left(U_M(p)-\Omega_M(p)\right)$. 
+
+D'autre part, en utilisant les deux équations du moteur électrique, on a $U_M (p)=RI (p)+E(p)$ et $E (p )=k_c \Omega_M (p)$ soit  $U_M (p)=RI (p)+k_c \Omega_M (p)$. De plus $C_M (p)=k_c I (p )$; donc $U_M (p)=R\dfrac{C_M(p)}{k_c}+k_c \Omega_M (p)$. 
+Par suite, $C_M(p)=\dfrac{k_c}{R}\left(U_M (p)-k_c \Omega_M (p)\right)$.
+
+En identifiant, on a donc $H_1(p)=\dfrac{k_c}{R}$ et  $H_6(p)={k_c}$.
+
+
+En utilisant l'équation différentielle caractéristique du comportement de la prothèse, on a : 
+$J_M p^2 \Delta \alpha(p) + \mu_m p \Delta \alpha(p)  = C_M(p)R_T -C(p)R_T^2$
+$\Leftrightarrow \Delta \alpha(p) \left(J_M p^2  + \mu_m p \right)  = C_M(p)R_T -C(p)R_T^2$.
+
+D'après le schéma-blocs, 
+$\Delta \alpha(p) = \left(C(p)-C_M(p)H_2(p)\right)H_3(p)H_4(p)$.
+
+A TERMINER
+
 \end{corrige}
 \else
 \fi
@@ -243,6 +260,8 @@ en couple et d'analyser les performances de cet asservissement.
 \end{obj}
 
 \subsubsection*{Mise en place de l'asservissement en couple}
+\ifprof
+\else
 On se place pour analyser les performances de l'asservissement en couple dans le cadre de l'expérience
 d'identification décrite précédemment (pied et tibia bloqués).
 
@@ -250,7 +269,7 @@ L'asservissement en couple est réalisé grâce à un potentiomètre linéaire q
 variation de longueur des ressorts $\Delta X $. On note $K_{\text{capt}}$ le gain de ce capteur. D'autre part, un bloc d'adaptation de gain $K_A$ permet d'obtenir une tension $u_{\text{th}}$ image du couple de consigne $C_{\text{th}}$. L'écart $\varepsilon$ entre les tensions $u_{\text{th}}$ et
 $u_{\text{mes}}$ est corrigé par un correcteur de fonction de transfert $H_c ( p)$ qui délivre la tension $u_M$ au moteur par
 l'intermédiaire de l'amplificateur de gain $K_{\text{amp}}$.
-
+\fi
 
 
 \question{Compléter le schéma-blocs afin de mettre en place
