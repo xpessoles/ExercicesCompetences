@@ -182,14 +182,24 @@ Par suite, $C_M(p)=\dfrac{k_c}{R}\left(U_M (p)-k_c \Omega_M (p)\right)$.
 En identifiant, on a donc $H_1(p)=\dfrac{k_c}{R}$ et  $H_6(p)={k_c}$.
 
 
-En utilisant l'équation différentielle caractéristique du comportement de la prothèse, on a : 
-$J_M p^2 \Delta \alpha(p) + \mu_m p \Delta \alpha(p)  = C_M(p)R_T -C(p)R_T^2$
-$\Leftrightarrow \Delta \alpha(p) \left(J_M p^2  + \mu_m p \right)  = C_M(p)R_T -C(p)R_T^2$.
+
+
 
 D'après le schéma-blocs, 
-$\Delta \alpha(p) = \left(C(p)-C_M(p)H_2(p)\right)H_3(p)H_4(p)$.
 
-A TERMINER
+$\Delta \alpha(p) = \left(C(p)-C_M(p)H_2(p)\right)H_3(p)H_4(p)$ soit 
+
+En utilisant l'équation différentielle caractéristique du comportement de la prothèse, on a : 
+$J_M p^2 \Delta \alpha(p) + \mu_m p \Delta \alpha(p)  = C_M(p)R_T -C(p)R_T^2$
+$\Leftrightarrow \Delta \alpha(p) \left(J_M p^2  + \mu_m p \right)  = C_M(p)R_T -C(p)R_T^2$
+
+$\Leftrightarrow \Delta \alpha(p)  = \dfrac{R_T^2}{J_M p^2  + \mu_m p}\left(\dfrac{C_M(p)}{R_T} -C(p)\right)$.
+
+Or, $\Delta \alpha(p) = \dfrac{1}{p}\Delta \alpha'(p)$; donc $H_4(p)=\dfrac{1}{p}$.
+
+Au final, $H_3(p) = \dfrac{R_T^2}{J_M p  + \mu_m }$ et $H_2(p)=R_T$.
+
+
 
 \end{corrige}
 \else
