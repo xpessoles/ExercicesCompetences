@@ -212,6 +212,21 @@ On considère que $\theta(p)=0$.
 \question{Déterminer la fonction de transfert en boucle fermée $\text{FTBF}(p)=\dfrac{C(p)}{U_M(p)}$.}
 \ifprof
 \begin{corrige}
+On déplace le dernier point de prélèvement avant $H_4$. On ajoute donc $H_4(p)H_7(p)$ dans la retour. 
+
+On a alors $F(p)=\dfrac{\Delta \alpha'(p)}{-} = \dfrac{H_3(p)}{1+H_3(p)H_4(p)H_7(p)}$.
+$\text{FTBF}(p)  = \dfrac{H_1(p)H_2(p) F(p)}{1+H_1(p)H_2(p)H_5(p)H_6(p) F(p)}H_4(p)H_7(p) $.
+
+Soit 
+$\text{FTBF}(p)  = \dfrac{H_1(p)H_2(p) \dfrac{H_3(p)}{1+H_3(p)H_4(p)H_7(p)}}{1+H_1(p)H_2(p)H_5(p)H_6(p) \dfrac{H_3(p)}{1+H_3(p)H_4(p)H_7(p)}}H_4(p)H_7(p) $
+
+$= \dfrac{H_1(p)H_2(p) H_3(p)}{1+H_3(p)H_4(p)H_7(p)+H_1(p)H_2(p)H_5(p)H_6(p) H_3(p)}H_4(p)H_7(p) $
+
+$= \dfrac{\dfrac{k_c}{R}R_T \dfrac{R_T^2}{J_M p  + \mu_m }}{1+\dfrac{R_T^2}{J_M p  + \mu_m }\dfrac{k_{RS}d_0^2}{p}+\dfrac{k_c}{R}R_T \dfrac{1}{R_T}k_c \dfrac{R_T^2}{J_M p  + \mu_m }}\dfrac{k_{RS}d_0^2}{p} $
+
+$= \dfrac{\dfrac{k_c}{1} R_T^3}{J_MR p^2  + \mu_m R p+R_TR^2k_{RS}d_0^2+pk_ck_c R_T^2}k_{RS}d_0^2 $
+
+$= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{RS}d_0^2}k_{RS}d_0^2 $.
 \end{corrige}
 \else
 \fi
@@ -363,7 +378,7 @@ Précision pour une entrée en échelon
 %\textit{Tracer le diagramme asymptotique en le justifiant rigoureusement. }
 
 
-{À l'aide des courbes, valider l'ensemble des critères du cahier des charges en justifiant clairement vos réponses. }
+\question{À l'aide des courbes, valider l'ensemble des critères du cahier des charges en justifiant clairement vos réponses. }
 
 \begin{center}
 \includegraphics[width=\linewidth]{ccmp_10}
