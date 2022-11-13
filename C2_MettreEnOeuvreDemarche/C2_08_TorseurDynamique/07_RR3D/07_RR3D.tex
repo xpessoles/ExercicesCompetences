@@ -21,7 +21,7 @@
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ et $\vect{BC}=\ell\vect{i_2}+r\vect{j_2}$. On note $R+\ell=L = \SI{20}{mm}$ et $r=\SI{10}{mm}$. De plus :
 \begin{itemize}
-\item $G_1=B$ désigne le centre d'inertie de \textbf{1}, on note $m_1$ la masse de \textbf{1} et $\inertie{G_1}{1}$; 
+\item $G_1=B$ désigne le centre d'inertie de \textbf{1}, on note $m_1$ la masse de \textbf{1} et $\inertie{G_1}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\bas{1}}$; 
 \item $G_2$ désigne le centre d'inertie de \textbf{2} tel que  $\vect{BG_2}=\ell\vect{i_2}$, on note $m_2$ la masse de \textbf{2} et $\inertie{G_2}{2}=\matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\bas{2}}$.
 \end{itemize}
 \begin{center}
@@ -81,6 +81,50 @@ $\torseurdyn{1}{0} = \torseurl{m_1\left(R\thetapp \vj{1}-R\thetap^2 \vi{1}\right
 
 \question{Déterminer $\vectmd{A}{1+2}{0}\cdot \vect{k_0}$}
 \ifprof
+
+Tout d'abord, $\vectmd{A}{1+2}{0} = \vectmd{A}{1}{0}+\vectmd{A}{2}{0}$.
+
+\textbf{Calcul de $\vectmd{A}{1}{0} \cdot \vect{k_0}$ -- Méthode 1}
+
+$\vectmd{A}{1}{0} \cdot \vect{k_0} = \left(\vectmd{B}{1}{0} + \vect{AB} \wedge \vectrd{1}{0} \right) \cdot \vect{k_0} $
+$= \left(C_1 \thetapp \vk{0} + R\vi{1} \wedge m_1\left(R\thetapp \vj{1}-R\thetap^2 \vi{1}\right) \right) \cdot \vect{k_0} $
+$= C_1 \thetapp  +  m_1R^2 \thetapp  $.
+
+
+\textbf{Calcul de $\vectmd{A}{2}{0} \cdot \vect{k_0}$ -- Méthode 1}
+
+$A$ est un point fixe. On a donc 
+$\vectmd{A}{2}{0} \cdot \vect{k_0} = \deriv{\vectmc{A}{2}{0}}{\rep{0}}\cdot \vect{k_0} $
+$= \deriv{\vectmc{A}{2}{0}\cdot \vect{k_0}}{\rep{0}} - \underbrace{\vectmc{A}{2}{0}\cdot \deriv{ \vect{k_0}}{\rep{0}}}_{\vect{0}}$.
+
+$A$ est un point fixe. On a donc 
+$\vectmc{A}{2}{0} \cdot \vect{k_0} = \left(\inertie{A}{2} \vecto{2}{0}\right)\cdot \vect{k_0} $
+
+$\inertie{A}{2} = \inertie{G_2}{2}+\matinertie{0}{m_2R^2}{m_2R^2}{0}{0}{0}{\rep{2}}$ et
+$\vecto{2}{0} = \thetap\vk{1}+\varphip\vi{2}=\thetap\left(\cos\varphi\vk{2}+\sin\varphi\vj{2}\right)+\varphip\vi{2}$. 
+
+On a donc $\vectmc{A}{2}{0}= \matinertie{A_2}{B_2+m_2R^2}{C_2m_2R^2}{0}{0}{0}{\rep{2}}\begin{pmatrix}
+\varphip \\
+\thetap\sin\varphi \\
+\thetap\cos\varphi
+\end{pmatrix}_{\rep{2}}
+= \begin{pmatrix}
+A_2 \varphip \\
+\thetap\sin\varphi \left(B_2+m_2R^2\right) \\
+\thetap\cos\varphi\left(C_2+m_2R^2\right)
+\end{pmatrix}_{\rep{2}}
+$. 
+
+De plus $\vk{1}=\cos\varphi\vk{2}+\sin\varphi\vj{2}$.
+On a alors $\vectmc{A}{2}{0} \cdot \vect{k_0} = \thetap\sin^2\varphi \left(B_2+m_2R^2\right) +
+\thetap\cos^2\varphi\left(C_2+m_2R^2\right)$.
+
+Enfin, $\vectmd{A}{2}{0} \cdot \vect{k_0} = 
+\left(B_2+m_2R^2\right)\left(\thetapp\sin^2\varphi  +
+2 \thetap \varphip \cos\varphi\sin\varphi \right)+
+\left(C_2+m_2R^2\right)\left(\thetapp\cos^2\varphi-
+2\thetap\cos\varphi\sin\varphi\right)$.
+
 \else
 \fi
 
