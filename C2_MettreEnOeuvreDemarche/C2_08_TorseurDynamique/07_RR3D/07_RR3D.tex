@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -63,7 +63,7 @@ $B$ est le centre d'inertie du solide 1; donc
   Par suite, $\vectmd{B}{1}{0} = C_1 \thetapp \vk{0}$.
   
   Au final, 
-$\torseurdyn{1}{0} = \torseurl{m_1\left(R\thetapp \vj{1}-R\thetap^2 \vi{1}\right)}{C_1 \thetapp \vk{0}}{B}$
+$\torseurdyn{1}{0} = \torseurl{m_1\left(R\thetapp \vj{1}-R\thetap^2 \vi{1}\right)}{C_1 \thetapp \vk{0}}{B}$.
 
 
 %$= \dfrac{\dd \vect{AB}}{\dd t}$
@@ -123,13 +123,33 @@ Enfin, $\vectmd{A}{2}{0} \cdot \vect{k_0} =
 \left(B_2+m_2R^2\right)\left(\thetapp\sin^2\varphi  +
 2 \thetap \varphip \cos\varphi\sin\varphi \right)+
 \left(C_2+m_2R^2\right)\left(\thetapp\cos^2\varphi-
-2\thetap\cos\varphi\sin\varphi\right)$.
+2\thetap\varphip\cos\varphi\sin\varphi\right)$.
 
+\textbf{Conclusion}
+
+$\vectmd{A}{1+2}{0}\cdot \vect{k_0} =  C_1 \thetapp  +  m_1R^2 \thetapp + \left(B_2+m_2R^2\right)\left(\thetapp\sin^2\varphi  +
+2 \thetap \varphip \cos\varphi\sin\varphi \right)+
+\left(C_2+m_2R^2\right)\left(\thetapp\cos^2\varphi-
+2\thetap \varphip\cos\varphi\sin\varphi\right)$.
 \else
 \fi
 
 \ifprof
 \else
+\footnotesize
+\begin{tabular}{|p{.95\linewidth}|}
+\hline
+\begin{enumerate}
+\item $\torseurdyn{1}{0} = \torseurl{m_1\left(R\thetapp \vj{1}-R\thetap^2 \vi{1}\right)}{C_1 \thetapp \vk{0}}{B}$.
+\item $\vectmd{A}{1+2}{0}\cdot \vect{k_0} =  C_1 \thetapp  +  m_1R^2 \thetapp + \left(B_2+m_2R^2\right)\left(\thetapp\sin^2\varphi  +
+2 \thetap \varphip \cos\varphi\sin\varphi \right)+
+\left(C_2+m_2R^2\right)\left(\thetapp\cos^2\varphi-
+2\thetap \varphip\cos\varphi\sin\varphi\right)$.
+\end{enumerate}\\
+\hline
+\end{tabular}
+\normalsize
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{C2:08:07}.}
 \end{flushright}%
