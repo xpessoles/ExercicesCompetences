@@ -33,9 +33,6 @@ def get_listes_exos(folder_path):
                 if len(ligne)==7:
                     ligne = ligne[:-1]+[""]+[ligne[-1]]
                 liste_exos.append(ligne)
-    
-    
-    
     return liste_exos
 
 def ecrire_csv(liste_exos,file_csv):   
