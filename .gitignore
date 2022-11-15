@@ -2,3 +2,9 @@
 MecanismesDeBase/~$Figures.pptx
 *.log
 *.pyc
+Outils/test.aux
+*.aux
+*.pdf
+*.idx
+*.aux
+*.gz

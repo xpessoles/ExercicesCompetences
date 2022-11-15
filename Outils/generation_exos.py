@@ -163,6 +163,9 @@ def write_tex(competences,exercices):
             # On fait la liste des dossiers
             # On recherche si le code est présent
             
+            ligne = "\n\\begin{multicols}{2} \n"
+            fid.write(ligne)
+            
             os.chdir("C:/GitHub/ExercicesCompetences")
             rep = os.listdir()
             for r in rep :
@@ -179,8 +182,8 @@ def write_tex(competences,exercices):
                             fid.write("\\renewcommand{\\td}{"+exo[:-4]+"}\n")
                             fid.write("\\graphicspath{{\\repStyle/png/}{\\repExo/images/}}\n")
                             fid.write("\\input{\\repExo/\\td.tex}\n")
-                    #print()
-                    a=1
+                
+            fid.write("\n\\end{multicols}\n")
     fid.write("\end{document} \n")        
     fid.close()
 write_tex(competences,exercices)
