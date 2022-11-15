@@ -146,7 +146,7 @@ def write_tex(competences,exercices):
     fid = open("test.tex","w",encoding="utf-8")
     entete(fid)
 
-    
+    #### SUJETS
     for comp in competences : 
         
         if len(comp[0])==1 :## C'est une macro compétences >> Chapitre
@@ -184,6 +184,53 @@ def write_tex(competences,exercices):
                             fid.write("\\input{\\repExo/\\td.tex}\n")
                 
             fid.write("\n\\end{multicols}\n")
+    
+    
+    #### CORRIGES (IDEM QUE SUJET...)
+    
+    
+    fid.write("\n\\proftrue\n")
+    
+    for comp in competences : 
+        
+        if len(comp[0])==1 :## C'est une macro compétences >> Chapitre
+            ligne = "\n\\chapter{"+comp[1]+"} \n"
+            fid.write(ligne)
+        elif len(comp[0])==2 :## C'est une compétence >> section
+            ligne = "\n\\section{"+comp[1]+"} \n"
+            fid.write(ligne)
+            codecomp = comp[0]
+        else  :## C'est une sous-comp >> subsection
+            ligne = "\n\\subsection{"+comp[1]+"} \n"
+            fid.write(ligne)
+            code = comp[0]
+            # On fait la liste des dossiers
+            # On recherche si le code est présent
+            
+            
+            fid.write(ligne)
+            
+            os.chdir("C:/GitHub/ExercicesCompetences")
+            rep = os.listdir()
+            for r in rep :
+                if codecomp in r :
+                    code = code.replace("-","_")
+                    
+                    for exercice in exercices : 
+                        if code in exercice[0]:
+                            dossier = exercice[0][31:]
+                            dossier = dossier.replace("\\","/")
+                            exo = exercice[1]
+                            
+                            fid.write("\n\\renewcommand{\\repExo}{\\repExos/"+dossier+"}\n")
+                            fid.write("\\renewcommand{\\td}{"+exo[:-4]+"}\n")
+                            fid.write("\\graphicspath{{\\repStyle/png/}{\\repExo/images/}}\n")
+                            fid.write("\\input{\\repExo/\\td.tex}\n")
+                
+    
+            
+            
+            
     fid.write("\end{document} \n")        
     fid.close()
 write_tex(competences,exercices)

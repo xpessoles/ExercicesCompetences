@@ -8,3 +8,5 @@ Outils/test.aux
 *.idx
 *.aux
 *.gz
+ALL_EXOS/ALL_EXOS.bcf
+*.xml
