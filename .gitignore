@@ -10,3 +10,4 @@ Outils/test.aux
 *.gz
 ALL_EXOS/ALL_EXOS.bcf
 *.xml
+*.bcf
