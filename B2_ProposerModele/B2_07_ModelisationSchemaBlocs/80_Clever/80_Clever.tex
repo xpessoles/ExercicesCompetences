@@ -18,6 +18,8 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+\ifprof
+\else
 \section*{Présentation du système}
 
 Le Clever est un démonstrateur technologique développé par un tissu d'industriels européens. Clever est la contraction de Compact Low Emission VEhiclefor uRban tRansportation (véhicule compacte à faibles émissions pour le transport urbain) car, avec une consommation de seulement \SI{2,5}{L}/\SI{100}{km}, il s'annonce très écologique. 
@@ -69,6 +71,7 @@ On modélise le comportement du servo-distributeur par un gain pur noté $K_s$ e
 \item $v(t)=\dot{\lambda}(t)=\dfrac{\dd \lambda(t) }{\dd t}$ est la vitesse de translation de la tige du vérin par rapport au corps.
 \end{itemize}
 % 
+\fi
 
 \question{Donner l'expression de la fonction de transfert du vérin $H_{V1}(p)$ (telle que $\lambda(p) = H_{V1}(p) Q(p)$) et compléter le schéma-bloc associé à la modélisation actuelle du système.}
 \ifprof
@@ -108,6 +111,8 @@ $\dfrac{K_1}{1+\tau_1 p}$ en précisant les expressions de $K_1$ et de $\tau_1$.
 \else
 \fi
 
+\ifprof
+\else
 \subsection*{Modélisation du comportement du vérin avec fluide compressible et du comportement dynamique du mécanisme}
 
 La compressibilité du fluide étant prise en compte dans le modèle, l'évolution du débit est une fonction du déplacement mais aussi de la pression sous la forme de la relation (1). L'effort exercé par le vérin en sortie de tige est décrit par la relation (2).
@@ -125,7 +130,7 @@ où:
 \end{itemize}
 
 Par ailleurs, $F_v(t)+k_g \lambda(t)=m_{\text{eq}}\ddot{\lambda}(t)$ avec $m_{\text{eq}}$ la masse équivalente du système, $k_g$ une constante, $\lambda(t)$ le déploiement des vérins.
-
+\fi
 
 
 \question{Appliquer la transformation de Laplace aux équations précédentes et compléter le schéma-blocs.}
@@ -144,7 +149,10 @@ Par ailleurs, $F_v(t)+k_g \lambda(t)=m_{\text{eq}}\ddot{\lambda}(t)$ avec $m_{\t
 \end{center}
 
 
+\ifprof
+\else
 \subsection*{Analyse du comportement global}
+\fi
 
 
 \question{Donner l'expression de la fonction de transfert en boucle fermée du vérin $H_{\text{V2}}$ (telle que $\lambda(p) =  H_{\text{V2}} Q(p)$) et préciser les expressions des coefficients $K_V$ et $\omega_V$ de sa forme canonique : $H_{\text{V2}}(p)=\dfrac{K_V}{p\left( 1+\dfrac{p^2}{\omega_V^2}\right)}$.}
@@ -159,11 +167,16 @@ Par ailleurs, $F_v(t)+k_g \lambda(t)=m_{\text{eq}}\ddot{\lambda}(t)$ avec $m_{\t
 \else
 \fi
 
+
+\ifprof
+\else
+
 \textbf{$k_g$ peut maintenant être négligé.}
 
 \subsection*{Modélisation du comportement dynamique avec prise en compte d'un débit de fuite}
 Pour pallier le problème de stabilité du modèle précédemment établi, une solution possible consiste à introduire un débit de fuite au niveau du vérin. Celui-ci a pour effet de réduire artificiellement le débit réel entrant dans le vérin en fonction de la pression utile. L'expression du débit est alors : 
 $q(t)=S\dot{\lambda}(t)+\dfrac{V_0}{B} \dot{p}_r(t)-\delta p_r(t)$ où $\delta$ représente le coefficient de débit de fuite.
+\fi
 
 
 \question{Proposer une modification du schéma-bloc donné afin de prendre en compte le débit de fuite.}
@@ -195,6 +208,8 @@ Donner l'expression de $a_1$ en fonction de $M_{eq}$, $\delta$ et $S$ et déterm
 \else
 \fi
 
+\ifprof
+\else
 \subsection*{Retour sur le cahier des charges}
 Le régulateur étant a priori optimisé, on réalise un essai de validation du comportement temporel de l'inclinaison de l'habitacle, le véhicule étant à l'arrêt. Le calculateur envoie un signal de consigne représentant l'évolution de la position angulaire souhaitée (de 0 à 45\degres en \SI{0,75}{s}). 
 
@@ -202,6 +217,7 @@ Le régulateur étant a priori optimisé, on réalise un essai de validation du 
 \includegraphics[width=\linewidth]{fig_09}
 %\textit{}
 \end{center}
+\fi
 
 \question{Quels sont les critères du cahier des charges validés ?}
 \ifprof

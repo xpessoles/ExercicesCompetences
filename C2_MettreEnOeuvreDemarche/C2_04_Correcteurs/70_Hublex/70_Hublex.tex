@@ -19,6 +19,10 @@
 \fi
 
 
+
+\ifprof
+\else
+
 L’architecture retenue pour contrôler le couple moteur est un asservissement en intensité, image du
 couple moteur (voir équation précédente). Le schéma-blocs est représenté \autoref{fig_13}. Un convertisseur IU
 fournit au calculateur une tension $\indice{u}{ic}(t)$ image de l’intensité de consigne $i_c(t)$, proportionnelle à cette
@@ -35,8 +39,13 @@ On donne la fonction de transfert du moteur : $H_m(p)=K_m\dfrac{1+\tau_m p}{1+\d
 \caption{Schéma-blocs \label{fig_13}}
 \end{figure}
 
+\fi
+
 \question{Préciser, en justifiant, quelle valeur donner à $\indice{K}{iu}$, caractéristique du convertisseur IU.}
 
+
+\ifprof
+\else
 On prend, dans un premier temps, un correcteur purement proportionnel: $C(p)=K_p$.
 
 On en déduit la fonction de transfert $H_I(p)=\dfrac{I(p)}{I_c(p)}$ :
@@ -45,6 +54,7 @@ $H_I(p)=\dfrac{K'}{1+K'}\dfrac{1+\tau_m p}{1+
 \dfrac{\dfrac{2z_m}{\omega_{0m}}+ K'\tau_m}{1+K'}p 
 + \dfrac{1}{\omega_{0m}^2(1+K')} p^2}$, avec $K'=\indice{K}{iu}K_pK_m$.
 
+\fi
 
 \question{Calculer l’expression littérale de l’erreur en régime permanent notée $\mu_s$, pour une entrée indicielle (i.e. $I_c(p)$ est un échelon unitaire), en fonction de $\indice{K}{iu}$, $\indice{K}{p}$ et $K_m$.}
 
@@ -79,12 +89,18 @@ On souhaite régler le correcteur afin de respecter les performances de précisi
 % Q35.
 \question{Commenter le résultat obtenu vis-à-vis de l’exigence «~1.7.1.1.4~». Expliquer pourquoi, à partir des exigences du D6, cet asservissement n’est pas directement implanté en l’état dans le système.}
 
+\ifprof
+\else
+
 Le correcteur reste inchangé. Afin de palier au problème identifié précédemment, on apporte une dernière évolution au sein du calculateur. Cela permet de respecter les exigences de l’asservissement. \autoref{fig_17} présente les réponses temporelles du système pour un échelon d’intensité $i_c(t)$ de \SI{2}{A}.
+\fi
 
 %Q36.
 \question{Préciser quelle ultime modification a apporté le constructeur afin de respecter les exigences de l’asservissement.}
 
 
+\ifprof
+\else
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{fig_14}
@@ -110,6 +126,7 @@ Le correcteur reste inchangé. Afin de palier au problème identifié précédem
 \includegraphics[width=.95\linewidth]{fig_17}
 \caption{Réponses temporelles du système finalement implanté\label{fig_17}}
 \end{figure}
+\fi
 
 
 \ifprof
