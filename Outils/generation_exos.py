@@ -92,7 +92,7 @@ exercices = get_listes_exos(folder_path)
 
 def entete(fid):
     
-    fid.write("\\documentclass[10pt,fleqn]{book}\n")
+    fid.write("\\documentclass[10pt,fleqn]{article}\n")
     fid.write("\\usepackage[%\n")
     fid.write("\tpdftitle={Exercices de SII},\n")
     fid.write("\tpdfauthor={Xavier Pessoles}]{hyperref}\n")
@@ -124,34 +124,54 @@ def entete(fid):
 
     fid.write("\\def\\xxpartie{}\n")
     fid.write("\\def\\xxnumpartie{}\n")
-    fid.write("\\def\\xxchapitre{}\n")
+    fid.write("\\def\\xxchapitre{xxch}\n")
     fid.write("\\def\\xxnumchapitre{}\n")
     fid.write("\\def\\xxactivite{DDS 3}\n")
     fid.write("\\def\\xxtitreexo{Les ptits devoirs du soir}\n")
     fid.write("\\def\\xxsourceexo{Xavier Pessoles}\n")
 
+    """
     fid.write("\\input{\\repRel/Style/pagegarde_TD}\n")
-
     fid.write("\\pagestyle{fancy}\n")
     fid.write("\\thispagestyle{plain}\n")
-
     fid.write("\\vspace{4.5cm}\n")
-
     fid.write("\\proffalse\n")
-
+    """
 
 
 def write_tex(competences,exercices):
     codecomp = ""
     fid = open("test.tex","w",encoding="utf-8")
     entete(fid)
-
+    flag = False
+    CORPS = ""
     #### SUJETS
     for comp in competences : 
         
         if len(comp[0])==1 :## C'est une macro compétences >> Chapitre
-            ligne = "\n\\chapter{"+comp[1]+"} \n"
-            fid.write(ligne)
+           
+            if flag :         
+                ## On MET LE CORRIGE
+                fid.write("\n\\proftrue\n")
+                fid.write("\\setcounter{numexo}{0}\n")
+                fid.write("\n\\section{Corrigé} \n")
+                fid.write(CORPS)
+                fid.write("\n\\proffalse\n")
+                CORPS = ""
+                
+            
+            print(comp)
+            fid.write("\\newpage\n")
+            #fid.write("\n\\chapter{"+comp[1]+"} \n")
+            fid.write("\\def\\xxchapitre{"+comp[1]+"}\n")
+            fid.write("\\def\\xxactivite{"+comp[0]+"}\n")
+            fid.write("\\setcounter{section}{0}\n")
+            fid.write("\\setcounter{numexo}{0}\n")
+            fid.write("\\input{\\repRel/Style/pagegarde_chap}\n")
+            flag = True
+            
+        
+            
         elif len(comp[0])==2 :## C'est une compétence >> section
             ligne = "\n\\section{"+comp[1]+"} \n"
             fid.write(ligne)
@@ -178,61 +198,29 @@ def write_tex(competences,exercices):
                             dossier = dossier.replace("\\","/")
                             exo = exercice[1]
                             
-                            fid.write("\n\\renewcommand{\\repExo}{\\repExos/"+dossier+"}\n")
-                            fid.write("\\renewcommand{\\td}{"+exo[:-4]+"}\n")
-                            fid.write("\\graphicspath{{\\repStyle/png/}{\\repExo/images/}}\n")
-                            fid.write("\\input{\\repExo/\\td.tex}\n")
-                
-            fid.write("\n\\end{multicols}\n")
-    
-    
-    #### CORRIGES (IDEM QUE SUJET...)
-    
-    
-    fid.write("\n\\proftrue\n")
-    
-    for comp in competences : 
-        
-        if len(comp[0])==1 :## C'est une macro compétences >> Chapitre
-            ligne = "\n\\chapter{"+comp[1]+"} \n"
-            fid.write(ligne)
-        elif len(comp[0])==2 :## C'est une compétence >> section
-            ligne = "\n\\section{"+comp[1]+"} \n"
-            fid.write(ligne)
-            codecomp = comp[0]
-        else  :## C'est une sous-comp >> subsection
-            ligne = "\n\\subsection{"+comp[1]+"} \n"
-            fid.write(ligne)
-            code = comp[0]
-            # On fait la liste des dossiers
-            # On recherche si le code est présent
-            
-            
-            fid.write(ligne)
-            
-            os.chdir("C:/GitHub/ExercicesCompetences")
-            rep = os.listdir()
-            for r in rep :
-                if codecomp in r :
-                    code = code.replace("-","_")
-                    
-                    for exercice in exercices : 
-                        if code in exercice[0]:
-                            dossier = exercice[0][31:]
-                            dossier = dossier.replace("\\","/")
-                            exo = exercice[1]
                             
                             fid.write("\n\\renewcommand{\\repExo}{\\repExos/"+dossier+"}\n")
                             fid.write("\\renewcommand{\\td}{"+exo[:-4]+"}\n")
                             fid.write("\\graphicspath{{\\repStyle/png/}{\\repExo/images/}}\n")
                             fid.write("\\input{\\repExo/\\td.tex}\n")
-                
+                            
+                            CORPS = CORPS + "\n\\renewcommand{\\repExo}{\\repExos/"+dossier+"}\n"
+                            CORPS = CORPS + "\\renewcommand{\\td}{"+exo[:-4]+"}\n"
+                            CORPS = CORPS + "\\graphicspath{{\\repStyle/png/}{\\repExo/images/}}\n"
+                            CORPS = CORPS + "\\input{\\repExo/\\td.tex}\n"
+                    
+            fid.write("\n\\end{multicols}\n")
+            
+        
+            
     
-            
-            
-            
+    #### CORRIGES (IDEM QUE SUJET...)
+    #fid.write("\n\\proftrue\n")
+    #fid.write(CORPS)            
+    
     fid.write("\end{document} \n")        
     fid.close()
+    
 write_tex(competences,exercices)
             
         
