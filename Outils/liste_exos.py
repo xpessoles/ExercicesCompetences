@@ -117,10 +117,15 @@ liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 2")
 print("DDS2", len(liste_dds))
 
 
+fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_03/DDS_03_liste.tex"
+liste_dds = read_liste_dds(fichier_dds)
+liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 3")
+print("DDS3", len(liste_dds))
+
     
 ecrire_csv(liste_exos,"liste_exos.csv")        
 
 import pandas as pd
 
-#read_file = pd.read_csv('liste_exos.csv')
-#read_file.to_excel('liste_exos.xlsx', index = None, header=False)
+read_file = pd.read_csv('liste_exos.csv')
+read_file.to_excel('liste_exos.xlsx', index = None, header=False)
