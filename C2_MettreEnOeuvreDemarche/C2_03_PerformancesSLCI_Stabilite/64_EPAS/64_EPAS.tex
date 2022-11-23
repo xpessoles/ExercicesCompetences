@@ -16,6 +16,9 @@
 \textbf{Pas de corrigé pour cet exercice.}
 \fi
 
+
+\ifprof
+\else
 L'asservissement est donné par le schéma-blocs suivant. $H_{\text{BO}}(p) = \dfrac{4}{p\left( p+3,6\right)}$.  Le retard du système est de \SI{0,2}{s}.
 De plus, $C(p)=K_c\dfrac{1+T_c p}{T_c p}$
 
@@ -23,6 +26,7 @@ De plus, $C(p)=K_c\dfrac{1+T_c p}{T_c p}$
 \includegraphics[width=\linewidth]{64_01}
 \end{center}
 
+\fi
  
 \question{Tracer le diagramme de Bode asymptotique de $H_{\text{BO}}(p)$ pour des pulsations comprises entre \SI{0,5}{rad.s^{-1}} et \SI{50}{rad.s^{-1}}.}
 \ifprof
@@ -35,11 +39,14 @@ De plus, $C(p)=K_c\dfrac{1+T_c p}{T_c p}$
 \fi
 
 
+\ifprof
+\else
 On donne le diagramme de la FTBO retardée. 
 
 \begin{center}
 \includegraphics[width=\linewidth]{64_02}
 \end{center}
+\fi
 
 \question{Déterminer le gain $K_c$ qui donne une marge de phase de 50\degres.}
 \ifprof

@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -32,6 +32,8 @@
 %déformation.
 
 %\noindent\begin{minipage}[c]{.55\linewidth}
+\ifprof
+\else
 Des ingénieurs du M.I.T. ont mis au point une prothèse active transtibiale capable de proposer un comportement
 similaire à celui des membres non amputés. On étudie dans ce sujet le prototype initial
 qui a permis de valider la pertinence d'une telle prothèse active.
@@ -132,13 +134,17 @@ domaine symbolique.
 %Le système vis-écrou est équipé d'une vis à billes de pas à droite $p_v$ avec $p_v=\SI{3}{mm.tour^{-1}}$. Le réducteur poulie-courroie possède un rapport de réduction $k=\dfrac{1}{2,1}$. On note $R_T$ le rapport entre la vitesse angulaire du rotor du moteur $\omega_M$ et la vitesse angulaire $\dfrac{\dd \alpha}{\dd t}$ tel que $\dfrac{\dd \alpha}{\dd t}=R_T\omega_M$.
 %
 %\question{En déduire les expressions littérales des blocs $H_4( p)$ et $H_5( p)$ . Déterminer la valeur numérique de $R_T$ . Conclure sur l'aptitude du moteur à générer la vitesse maximale exigée.}
+\fi
 
 \subsection*{Comportement dynamique de la prothèse}
+\ifprof
+\else
 \begin{obj}
 L'objectif de cette partie est d'établir les équations de comportement dynamique de la prothèse autour de
 la position de repos lors des phases d'appui et oscillante. Ces équations permettront de compléter le schéma-blocs
 de la chaîne d'énergie.
 \end{obj}
+
 
 On donne l'équation différentielle linéarisée suivante qui caractérise le comportement dynamique de la prothèse :
 $
@@ -169,6 +175,7 @@ Le moteur électrique est régi par les équations électriques et de couplage �
 %\begin{center}
 %\includegraphics[width=.9\linewidth]{images/ccmp_06}
 %\end{center}
+\fi
 
 \question{À partir des équations caractérisant le système, déterminer les expressions littérales des fonctions
 de transfert $H_1( p)$, $H_2 ( p)$, $H_3 ( p)$ et $H_6 ( p)$.}
@@ -181,27 +188,50 @@ Par suite, $C_M(p)=\dfrac{k_c}{R}\left(U_M (p)-k_c \Omega_M (p)\right)$.
 
 En identifiant, on a donc $H_1(p)=\dfrac{k_c}{R}$ et  $H_6(p)={k_c}$.
 
+D'après le schéma-blocs, 
+
+$\Delta \alpha(p) = \left(C(p)-C_M(p)H_2(p)\right)H_3(p)H_4(p)$ soit 
 
 En utilisant l'équation différentielle caractéristique du comportement de la prothèse, on a : 
 $J_M p^2 \Delta \alpha(p) + \mu_m p \Delta \alpha(p)  = C_M(p)R_T -C(p)R_T^2$
-$\Leftrightarrow \Delta \alpha(p) \left(J_M p^2  + \mu_m p \right)  = C_M(p)R_T -C(p)R_T^2$.
+$\Leftrightarrow \Delta \alpha(p) \left(J_M p^2  + \mu_m p \right)  = C_M(p)R_T -C(p)R_T^2$
 
-D'après le schéma-blocs, 
-$\Delta \alpha(p) = \left(C(p)-C_M(p)H_2(p)\right)H_3(p)H_4(p)$.
+$\Leftrightarrow \Delta \alpha(p)  = \dfrac{R_T^2}{J_M p^2  + \mu_m p}\left(\dfrac{C_M(p)}{R_T} -C(p)\right)$.
 
-A TERMINER
+Or, $\Delta \alpha(p) = \dfrac{1}{p}\Delta \alpha'(p)$; donc $H_4(p)=\dfrac{1}{p}$.
+
+Au final, $H_3(p) = \dfrac{R_T^2}{J_M p  + \mu_m }$ et $H_2(p)=R_T$.
 
 \end{corrige}
 \else
 \fi
 
+\ifprof
+\else
+
 On a par ailleurs $H_4(p)=\dfrac{1}{p}$, $H_5(p)=\dfrac{1}{R_T}$ et $H_7(p)=k_{RS}d_0^2$ ($k_{RS}=\SI{1200e3}{N.m^{-1}}$ raideur équivalente du ressort et $d_0=\SI{0,035}{m}$).
 
 On considère que $\theta(p)=0$. 
+\fi
 
 \question{Déterminer la fonction de transfert en boucle fermée $\text{FTBF}(p)=\dfrac{C(p)}{U_M(p)}$.}
 \ifprof
 \begin{corrige}
+On déplace le dernier point de prélèvement avant $H_4$. On ajoute donc $H_4(p)H_7(p)$ dans la retour. 
+
+On a alors $F(p)=\dfrac{\Delta \alpha'(p)}{-} = \dfrac{H_3(p)}{1+H_3(p)H_4(p)H_7(p)}$.
+$\text{FTBF}(p)  = \dfrac{H_1(p)H_2(p) F(p)}{1+H_1(p)H_2(p)H_5(p)H_6(p) F(p)}H_4(p)H_7(p) $.
+
+Soit 
+$\text{FTBF}(p)  = \dfrac{H_1(p)H_2(p) \dfrac{H_3(p)}{1+H_3(p)H_4(p)H_7(p)}}{1+H_1(p)H_2(p)H_5(p)H_6(p) \dfrac{H_3(p)}{1+H_3(p)H_4(p)H_7(p)}}H_4(p)H_7(p) $
+
+$= \dfrac{H_1(p)H_2(p) H_3(p)}{1+H_3(p)H_4(p)H_7(p)+H_1(p)H_2(p)H_5(p)H_6(p) H_3(p)}H_4(p)H_7(p) $
+
+$= \dfrac{\dfrac{k_c}{R}R_T \dfrac{R_T^2}{J_M p  + \mu_m }}{1+\dfrac{R_T^2}{J_M p  + \mu_m }\dfrac{k_{RS}d_0^2}{p}+\dfrac{k_c}{R}R_T \dfrac{1}{R_T}k_c \dfrac{R_T^2}{J_M p  + \mu_m }}\dfrac{k_{RS}d_0^2}{p} $
+
+$= \dfrac{\dfrac{k_c}{1} R_T^3}{J_MR p^2  + \mu_m R p+R_TR^2k_{RS}d_0^2+pk_ck_c R_T^2}k_{RS}d_0^2 $
+
+$= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{RS}d_0^2}k_{RS}d_0^2 $.
 \end{corrige}
 \else
 \fi
@@ -251,43 +281,46 @@ On considère que $\theta(p)=0$.
 %\newpage
 %\if
 
-\subsection*{Contrôler le processus lors de la phase d'appui}
-
-\begin{obj}
-La gestion des modes de commande permet de définir les séquences où l'asservissement s'effectue en
-position et celles où l'asservissement s'effectue en couple. L'objectif de cette partie est de définir l'asservissement
-en couple et d'analyser les performances de cet asservissement.
-\end{obj}
-
-\subsubsection*{Mise en place de l'asservissement en couple}
-\ifprof
-\else
-On se place pour analyser les performances de l'asservissement en couple dans le cadre de l'expérience
-d'identification décrite précédemment (pied et tibia bloqués).
-
-L'asservissement en couple est réalisé grâce à un potentiomètre linéaire qui délivre une tension $u_{\text{mes}}$ image de la
-variation de longueur des ressorts $\Delta X $. On note $K_{\text{capt}}$ le gain de ce capteur. D'autre part, un bloc d'adaptation de gain $K_A$ permet d'obtenir une tension $u_{\text{th}}$ image du couple de consigne $C_{\text{th}}$. L'écart $\varepsilon$ entre les tensions $u_{\text{th}}$ et
-$u_{\text{mes}}$ est corrigé par un correcteur de fonction de transfert $H_c ( p)$ qui délivre la tension $u_M$ au moteur par
-l'intermédiaire de l'amplificateur de gain $K_{\text{amp}}$.
-\fi
-
-
-\question{Compléter le schéma-blocs afin de mettre en place
-l'asservissement en couple. Proposer une expression de $K_A$ permettant de réaliser un asservissement
-correct.}
-\ifprof
-\begin{corrige}
-\end{corrige}
-\else
-\fi
-
-\begin{center}
-\includegraphics[width=\linewidth]{ccmp_09}
-
-%\textit{Schéma-blocs de l'asservissement en couple simplifié}
-\end{center}
+%
+%\subsection*{Contrôler le processus lors de la phase d'appui}
+%
+%\begin{obj}
+%La gestion des modes de commande permet de définir les séquences où l'asservissement s'effectue en
+%position et celles où l'asservissement s'effectue en couple. L'objectif de cette partie est de définir l'asservissement
+%en couple et d'analyser les performances de cet asservissement.
+%\end{obj}
+%
+%\subsubsection*{Mise en place de l'asservissement en couple}
+%\ifprof
+%\else
+%On se place pour analyser les performances de l'asservissement en couple dans le cadre de l'expérience
+%d'identification décrite précédemment (pied et tibia bloqués).
+%
+%L'asservissement en couple est réalisé grâce à un potentiomètre linéaire qui délivre une tension $u_{\text{mes}}$ image de la
+%variation de longueur des ressorts $\Delta X $. On note $K_{\text{capt}}$ le gain de ce capteur. D'autre part, un bloc d'adaptation de gain $K_A$ permet d'obtenir une tension $u_{\text{th}}$ image du couple de consigne $C_{\text{th}}$. L'écart $\varepsilon$ entre les tensions $u_{\text{th}}$ et
+%$u_{\text{mes}}$ est corrigé par un correcteur de fonction de transfert $H_c ( p)$ qui délivre la tension $u_M$ au moteur par
+%l'intermédiaire de l'amplificateur de gain $K_{\text{amp}}$.
+%\fi
+%
+%
+%\question{Compléter le schéma-blocs afin de mettre en place
+%l'asservissement en couple. Proposer une expression de $K_A$ permettant de réaliser un asservissement
+%correct.}
+%\ifprof
+%\begin{corrige}
+%\end{corrige}
+%\else
+%\fi
+%
+%\begin{center}
+%\includegraphics[width=\linewidth]{ccmp_09}
+%
+%%\textit{Schéma-blocs de l'asservissement en couple simplifié}
+%\end{center}
 
 \subsection*{Analyse des performances de l'asservissement en couple}
+\ifprof
+\else
 
 %\begin{minipage}[c]{.5\linewidth}
 Le schéma-blocs de l'asservissement en couple peut être simplifié par le schéma-blocs suivant avec 
@@ -306,7 +339,7 @@ $a_1=\dfrac{26}{4356}\SI{}{s}$ et $a_2=\dfrac{1}{4356}\SI{}{s^2}$ et $H_{\text{c
 
 
 \begin{obj}
-L'objectif est de déterminer une correction  $H_{\text{cor}}( p)$ qui permette de respecter le cahier des charges
+L'objectif est de déterminer si la correction  $H_{\text{cor}}( p)$ permet de respecter le cahier des charges
 rappelé ci-après.
 \end{obj}
 
@@ -352,20 +385,47 @@ Précision pour une entrée en échelon
 %\subparagraph{}
 %\textit{Tracer le diagramme asymptotique en le justifiant rigoureusement. }
 
+\fi
 
-{À l'aide des courbes, valider l'ensemble des critères du cahier des charges en justifiant clairement vos réponses. }
+\question{À l'aide des courbes, valider l'ensemble des critères du cahier des charges en justifiant clairement vos réponses. }
 
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=\linewidth]{ccmp_10}
-
 %\textit{Schéma-blocs de l'asservissement en couple simplifié}
 \end{center}
+\fi
+
+\ifprof
+\begin{corrige}
+\begin{itemize}
+\item Le régime permanent semble atteint autour de \SI{0,03}{s}; donc les critère de rapidité est respécté.
+\item En régime permanent, le couple atteint est de \SI{46}{Nm} pour une consigne de \SI{50}{Nm}. Un écart de 10 \% correspondrait à un couple atteint de \SI{45}{Nm}. Le critère de précision est respecté.
+\end{itemize}
+\end{corrige}
+\else
+\fi
 
 
 
 
 \ifprof
 \else
+
+\ifcolle
+\else
+\noindent
+\begin{tabular}{|p{.95\linewidth}|}
+\hline
+\begin{enumerate}
+\item  $H_1(p)=\dfrac{k_c}{R}$, $H_2(p)=R_T$,  $H_3(p) = \dfrac{R_T^2}{J_M p  + \mu_m }$ et   $H_6(p)={k_c}$.
+\item $\text{FTBF}(p)= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{RS}d_0^2}k_{RS}d_0^2 $.
+\item .
+\end{enumerate} \\
+\hline
+\end{tabular}
+\fi
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{B2:07:77}.}
 \end{flushright}%

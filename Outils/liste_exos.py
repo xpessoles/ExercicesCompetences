@@ -33,19 +33,17 @@ def get_listes_exos(folder_path):
                 if len(ligne)==7:
                     ligne = ligne[:-1]+[""]+[ligne[-1]]
                 liste_exos.append(ligne)
-    
-    
-    
     return liste_exos
 
 def ecrire_csv(liste_exos,file_csv):   
     fid = open(file_csv,"w")
-    fid.write(8*","+"\n")
+    fid.write(12*","+"\n")
     for ligne in liste_exos:
         ch =""     
         for mot in ligne :
             ch=ch+mot+','
-        fid.write(ch[:-1]+"\n")
+       
+        fid.write(ch+" \n")
         
     fid.close()
 
@@ -105,15 +103,26 @@ os.chdir(folder_path)
 fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_01/DDS_01_liste.tex"
 liste_dds = read_liste_dds(fichier_dds)
 liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 1")
+print("DDS1", len(liste_dds))
 
 fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_01/DDS_02_liste.tex"
 liste_dds = read_liste_dds(fichier_dds)
 liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 1")
+print("DDS1", len(liste_dds))
+
 
 fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_02/DDS_02_liste.tex"
 liste_dds = read_liste_dds(fichier_dds)
 liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 2")
+print("DDS2", len(liste_dds))
 
+
+fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_03/DDS_03_liste.tex"
+liste_dds = read_liste_dds(fichier_dds)
+liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 3")
+print("DDS3", len(liste_dds))
+
+    
 ecrire_csv(liste_exos,"liste_exos.csv")        
 
 import pandas as pd

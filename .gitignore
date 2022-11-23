@@ -1,3 +1,14 @@
 
 MecanismesDeBase/~$Figures.pptx
 *.log
+*.pyc
+Outils/test.aux
+*.aux
+*.pdf
+*.idx
+*.aux
+*.gz
+ALL_EXOS/ALL_EXOS.bcf
+*.xml
+*.bcf
+*.ptc

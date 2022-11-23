@@ -90,12 +90,16 @@ numérique.}
 \else
 \fi
 
+
+\ifprof
+\else
 \begin{itemize}
 \item Les efforts résistants sur le chariot sont modélisés par un glisseur $F$ d'amplitude \SI{500}{N}.
 \item Le rendement de l'ensemble du mécanisme (réducteur roue et vis sans fin, réducteur à axes parallèles) est $\eta= 0,3$.
 \item On prendra une accélération angulaire maximale du moteur $\dot{\omega}_m$ égale à \SI{250}{rad.s^{-2}} et une inertie totale équivalente ramenée à l'arbre moteur $J_{\text{eq}}$ égale à \SI{0,01}{kg.m^2}.
 \end{itemize}
 On se propose de déterminer le couple nécessaire du moteur.
+\fi
 
 \question{Déterminer l'expresion du couple $C_m$ à fournir par le moteur en fonction de $\dot{\omega}_m$, $J_{\text{eq}}$ et $F$. Calculer $C_m$.}
 \ifprof
