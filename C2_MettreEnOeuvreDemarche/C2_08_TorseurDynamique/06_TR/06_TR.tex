@@ -47,14 +47,15 @@ $= \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 
 \begin{itemize}
 \item Calcul du moment cinétique en $G_2$ : $G_2=C$ est le centre de gravité donc $\vectmc{C}{2}{0}=\inertie{C}{2}\dot{\theta}\vect{k_0} = C_1  \dot{\theta} \vk{1}$.
 \item Calcul du moment dynamique en $G_2$ : $G_2=C$ est le centre de gravité donc $\vectmd{C}{2}{0}=\deriv{\vectmc{C}{2}{0}}{\rep{0}}= C_1  \ddot{\theta} \vk{1}$.
-\item Calcul du moment dynamique en $B$ : $\babard{B}{C}{2}{0} = C_1  \ddot{\theta} \vk{1} + R\vi{2}\wedge\left(  \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)\right)$
-$= C_1  \ddot{\theta} \vk{1} + R\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)$.
+\item Calcul du moment dynamique en $B$ : $\babard{B}{C}{2}{0} $
+$= C_1  \ddot{\theta} \vk{1} + R\vi{2}m_2\wedge\left(  \ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)\right)$
+$= C_1  \ddot{\theta} \vk{1} + Rm_2\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)$.
 \end{itemize}
 
 Au final, on a donc $\torseurdyn{2}{0}=\torseurl{%
 m_2\left(\ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)\right)
 }{%
-C_1  \ddot{\theta} \vk{1} + R\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)
+C_1  \ddot{\theta} \vk{1} + Rm_2\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)
 }{B}$.
 \else
 \fi
