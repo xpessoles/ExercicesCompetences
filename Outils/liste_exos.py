@@ -122,6 +122,11 @@ liste_dds = read_liste_dds(fichier_dds)
 liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 3")
 print("DDS3", len(liste_dds))
 
+fichier_dds = "../../2022_2023_Enseignements/PSI_Etoile/DDS/DDS_04/DDS_04_liste.tex"
+liste_dds = read_liste_dds(fichier_dds)
+liste_exos = association_exos_dds(liste_exos, liste_dds,"DDS 4")
+print("DDS4", len(liste_dds))
+
     
 ecrire_csv(liste_exos,"liste_exos.csv")        
 
