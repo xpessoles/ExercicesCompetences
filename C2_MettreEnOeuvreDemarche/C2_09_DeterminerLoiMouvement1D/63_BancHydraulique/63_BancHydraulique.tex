@@ -111,6 +111,8 @@ On se propose de déterminer le couple nécessaire du moteur.
 \ifprof
 
 \else
+\ifcolle
+\else
 \footnotesize
 \begin{enumerate}
  \item $c_{\text{lent}}=\dfrac{V_{\text{rap}}}{2}t_l$ et $c_{\text{rap}}=V_{\text{rap}}\left(t_r - \dfrac{1}{2}t_a\right)$.
@@ -121,6 +123,8 @@ On se propose de déterminer le couple nécessaire du moteur.
  \item $J_{\text{eq}} = I_M + I_r + M \left( \dfrac{rR_1 R_p}{R_3}\right)^2 = \SI{0,00877}{kg.m^2}$.
  \item $C_M \dfrac{J_{\text{eq}} \dot{\omega}_m + F \dfrac{rR_1R_p}{R_3}}{\eta} = \SI{10,4}{Nm}$ (rendement à voir...).
 \end{enumerate}
+\fi
+
 \normalsize
 
 \begin{flushright}
