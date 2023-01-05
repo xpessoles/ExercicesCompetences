@@ -170,11 +170,14 @@ $.
 \else
 \fi
 
+\ifprof
+\else
 Les valeurs du robot considéré sont :
 \begin{itemize}
 \item $M_{2}=\SI{264}{kg}$, $M_{34}=\SI{430}{kg}$, $M_{\text{E1}}=\SI{150}{kg}$, $P=\SI{150}{N}$, $F=\SI{1000}{N}$;
 \item $L_{1}=\SI{0,405}{m}$, $L_{2}=\SI{0,433}{m}$, $L_{3}=\SI{1,075}{m}$, $L_{4}=\SI{1,762}{m}$, $L_{5}=\SI{0,165}{m}$, $L_{6}=\SI{0,250}{m}$, $L_{7}=\SI{0,550}{m}$, $L_{8}=\SI{0,750}{m}$.
 \end{itemize}
+\fi
 
 \question{Déterminer alors la valeur du couple~$C_{12}$.}
 \ifprof
@@ -222,6 +225,31 @@ La valeur limite supérieure du couple $C_{12}$ est fixée par le constructeur �
 
 \ifprof
 \else
+\footnotesize
+\begin{enumerate}
+\item .
+\item .
+\item .
+\item .
+\item $
+C_{12} -\dfrac{1}{2}M_2gL_3 \cos \theta_{12}
+  -M_{34}g\left( L_3\cos\theta_{12} +\dfrac{1}{3}L_4\cos\theta_{12}\right)
+  -M_{E1}g\left( L_3 \cos\theta_{12}+L_4+L_5+L_7 \cos\theta_{15}\right) 
+  -(F+P)\left(  L_3 \sin\left(\theta_{15}-\theta_{12} \right)+ \left(L_4+L_5\right)\sin\left(\theta_{15} \right)-l_5 \cos\left(\theta_{15}  \right)  \right) 
+  = 0
+$.
+\item $
+C_{12} 
+= \dfrac{1}{4}M_2gL_3 
+  +M_{34}g\dfrac{1}{2}\left( L_3 +\dfrac{1}{3}L_4\right)
+  +M_{E1}g\left( L_3 \dfrac{1}{2}+L_4+L_5 \right) 
+  +(F+P)\left(  L_3 \dfrac{1}{2}- \left(L_4+L_5\right)  \right) 
+$.
+\item $C_{12} = \SI{6230}{Nm}$.
+\end{enumerate}
+\normalsize
+
+
 \begin{flushright}
 \footnotesize{Corrigé  voir \ref{C2:07:56}.}
 \end{flushright}%
