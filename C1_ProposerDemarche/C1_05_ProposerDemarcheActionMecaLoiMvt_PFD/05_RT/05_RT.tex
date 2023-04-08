@@ -1,5 +1,5 @@
 \normaltrue
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -39,11 +39,24 @@ L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+\begin{center}
+\includegraphics[width=\linewidth]{05_RT_01_cor}
+\end{center}
+
 \else
 \fi
 
 \question{Proposer une démarche permettant de déterminer les loi de mouvement de \textbf{1} et de \textbf{2} par rapport à $\rep{0}$.}
 \ifprof
+\begin{itemize}
+\item On isole \textbf{\{1\}}. On réalise un théorème de la résultante dynamique en projection sur $\vect{i_1}$ :
+$ \vectf{1}{2}\cdot \vect{i_1} + \vectf{F_v}{2}\cdot \vect{i_1} + \vectf{\text{Pes}}{2}\cdot \vect{i_1} = \vectrd{2}{0}\cdot \vect{i_1}$.
+\item On isole \textbf{\{1+2\}}. On réalise un théorème du moment dynamique en $A$ en projection sur $\vect{k_0}$ :
+$ \vectm{A}{0}{1}\cdot \vect{k_0} 
++ \vectm{A}{\text{Mot}}{1}\cdot \vect{k_0} 
++ \vectm{A}{\text{Pes}}{2}\cdot \vect{k_0}
++ \vectm{A}{\text{Pes}}{1}\cdot \vect{k_0} = \vectmd{A}{2}{0}\cdot \vect{k_0}+\vectmd{A}{1}{0}\cdot \vect{k_0}$.
+\end{itemize}
 \else
 \fi
 
