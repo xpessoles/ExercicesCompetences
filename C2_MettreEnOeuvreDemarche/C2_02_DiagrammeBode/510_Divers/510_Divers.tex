@@ -30,17 +30,101 @@
 \end{center}
 
 
+\begin{tikzpicture}[xscale=7/6]
+\tikzset{
+semilog lines/.style={thin, bleuxp}, 
+semilog lines 2/.style={semilog lines,bleuxpc},
+semilog half lines/.style={semilog lines 2,dotted },
+semilog label x/.style={semilog lines,below,font=\tiny,black},
+semilog label y/.style={semilog lines,right,font=\tiny,black}
+}
+\begin{scope}[yscale=3/50]
+\semilog{-2}{2}{0}{30}
+
+\BodeAmp[orangexp,thin,samples=100]{-2:2}{\POAmpAsymp{20}{0.2}}
+\BodeAmp[orangexp,ultra thick]{-2:2}{\POAmp{20}{0.2}}
+\draw (-1,28) node {\footnotesize $20\log K$, 0 dB/d\'ecade};
+\draw (1.7,20) node {\footnotesize $-$20 dB/d\'ecade};
+\draw [dashed,thick,bleuxp] (.7,0) -- (.7,25);
+\draw (.7,0)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{\tau}$};
+\end{scope}
+\begin{scope}[yshift=-0.5cm,yscale=1/50]
+\UniteDegre
+\OrdBode{30}
+\semilog{-2}{2}{-90}{0}
+\BodeArg[orangexp,samples=100,thin]{-2:2}{\POArgAsymp{20}{0.2}}
+\BodeArg[orangexp,ultra thick]{-2:2}{\POArg{20}{0.2}}
+\end{scope}
+\end{tikzpicture}
+
+
 \textbf{Positionnement du diagramme de gain}
 Lorsque que $\omega$ tend vers 0, le gain tend vers $20 \log 15 = \SI{23,5}{dB}$.
+
+
+\begin{center}
+ \begin{tikzpicture}[xscale=2]
+\tikzset{
+semilog lines/.style={thin, bleuxp}, 
+semilog lines 2/.style={semilog lines,bleuxpc},
+semilog half lines/.style={semilog lines 2,dotted },
+semilog label x/.style={semilog lines,below,font=\tiny,black},
+semilog label y/.style={semilog lines,right,font=\tiny,black}
+}
+\begin{scope}[yscale=1/20]
+\semilog{-3}{1}{-30}{30}
+
+\BodeAmp[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{10}}
+\BodeAmp[orangexp,ultra thick]{-3:1}{\POAmp{15}{10}}
+\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
+\draw (.3,15) node {\footnotesize $-$20 dB/d\'ecade};
+\draw [dashed,ultra thick,bleuxp] (-1,-1) -- (-1,23.5);
+\draw (-1,-1)  node {\Huge $\cdot$} node [right]{\footnotesize 0,1};
+\end{scope}
+\begin{scope}[yshift=-3cm,yscale=1/90]
+\UniteDegre
+\OrdBode{45}
+\semilog{-3}{1}{-180}{90}
+\BodeArg[orangexp,samples=100,thin]{-3:1}{\POArgAsymp{15}{10}}
+\BodeArg[orangexp,ultra thick]{-3:1}{\POArg{15}{10}}
+\end{scope}
+\end{tikzpicture}
+
 
 \begin{center}
 \includegraphics[width=.9\linewidth]{bode_01}
 \end{center}
 
 \else 
+
 \begin{center}
-\includegraphics[width=.9\linewidth]{510_01}
-\end{center}
+ \begin{tikzpicture}[xscale=2]
+\tikzset{
+semilog lines/.style={thin, bleuxp}, 
+semilog lines 2/.style={semilog lines,bleuxpc},
+semilog half lines/.style={semilog lines 2,dotted },
+semilog label x/.style={semilog lines,below,font=\tiny,black},
+semilog label y/.style={semilog lines,right,font=\tiny,black}
+}
+\begin{scope}[yscale=1/20]
+\semilog{-3}{1}{-30}{30}
+
+%\BodeAmp[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{10}}
+%\BodeAmp[orangexp,ultra thick]{-3:1}{\POAmp{15}{10}}
+%\draw (-1,28) node {\footnotesize $20\log K$, 0 dB/d\'ecade};
+%\draw (1.7,20) node {\footnotesize $-$20 dB/d\'ecade};
+%\draw [dashed,thick,bleuxp] (.7,0) -- (.7,25);
+%\draw (.7,0)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{\tau}$};
+\end{scope}
+\begin{scope}[yshift=-3cm,yscale=1/90]
+\UniteDegre
+\OrdBode{45}
+\semilog{-3}{1}{-180}{90}
+%\BodeArg[orangexp,samples=100,thin]{-3:1}{\POArgAsymp{15}{10}}
+%\BodeArg[orangexp,ultra thick]{-3:1}{\POArg{15}{10}}
+\end{scope}
+\end{tikzpicture}
+
 \fi
 
 
@@ -108,7 +192,8 @@ Lorsque que $\omega$ tend vers 0, $F_3(p)\simeq \dfrac{40}{p}$. Cette asymptote 
 %\fi
 
 
- 
+\end{center}
+
 
 \ifprof
 \else
