@@ -79,7 +79,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
 \draw (.3,15) node {\footnotesize $-$20 dB/d\'ecade};
 \draw [dashed,ultra thick,bleuxp] (-1,-1) -- (-1,23.5);
-\draw (-1,-1)  node {\Huge $\cdot$} node [right]{\footnotesize 0,1};
+\draw (-1,-1)  node {\Huge $\cdot$} node [above right]{\footnotesize 0,1};
 \end{scope}
 \begin{scope}[yshift=-3cm,yscale=1/90]
 \UniteDegre
@@ -91,9 +91,9 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \end{tikzpicture}
 
 
-\begin{center}
-\includegraphics[width=.9\linewidth]{bode_01}
-\end{center}
+%\begin{center}
+%\includegraphics[width=.9\linewidth]{bode_01}
+%\end{center}
 
 \else 
 
@@ -109,19 +109,12 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \begin{scope}[yscale=1/20]
 \semilog{-3}{1}{-30}{30}
 
-%\BodeAmp[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{10}}
-%\BodeAmp[orangexp,ultra thick]{-3:1}{\POAmp{15}{10}}
-%\draw (-1,28) node {\footnotesize $20\log K$, 0 dB/d\'ecade};
-%\draw (1.7,20) node {\footnotesize $-$20 dB/d\'ecade};
-%\draw [dashed,thick,bleuxp] (.7,0) -- (.7,25);
-%\draw (.7,0)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{\tau}$};
 \end{scope}
 \begin{scope}[yshift=-3cm,yscale=1/90]
 \UniteDegre
 \OrdBode{45}
 \semilog{-3}{1}{-180}{90}
-%\BodeArg[orangexp,samples=100,thin]{-3:1}{\POArgAsymp{15}{10}}
-%\BodeArg[orangexp,ultra thick]{-3:1}{\POArg{15}{10}}
+
 \end{scope}
 \end{tikzpicture}
 
@@ -142,14 +135,73 @@ $F_2(p)=\dfrac{1}{\left(1+10p\right)\left(1+\dfrac{p}{10}\right)}$
 \textbf{Positionnement du diagramme de gain}
 Lorsque que $\omega$ tend vers 0, le gain tend vers $20 \log 1 = \SI{0}{dB}$.
 
+
 \begin{center}
-\includegraphics[width=.9\linewidth]{bode_02}
+ \begin{tikzpicture}[xscale=1.5]
+\tikzset{
+semilog lines/.style={thin, bleuxp}, 
+semilog lines 2/.style={semilog lines,bleuxpc},
+semilog half lines/.style={semilog lines 2,dotted },
+semilog label x/.style={semilog lines,below,font=\tiny,black},
+semilog label y/.style={semilog lines,right,font=\tiny,black}
+}
+\begin{scope}[yscale=1/40]
+\semilog{-3}{3}{-140}{20}
+\UnitedB
+\OrdBode{20}
+\BodeAmp[orangexp,thin,samples=101]{-3:3}{\POAmpAsymp{1}{10} + \POAmpAsymp{1}{10}}
+\BodeAmp[orangexp,ultra thick]{-3:3}{\POAmp{1}{10} + \POAmp{1}{0.1}}
+
+%\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
+%\draw (.3,15) node {\footnotesize $-$20 dB/d\'ecade};
+%\draw [dashed,ultra thick,bleuxp] (-1,-1) -- (-1,23.5);
+%\draw (-1,-1)  node {\Huge $\cdot$} node [above right]{\footnotesize 0,1};
+\end{scope}
+
+\begin{scope}[yshift=-5cm,yscale=1/90]
+\UniteDegre
+\OrdBode{45}
+\semilog{-3}{3}{-180}{90}
+\BodeArg[orangexp,samples=101,thin]{-3:3}{\POArgAsymp{1}{10} + \POArgAsymp{1}{0.1}}
+\BodeArg[orangexp,ultra thick]{-3:3}{\POArg{1}{10} + \POArg{1}{0.1}}
+\end{scope}
+\end{tikzpicture}
 \end{center}
+%
+%\begin{center}
+%\includegraphics[width=.9\linewidth]{bode_02}
+%\end{center}
 
 \else 
+%\begin{center}
+%\includegraphics[width=.9\linewidth]{510_01}
+%\end{center}
 \begin{center}
-\includegraphics[width=.9\linewidth]{510_01}
+ \begin{tikzpicture}[xscale=1.5]
+\tikzset{
+semilog lines/.style={thin, bleuxp}, 
+semilog lines 2/.style={semilog lines,bleuxpc},
+semilog half lines/.style={semilog lines 2,dotted },
+semilog label x/.style={semilog lines,below,font=\tiny,black},
+semilog label y/.style={semilog lines,right,font=\tiny,black}
+}
+\begin{scope}[yscale=1/40]
+\semilog{-3}{3}{-140}{20}
+\UnitedB
+\OrdBode{20}
+
+\end{scope}
+
+\begin{scope}[yshift=-5cm,yscale=1/90]
+\UniteDegre
+\OrdBode{45}
+\semilog{-3}{3}{-180}{90}
+
+\end{scope}
+\end{tikzpicture}
 \end{center}
+
+
 \fi
 
 
