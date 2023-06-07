@@ -45,7 +45,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \semilog{-3}{3}{-140}{20}
 \UnitedB
 \OrdBode{20}
-\BodeAmp[orangexp,thin,samples=101]{-3:3}{\POAmpAsymp{1}{10} + \POAmpAsymp{1}{10}}
+\BodeAmp[orangexp,thick]{-3:3}{\POAmpAsymp{1.}{10.} + \POAmpAsymp{1.}{0.1}}
 \BodeAmp[orangexp,ultra thick]{-3:3}{\POAmp{1}{10} + \POAmp{1}{0.1}}
 
 %\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
@@ -58,7 +58,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \UniteDegre
 \OrdBode{45}
 \semilog{-3}{3}{-180}{90}
-\BodeArg[orangexp,samples=101,thin]{-3:3}{\POArgAsymp{1}{10} + \POArgAsymp{1}{0.1}}
+\BodeArg[orangexp,samples=200,thick]{-3:3}{\POArgAsymp{1.}{10.} + \POArgAsymp{1.}{0.1}}
 \BodeArg[orangexp,ultra thick]{-3:3}{\POArg{1}{10} + \POArg{1}{0.1}}
 \end{scope}
 \end{tikzpicture}
@@ -101,8 +101,6 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \fi
 
 
-
-\end{center}
 
 
 \ifprof

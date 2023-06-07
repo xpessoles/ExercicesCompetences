@@ -43,7 +43,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \begin{scope}[yscale=1/60]
 \semilog{-4}{-1}{-40}{120}
 
-\BodeAmp[orangexp,thin,samples=100]{-4:-1}{\POAmpAsymp{40}{300}}
+\BodeAmp[orangexp,thick]{-4:-1}{\POAmpAsymp{40.}{300.}+\IntAmp{1}}
 \BodeAmp[orangexp,ultra thick]{-4:-1}{\POAmp{40}{300}+\IntAmp{1}}
 %\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
 \draw (-3.5,120) node {\footnotesize $-$20 dB/d\'ecade};
@@ -55,7 +55,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \UniteDegre
 \OrdBode{45}
 \semilog{-4}{-1}{-180}{0}
-\BodeArg[orangexp,samples=100,thin]{-4:-1}{\POArgAsymp{40}{300}}
+\BodeArg[orangexp,samples=200,thick]{-4:-1}{\POArgAsymp{40.}{300.}+\IntArg{1}}
 \BodeArg[orangexp,ultra thick]{-4:-1}{\POArg{40}{300}+\IntArg{1}}
 \end{scope}
 \end{tikzpicture}
