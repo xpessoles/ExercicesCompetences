@@ -43,8 +43,9 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 }
 \begin{scope}[yscale=1/40]
 \semilog{-3}{3}{-140}{20}
-\UnitedB
 \OrdBode{20}
+\UnitedB
+
 \BodeAmp[orangexp,thick]{-3:3}{\POAmpAsymp{1.}{10.} + \POAmpAsymp{1.}{0.1}}
 \BodeAmp[orangexp,ultra thick]{-3:3}{\POAmp{1}{10} + \POAmp{1}{0.1}}
 
