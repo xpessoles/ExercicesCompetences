@@ -45,7 +45,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \semilog{-3}{3}{-140}{20}
 \UnitedB
 \OrdBode{20}
-\BodeAmp[orangexp,thin,samples=101]{-3:3}{\POAmpAsymp{1}{10} + \POAmpAsymp{1}{10}}
+\BodeAmp[orangexp,thin,samples=100]{-3:3}{\POAmpAsymp{1}{10} + \POAmpAsymp{1}{10}}
 \BodeAmp[orangexp,ultra thick]{-3:3}{\POAmp{1}{10} + \POAmp{1}{0.1}}
 
 %\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
@@ -92,17 +92,22 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \UniteDegre
 \OrdBode{45}
 \semilog{-3}{3}{-180}{90}
-
 \end{scope}
 \end{tikzpicture}
 \end{center}
-
-
 \fi
 
 
+\question{Le système est sollicité par une entrée sinusoïdale de période \SI{6}{s} et d'amplitude 10. Quel est le signal de sortie ?}
+\ifprof
+Pour une période de \SI{60}{s}, la pulsation est de $\dfrac{2\pi}{T}$ soit $\omega = \SI{0,1}{rad.s^{-1}}$.
+Pour cette pulsation le gain est de \SI{-5}{dB} et le déphasage de $-\dfrac{\pi}{4}$.
 
-\end{center}
+On a donc $20\log(S/E) = -5$ soit $S=E\times 10^{-5/20}=10\times 0,56 = 5,6$. Le signal d'entrée est donc $e(t) = 10 \sin (0,1 t)$ et le signal de sortie  
+$s(t) = 5,6 \sin\left(0,1 t - \dfrac{\pi}{4}\right)$.
+\else
+\fi
+
 
 
 \ifprof

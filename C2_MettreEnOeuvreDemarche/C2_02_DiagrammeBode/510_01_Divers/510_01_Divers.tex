@@ -44,6 +44,10 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 
 \BodeAmp[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{10}}
 \BodeAmp[orangexp,ultra thick]{-3:1}{\POAmp{15}{10}}
+
+\BodeGraph[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{1}}
+%\BodeGraph{-2:2}{\POAmp{6}{0.3}}
+
 \draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
 \draw (.3,15) node {\footnotesize $-$20 dB/d\'ecade};
 \draw [dashed,ultra thick,bleuxp] (-1,-1) -- (-1,23.5);
@@ -59,6 +63,15 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \end{tikzpicture}
 \end{center}
 
+\begin{tikzpicture}[xscale=7/4]
+\begin{scope}[yscale=3/40]
+\semilog{-2}{2}{-20}{20}
+\BodeGraph{-2:2}{\POAmpAsymp{6}{0.3}}
+\BodeGraph{-2:2}{\POAmp{6}{0.3}}
+\end{scope}
+
+\end{tikzpicture}
+
 
 %\begin{center}
 %\includegraphics[width=.9\linewidth]{bode_01}
@@ -66,27 +79,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 
 \else 
 
-\begin{center}
- \begin{tikzpicture}[xscale=2]
-\tikzset{
-semilog lines/.style={thin, bleuxp}, 
-semilog lines 2/.style={semilog lines,bleuxpc},
-semilog half lines/.style={semilog lines 2,dotted },
-semilog label x/.style={semilog lines,below,font=\tiny,black},
-semilog label y/.style={semilog lines,right,font=\tiny,black}
-}
-\begin{scope}[yscale=1/20]
-\semilog{-3}{1}{-30}{30}
 
-\end{scope}
-\begin{scope}[yshift=-3cm,yscale=1/90]
-\UniteDegre
-\OrdBode{45}
-\semilog{-3}{1}{-180}{90}
-
-\end{scope}
-\end{tikzpicture}
-\end{center}
 \fi
 
 \question{Le système est sollicité par une entrée sinusoïdale de période \SI{6}{s} et d'amplitude 10. Quel est le signal de sortie ?}
