@@ -42,7 +42,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \begin{scope}[yscale=1/20]
 \semilog{-3}{1}{-30}{30}
 
-\BodeAmp[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{10}}
+\BodeAmp[orangexp,thick,samples=100]{-3:1}{\POAmpAsymp{15.}{10.}}
 \BodeAmp[orangexp,ultra thick]{-3:1}{\POAmp{15}{10}}
 
 \BodeGraph[orangexp,thin,samples=100]{-3:1}{\POAmpAsymp{15}{1}}
@@ -57,7 +57,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \UniteDegre
 \OrdBode{45}
 \semilog{-3}{1}{-180}{90}
-\BodeArg[orangexp,samples=100,thin]{-3:1}{\POArgAsymp{15}{10}}
+\BodeArg[orangexp,samples=200,thick]{-3:1}{\POArgAsymp{15.}{10.}}
 \BodeArg[orangexp,ultra thick]{-3:1}{\POArg{15}{10}}
 \end{scope}
 \end{tikzpicture}

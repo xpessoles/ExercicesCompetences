@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{12} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
@@ -35,11 +35,42 @@ Un moteur exerce un couple entre les pièces 1 et 2.
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
+\begin{center}
+\includegraphics[width=\linewidth]{46_01_cor}
+\end{center}
+
 \else
 \fi
 
 \question{Proposer une démarche permettant de déterminer les loi de mouvement de \textbf{1} et de \textbf{2} par rapport à~$\rep{0}$.}
 \ifprof
+
+\begin{itemize}
+\item Première équation : 
+\begin{itemize}
+\item On isole 2.
+\item Bilan des actions mécaniques extérieures :
+\begin{itemize}
+\item liaison pivot en $A$ telle que $\vectm{A}{1}{2}\cdot \vect{k_0} = \vect{0}$;
+\item pesanteur en $B$ : $\torseurstat{T}{\text{pes}}{2} = \torseurl{-m_2 g \vect{j_0}}{\vect{0}}{B}$;
+\item cople moteur : $\torseurstat{T}{1_m}{2} = \torseurl{\vect{0}}{C_m\vect{k_0}}{\forall P}$.
+\end{itemize}
+\item On applique le théorème du moment dynamique en $A$ en projection sur $\vect{k_0}$.
+\end{itemize}
+\item Deuxième équation : 
+\begin{itemize}
+\item On isole 1+2.
+\item Bilan des actions mécaniques extérieures :
+\begin{itemize}
+\item liaison ponctuelle avec RSG en $I$ telle que $\vectm{I}{0}{1}\cdot \vect{k_0} = \vect{0}$; 
+\item pesanteur en $G_1$  : $\torseurstat{T}{\text{pes}}{1} = \torseurl{-m_1 g \vect{j_0}}{\vect{0}}{G_1}$;
+\item cople moteur : $\torseurstat{T}{2}{1_m} = \torseurl{\vect{0}}{-C_m\vect{k_0}}{\forall P}$.
+\end{itemize}
+\item On applique le théorème du moment dynamique en $I$ en projection sur $\vect{k_0}$.
+\item Remarque : on ne modélise pas la résistance au roulement. 
+\end{itemize}
+
+\end{itemize}
 \else
 \fi
 
