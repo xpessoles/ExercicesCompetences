@@ -77,7 +77,7 @@ def read_liste_dds(file):
     liste_exos = []
     for ligne in data :
         if "\\renewcommand{\\td}{" in ligne :
-            # On récupèr la fin de ligne
+            # On récupère la fin de ligne
             liste_exos.append(ligne[19:-2])
     
     
@@ -94,8 +94,15 @@ def association_exos_dds(liste_exos,liste_dds,num_dds):
     return liste_exos
 
 
+# Récupérer la liste des exos dans la liste des dossiers
 liste_exos = get_listes_exos(folder_path)
+# Excrire cette liste dans un fichier csv
+ecrire_csv(liste_exos,"liste_20_06_2023.csv")
 
+
+
+
+"""
 folder_path = "C:\\GitHub\ExercicesCompetences\Outils"
 os.chdir(folder_path)
 
@@ -134,3 +141,4 @@ import pandas as pd
 
 read_file = pd.read_csv('liste_exos.csv')
 read_file.to_excel('liste_exos.xlsx', index = None, header=False)
+"""
