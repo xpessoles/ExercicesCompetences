@@ -39,11 +39,11 @@ $s_{\infty}=\lim\limits_{p\to 0} p\dfrac{E_0}{p}\dfrac{K}{p\left(1+\tau_1 p \rig
 \else 
 \fi
 
-\question{En déduire la valeur de l'erreur statique.}
-\ifprof
-L'erreur statique est donnée par $\lim\limits_{t\to +\infty} (e(t)-s(t))=E_0 - \dfrac{E_0}{C}$.
-\else
-\fi
+%\question{En déduire la valeur de l'erreur statique.}
+%\ifprof
+%L'erreur statique est donnée par $\lim\limits_{t\to +\infty} (e(t)-s(t))=E_0 - \dfrac{E_0}{C}$.
+%\else
+%\fi
 
 \question{Déterminer la valeur finale de $s(t)$ lorsque l'entrée est une rampe de pente $k$.}
 \ifprof
@@ -56,26 +56,26 @@ $s_{\infty}=\infty$.
 \fi
 
 
-\question{En déduire la valeur de l'erreur de traînage.}
-\ifprof
-$\varepsilon_v = \lim\limits_{t\to +\infty} (e(t)-s(t))$
-$=\lim\limits_{p\to 0} p\left(\dfrac{k}{p^2}-\dfrac{k}{p^2}\dfrac{K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}\right)$
+%\question{En déduire la valeur de l'erreur de traînage.}
+%\ifprof
+%$\varepsilon_v = \lim\limits_{t\to +\infty} (e(t)-s(t))$
+%$=\lim\limits_{p\to 0} p\left(\dfrac{k}{p^2}-\dfrac{k}{p^2}\dfrac{K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}\right)$
+%
+%$=\lim\limits_{p\to 0} \dfrac{k}{p}\left(1-\dfrac{K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}\right)$
+%$=\lim\limits_{p\to 0} \dfrac{k}{p}\dfrac{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK-K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}=+\infty$
+%\else
+%\fi
+%
+%\question{Qu'en est-il si $C=1$ ?.}
+%\ifprof
+%$\varepsilon_v =\lim\limits_{p\to 0} \dfrac{k}{p}\dfrac{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK-K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}$
+%$=\lim\limits_{p\to 0} \dfrac{k}{p}\dfrac{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+K}$
+%$=\lim\limits_{p\to 0} k\dfrac{\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+K} = \dfrac{k}{K}$.
 
-$=\lim\limits_{p\to 0} \dfrac{k}{p}\left(1-\dfrac{K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}\right)$
-$=\lim\limits_{p\to 0} \dfrac{k}{p}\dfrac{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK-K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}=+\infty$
-\else
-\fi
 
-\question{Qu'en est-il si $C=1$ ?.}
-\ifprof
-$\varepsilon_v =\lim\limits_{p\to 0} \dfrac{k}{p}\dfrac{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK-K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}$
-$=\lim\limits_{p\to 0} \dfrac{k}{p}\dfrac{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+K}$
-$=\lim\limits_{p\to 0} k\dfrac{\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+K} = \dfrac{k}{K}$.
-
-
-
-\else
-\fi
+%
+%\else
+%\fi
 %\question{Réaliser le schéma-blocs.}
 %\ifprof
 %\begin{figure}[H]
@@ -98,10 +98,10 @@ $=\lim\limits_{p\to 0} k\dfrac{\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)}
 Éléments de corrigé : 
 \begin{enumerate}
     \item $s_{\infty}=\lim\limits_{p\to 0} p\dfrac{E_0}{p}\dfrac{K}{p\left(1+\tau_1 p \right)\left(1+\tau_2 p \right)+CK}=\dfrac{E_0}{C}$.
-    \item $\lim\limits_{t\to +\infty} (e(t)-s(t))=E_0 - \dfrac{E_0}{C}$.
+   % \item $\lim\limits_{t\to +\infty} (e(t)-s(t))=E_0 - \dfrac{E_0}{C}$.
     \item $s_{\infty}=\infty$.
-    \item $\varepsilon_v =\infty$.
-    \item $\varepsilon_v =\dfrac{k}{K}$.
+   % \item $\varepsilon_v =\infty$.
+%    \item $\varepsilon_v =\dfrac{k}{K}$.
 \end{enumerate}}}
 \normalsize
 
