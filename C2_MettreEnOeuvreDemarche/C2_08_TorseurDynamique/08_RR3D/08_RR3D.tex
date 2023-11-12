@@ -29,6 +29,8 @@ Soit le mécanisme suivant. On a $\vect{AB}=H\vect{j_1}+R\vect{i_1}$ et $\vect{B
 \includegraphics[width=\linewidth]{08_RR3D_01}
 \end{center}
 
+\ifcolle
+\else
 On donne : 
 $\vectv{C}{2}{0} = -R\dot{\theta}\vk{1}+L\left(-\dot{\theta}\cos\varphi\vk{1} + \dot{\varphi}\vj{2}\right)$.
 
@@ -39,9 +41,7 @@ $ =L\dot{\varphi}\left(\thetap\sin\varphi\vk{1}-\varphip\vi{2}\right)
 -\thetap\left( R \thetap\vi{1} +L\cos\varphi \thetap\vi{1}
 -L\varphip\sin\varphi\vk{1}\right)
 $.
-
-
-
+\fi
 
 
 \fi
@@ -134,10 +134,15 @@ $\vectmc{C}{2}{0} = \matinertie{A_2}{B_2}{C_2}{0}{0}{0}{\bas{2}}
 
 \question{Déterminer $\vectmd{A}{1+2}{0}\cdot \vect{j_0}$}
 \ifprof
-
-
 \else
 \fi
+
+
+\ifcolle
+\question{Déterminer $\pext{2}{1}{0}$ et $\pext{1}{2}{0}$.}
+\else
+\fi
+
 
 \ifprof
 \else
