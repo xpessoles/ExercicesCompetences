@@ -33,11 +33,41 @@ $\vect{BC}=L\vect{i_2}$ avec $L=\SI{15}{mm}$. De plus :
 
 \question{Exprimer le torseur dynamique $\torseurdyn{1}{0}$ en $A$ en utilisant 2 méthodes différentes pour le calcul du moment.}
 \ifprof
+
+[NON TERMINE]
+\textbf{Définition}
+
+$\torseurdyn{1}{0} = \torseurl{m_1 \vectg{G_1}{1}{0}}{\babard{A}{G_1}{1}{0}}{A}$
+
+\textbf{Calcul de $\vectv{G_1}{1}{0}$}
+
+$\vectv{G_1}{1}{0}$ $ = \deriv{\vect{AG_1}}{\rep{0}}$
+$ = \dfrac{1}{2}R\deriv{\vect{i_1}}{\rep{0}}$
+$ = R\dot{\theta}\vj{1}$.
+
+(Avec $\deriv{\vect{i_1}}{\rep{0}} = \deriv{\vect{i_1}}{\rep{1}} + \vecto{1}{0}\wedge \vi{1}$
+$ = \dot{\theta}\vk{0}\wedge \vi{1}$ $ = \dot{\theta}\vj{1}$).
+
+\textbf{Calcul de $\vectg{G_1}{1}{0}$}
+
+$\vectg{G_1}{1}{0}$ $ = \deriv{{\vectv{G_1}{1}{0}}}{\rep{0}}$
+$ =  R\ddot{\theta}\vj{1} - R\dot{\theta}^2\vi{1} $.
+
+
 \else
 \fi
 
 \question{Exprimer le torseur dynamique $\torseurdyn{2}{0}$ en $B$ en utilisant 2 méthodes différentes pour le calcul du moment.}
 \ifprof
+
+$\vectv{C}{2}{0}$ $ = \deriv{\vect{AC}}{\rep{0}}$
+$ = \deriv{\vect{AB}}{\rep{0}}+\deriv{\vect{BC}}{\rep{0}}$
+$ = R\deriv{\vect{i_1}}{\rep{0}}+L\deriv{\vect{i_2}}{\rep{0}}$
+$ = R\dot{\theta}\vj{1}+L\left( \dot{\theta}+\dot{\varphi}\right)\vj{2}$.
+
+(Avec $\deriv{\vect{i_2}}{\rep{0}} = \deriv{\vect{i_2}}{\rep{2}} + \vecto{2}{0}\wedge \vi{2}$
+$ = \left( \dot{\theta}+\dot{\varphi}\right)\vk{0}\wedge \vi{2}$ $ = \left( \dot{\theta}+\dot{\varphi}\right)\vj{2}$).
+
 \else
 \fi
 
