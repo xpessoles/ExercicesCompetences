@@ -53,6 +53,20 @@ $ = \dot{\theta}\vk{0}\wedge \vi{1}$ $ = \dot{\theta}\vj{1}$).
 $\vectg{G_1}{1}{0}$ $ = \deriv{{\vectv{G_1}{1}{0}}}{\rep{0}}$
 $ =  R\ddot{\theta}\vj{1} - R\dot{\theta}^2\vi{1} $.
 
+\textbf{Calcul de $\vectmc{G_1}{1}{0}$}
+
+$G_1$ est le centre d'inertie de 1; donc : 
+$\vectmc{G_1}{1}{0} = \inertie{G_1}{1}\vecto{1}{0} = \thetap C_1 \vz{1}$.
+
+\textbf{Calcul de $\vectmd{G_1}{1}{0}$}
+
+$G_1$ est le centre d'inertie de 1; donc : 
+$\vectmd{G_1}{1}{0} = \deriv{\vectmc{G_1}{1}{0}}{\rep{0}} = \thetapp C_1 \vz{1}$.
+
+\textbf{Calcul de $\vectmd{A}{1}{0}$}
+
+En utilisant la formule de changement de point, on a : 
+$\babard{A}{G_1}{1}{0} = \thetapp C_1 \vz{1} + \dfrac{1}{2}R\vi{1} \wedge m_1 \left( R\ddot{\theta}\vj{1} - R\dot{\theta}^2\vi{1}\right)$
 
 \else
 \fi
