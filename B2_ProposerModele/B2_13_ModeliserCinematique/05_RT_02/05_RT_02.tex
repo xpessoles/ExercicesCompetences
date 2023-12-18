@@ -6,7 +6,7 @@
 
 \exer{Mouvement RT  $\star$ \label{B2:13:05:02}}
 \setcounter{numques}{0}
-\UPSTIcompetence{B2-13}
+\marginnote{\UPSTIcompetence{B2-13}}
 \index{Compétence B2-13}
 \index{Mécanisme à 1 rotation et 1 translation}
 \ifcorrection
@@ -18,9 +18,31 @@
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=\lambda(t)\vect{i_1}$.
 \begin{center}
-\includegraphics[width=\linewidth]{05_RT_01}
+\includegraphics[width=.8\linewidth]{05_RT_01}
 \end{center}
 \fi
+
+
+% ================================
+\ifprof
+\else
+\ifcolle
+\else
+\marginnote{
+\begin{solution}
+\begin{enumerate}
+\item $\vectv{B}{2}{0} =\dot{\lambda}(t)\vect{i_1}+\lambda(t)\dot{\theta}(t)\vect{j_1}$.
+\item $\vectv{B}{2}{0}=\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}$.
+\item $\torseurcin{V}{2}{0} =\torseurl{\dot{\theta}(t)\vk{0}}{\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}}{B}$.
+\item $\vectg{B}{2}{0} =  \left( \ddot{\lambda}(t)-\lambda(t)\dot{\theta}(t)^2\right)\vi{1}  +  \left( \dot{\lambda}(t)\dot{\theta}(t) +\dot{\lambda}(t)\dot{\theta}(t)\right) \vj{1}$.
+\end{enumerate}
+\end{solution}}
+\fi
+\marginnote{Corrigé  voir \ref{B2:13:05:02}.}
+\fi
+% ================================
+
+
 
 \question{Déterminer $\vectv{B}{2}{0}$ par dérivation vectorielle.}
 \ifprof  ~\\
@@ -58,27 +80,3 @@ $ = \left( \ddot{\lambda}(t)-\lambda(t)\dot{\theta}(t)^2\right)\vi{1}  +  \left(
 \else
 \fi
 
-
-\ifprof
-\else
-\ifcolle
-\else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
-\begin{enumerate}
-\item $\vectv{B}{2}{0} =\dot{\lambda}(t)\vect{i_1}+\lambda(t)\dot{\theta}(t)\vect{j_1}$.
-\item $\vectv{B}{2}{0}=\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}$.
-\item $\torseurcin{V}{2}{0} =\torseurl{\dot{\theta}(t)\vk{0}}{\dot{\lambda}(t)\vi{1}+\lambda(t)\dot{\theta}(t)\vj{1}}{B}$.
-\item $\vectg{B}{2}{0} =  \left( \ddot{\lambda}(t)-\lambda(t)\dot{\theta}(t)^2\right)\vi{1}  +  \left( \dot{\lambda}(t)\dot{\theta}(t) +\dot{\lambda}(t)\dot{\theta}(t)\right) \vj{1}$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
-\fi
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:13:05:02}.}
-\end{flushright}%
-\fi

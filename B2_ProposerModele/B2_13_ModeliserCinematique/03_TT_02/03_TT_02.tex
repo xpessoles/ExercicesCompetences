@@ -7,7 +7,7 @@
 
 \exer{Mouvement TT -- $\star$ \label{B2:13:03:02}}
 \setcounter{numques}{0}
-\UPSTIcompetence{B2-13}
+\marginnote{\UPSTIcompetence{B2-13}}
 \index{Compétence B2-13}
 \index{Mécanisme à 2 translations}
 \ifcorrection
@@ -19,9 +19,24 @@
 \else
 Soit le mécanisme suivant. On note $\vect{AB}=\lambda(t)\vect{i_0}$ et $\vect{BC}=\mu(t)\vect{j_0}$.
 \begin{center}
-\includegraphics[width=.6\linewidth]{03_TT_01}
+\includegraphics[width=.5\linewidth]{03_TT_01}
 \end{center}
 \fi
+
+% ===============
+\ifprof
+\else
+\marginnote{
+\begin{solution}
+\begin{enumerate}
+\item $\vectv{C}{2}{0} =  \dot{\lambda}(t)\vect{i_0}+\dot{\mu}(t)\vect{j_0}$.
+\item $\torseurcin{V}{2}{0}= \torseurl{\vect{0}}{\dot{\lambda}(t)\vect{i_0}+\dot{\mu}(t)\vect{j_0}}{\forall P}$.
+\item $\vectg{C}{2}{0} = \ddot{\lambda}(t)\vect{i_0}+\ddot{\mu}(t)\vect{j_0}$.
+\end{enumerate} 
+\end{solution}
+Corrigé  voir \ref{B2:13:03:02}.}
+\fi
+% ===============
 
 \question{Déterminer $\vectv{C}{2}{0}$ par dérivation vectorielle ou par composition.}
 \ifprof~\\ 
@@ -49,25 +64,6 @@ $\torseurcin{V}{2}{0}= \torseurl{\vect{0}}{\dot{\lambda}(t)\vect{i_0}+\dot{\mu}(
 \else
 \fi
 
-\ifprof
-\else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
-\begin{enumerate}
-\item $\vectv{C}{2}{0} =  \dot{\lambda}(t)\vect{i_0}+\dot{\mu}(t)\vect{j_0}$.
-\item $\torseurcin{V}{2}{0}= \torseurl{\vect{0}}{\dot{\lambda}(t)\vect{i_0}+\dot{\mu}(t)\vect{j_0}}{\forall P}$.
-\item $\vectg{C}{2}{0} = \ddot{\lambda}(t)\vect{i_0}+\ddot{\mu}(t)\vect{j_0}$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
 
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:13:03:02}.}
-\end{flushright}%
-\fi
 
 

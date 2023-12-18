@@ -6,8 +6,9 @@
 
 \exer{Mouvement RR 3D  $\star\star$ \label{B2:13:08}}
 \setcounter{numques}{0}
+\marginnote{
 \UPSTIcompetence[2]{C2-05}
-\UPSTIcompetence[2]{B2-13}
+\UPSTIcompetence[2]{B2-13}}
 \index{Compétence C2-05}
 \index{Compétence B2-13}
 \index{Mécanisme à 2 rotations 3D}
@@ -20,10 +21,24 @@
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=H\vect{j_1}+R\vect{i_1}$ et $\vect{BC}=L\vect{i_2}$. On a $H=\SI{20}{mm}$, $R=\SI{20}{mm}$, $L=\SI{10}{mm}$. 
 \begin{center}
-\includegraphics[width=\linewidth]{08_RR3D_01}
+\includegraphics[width=.8\linewidth]{08_RR3D_01}
 \end{center}
 \fi
 
+
+% ==============================================
+\ifprof
+\else
+\marginnote{
+\begin{solution}
+\begin{enumerate}
+\item Tore.
+\item $x_C(t)=R\cos\theta+L\cos\varphi\cos\theta$, $y_C(t)= H+L\sin\varphi$, $z_C(t)=  -R\sin\theta-L\cos\varphi\sin\theta$.
+\end{enumerate} 
+\end{solution}
+Corrigé  voir \ref{B2:13:08}.}
+\fi
+% ==============================================
 \question{Donner l'ensemble des positions accessibles par le point $C$.}
 \ifprof
 Le point $C$ peut décrire un tore de grand rayon $R$ et de petit rayon $L$ (surface torique uniquement, pas l'intérieur du tore). 
@@ -45,23 +60,4 @@ z_C(t)=  -R\sin\theta-L\cos\varphi\sin\theta\\
 \right.
 $ dans le repère $\repere{A}{i_0}{j_0}{k_0}$.
 \else
-\fi
-
-\ifprof
-\else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications
-\begin{enumerate}
-\item Tore.
-\item $x_C(t)=R\cos\theta+L\cos\varphi\cos\theta$, $y_C(t)= H+L\sin\varphi$, $z_C(t)=  -R\sin\theta-L\cos\varphi\sin\theta$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:13:08}.}
-\end{flushright}%
 \fi

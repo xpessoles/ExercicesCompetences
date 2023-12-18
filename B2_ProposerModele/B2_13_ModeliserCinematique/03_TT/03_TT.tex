@@ -7,8 +7,8 @@
 
 \exer{Mouvement TT -- $\star$ \label{B2:13:03}}
 \setcounter{numques}{0}
-\UPSTIcompetence[2]{C2-05}
-\UPSTIcompetence[2]{B2-13}
+\marginnote{\UPSTIcompetence[2]{C2-05}
+\UPSTIcompetence[2]{B2-13}}
 \index{Compétence C2-05}
 \index{Compétence B2-13}
 \index{Mécanisme à 2 translations}
@@ -21,9 +21,27 @@
 \else
 Soit le mécanisme suivant. On note $\vect{AB}=\lambda(t)\vect{i_0}$ et $\vect{BC}=\mu(t)\vect{j_0}$.
 \begin{center}
-\includegraphics[width=.6\linewidth]{03_TT_01}
+\includegraphics[width=.5\linewidth]{03_TT_01}
 \end{center}
 \fi
+
+
+% ==================
+\ifprof
+\else
+\marginnote{
+\begin{solution}
+\begin{enumerate}
+\item .
+\item $x_C(t)= \lambda(t)$ et $y_C(t)= \mu(t)$.
+\item $ \theta(t)=\dfrac{v}{R}t$.
+\item $\lambda(t) = R\cos\left( \dfrac{v}{R}t\right)$, $\mu(t) = R\sin\left( \dfrac{v}{R}t\right)$.
+\item .
+\end{enumerate} 
+\end{solution}
+Corrigé  voir \ref{B2:13:03}}
+\fi
+% ==================
 
 \question{Quel est le mouvement de \textbf{2} par rapport à~\textbf{0}.}
 \ifprof ~\\
@@ -123,29 +141,3 @@ plt.savefig("03_TT_02_c.pdf")
 \end{minipage} 
 \else
 \fi
-
-
-\ifprof
-\else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
-\begin{enumerate}
-\item .
-\item $x_C(t)= \lambda(t)$ et $y_C(t)= \mu(t)$.
-\item $ \theta(t)=\dfrac{v}{R}t$.
-\item $\lambda(t) = R\cos\left( \dfrac{v}{R}t\right)$, $\mu(t) = R\sin\left( \dfrac{v}{R}t\right)$.
-\item .
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
-
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:13:03}.}
-\end{flushright}%
-\fi
-
-

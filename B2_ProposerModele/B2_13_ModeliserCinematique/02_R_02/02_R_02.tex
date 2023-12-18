@@ -8,7 +8,7 @@
 \exer{Mouvement R  $\star$ \label{B2:13:02}}
 \setcounter{numques}{0}
 
-\UPSTIcompetence[2]{B2-13}
+\marginnote{\UPSTIcompetence[2]{B2-13}}
 
 \index{Compétence B2-13}
 \index{Mécanisme à 1 rotation}
@@ -21,9 +21,28 @@
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ avec $R=\SI{20}{mm}$. 
 \begin{center}
-\includegraphics[width=.8\linewidth]{02_R_01}
+\includegraphics[width=.7\linewidth]{02_R_01}
 \end{center}
 \fi
+
+
+% ===============
+\ifprof
+\else
+\marginnote{
+\begin{solution}
+\begin{enumerate}
+\item $\vectv{B}{1}{0}=R\dot{\theta}\vj{1}$.
+\item $\vectv{B}{1}{0}=R\dot{\theta}\vj{1}$.
+\item $\torseurcin{V}{1}{0} = \torseurl{\dot{\theta}\vk{0}}{R\dot{\theta}\vj{1}}{B}$.
+\item  $\vectg{B}{1}{0} = R\ddot{\theta}\vj{1}-R\dot{\theta}^2\vi{1}$.
+\end{enumerate} 
+\end{solution}
+Corrigé  voir \ref{B2:13:02}.
+}
+\fi
+% ===============
+
 
 \question{Déterminer $\vectv{B}{1}{0}$ par dérivation vectorielle.}
 \ifprof ~\\
@@ -55,25 +74,3 @@ On a directement $\torseurcin{V}{1}{0} = \torseurl{\dot{\theta}\vk{0}}{R\dot{\th
 \else
 \fi
 
-
-\ifprof
-\else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
-\begin{enumerate}
-\item $\vectv{B}{1}{0}=R\dot{\theta}\vj{1}$.
-\item $\vectv{B}{1}{0}=R\dot{\theta}\vj{1}$.
-\item $\torseurcin{V}{1}{0} = \torseurl{\dot{\theta}\vk{0}}{R\dot{\theta}\vj{1}}{B}$.
-\item  $\vectg{B}{1}{0} = R\ddot{\theta}\vj{1}-R\dot{\theta}^2\vi{1}$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
-
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:13:02}.}
-\end{flushright}%
-\fi
