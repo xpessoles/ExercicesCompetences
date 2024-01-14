@@ -1,5 +1,5 @@
 \normalfalse \difficiletrue \tdifficilefalse
-\correctionfalse
+\correctiontrue
 
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
@@ -42,6 +42,25 @@ $B=\dfrac{RJ_{\text{eq}}}{R+C_f K_t K_r K_ve K_{\beta} }$.
 \fi
 
  
+ \ifprof
+\else
+\ifcolle
+\else
+\footnotesize
+\noindent
+\begin{tabular}{|p{.95\linewidth}|}
+\hline
+\begin{enumerate}
+\item $K=\dfrac{C_f K_t K_r K_{ve} K_{\beta}}{R+C_f K_t K_r K_{ve} K_{\beta}}$,
+$A=\dfrac{K_e K_t}{R+C_f K_t K_r K_{ve} K_{\beta} }$,
+$B=\dfrac{RJ_{\text{eq}}}{R+C_f K_t K_r K_ve K_{\beta} }$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\normalsize
+\fi
+
+\fi
+
 
 \ifprof
 \else
