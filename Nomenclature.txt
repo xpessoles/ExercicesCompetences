@@ -87,6 +87,7 @@
 87_Nacelle % BTS CPI 2016 
 88_Suspension % XENS PSI 2016
 89_Bouee % CCP PSI 2016
+90_Pilote % Pilote hydraulique de voilier
  
 500_Divers
 501_Divers
@@ -153,3 +154,5 @@
 1021_Euler
 1022_Euler
 1023_MCC
+
+1100_Pneumatique
