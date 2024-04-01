@@ -89,6 +89,10 @@
 89_Bouee % CCP PSI 2016
 90_Pilote % Pilote hydraulique de voilier
 91_PorteAvion % SIB 2023
+92_Colossus % SIC 2023
+93_Lokomat % CCINP TSI 2023
+
+
 
 
 500_Divers
