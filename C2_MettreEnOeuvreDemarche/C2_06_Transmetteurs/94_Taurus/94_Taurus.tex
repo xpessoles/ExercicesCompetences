@@ -75,29 +75,30 @@ Roue 2 		& $Z_2 = 100$ 	& Roue 3	& $Z_3 = 120$ 	\\
 
 \question{En utilisant le schéma cinématique et les données sur les roues, déterminer l’expression littérale du rapport de réduction $r$. Faire ensuite l’application numérique.}
 \ifprof
-\else
-\fi
 \begin{corrige}
 On a $r = \dfrac{\omega_{s/0}}{\omega_{e/0}} = - \dfrac{Z_1 Z_2'}{Z_2 Z_3} $.
 
 \textit{AN :} $r =  - \dfrac{40 \times 30}{100 \times 120}  = -0,1$.
 \end{corrige}
 
+\else
+\fi
+
 On considère l’ensemble $\Sigma =\{\text{Turbine}, \text{Compresseur}, \text{Réducteur}, \text{Générateur}\}$.
 
 \question{Déterminer l’énergie cinétique de $\Sigma$ par rapport au référentiel galiléen lié au bâti : $\ec{\Sigma}{0}$ en fonction de la vitesse de rotation $\omega_{e/0}$ et des différents moments d’inertie. En déduire l’expression de l’inertie équivalente $\indice{J}{eq}$ ramenée sur l’arbre d’entrée.
  Faire l’application numérique.}
 \ifprof 
-\else
-\fi
-
 \begin{corrige}
 $\ec{\Sigma}{0} = \dfrac{1}{2}\left( J_1 + J_2 \right) \omega_{e/0}^2 + \dfrac{1}{2}\left( J_3 + J_4 \right) \omega_{e/0}^2r^2 $
 $= \dfrac{1}{2}\left(  J_1 + J_2  + \left( J_3 + J_4 \right)r^2  \right)\omega_{e/0}^2$
 
 Et donc $\indice{J}{eq}= J_1 + J_2  + \left( J_3 + J_4 \right)r^2 $.
-
 \end{corrige}
+\else
+\fi
+
+
 
 
 Le rotor du moteur asynchrone de démarrage dont le moment d’inertie est $J_5=\SI{0,7}{kg.m^2}$ entraîne
@@ -111,21 +112,15 @@ Le rotor du moteur asynchrone de démarrage dont le moment d’inertie est $J_5=
 On considère alors le système $\Sigma' = \{ \Sigma, \text{Moteur asynchrone}, \text{Multiplicateur}\}$.
  
 \question{Déterminer l’expression littérale de l’inertie équivalente $\indice{J'}{eq}$ de l’ensemble $\Sigma `$  ramenée sur l’arbre du moteur asynchrone. Faire l’application numérique.}
-
+\ifprof 
 \begin{corrige}
 On a $\omega_{e/0} = k \omega_{mas/0}$
 
 $\ec{\Sigma'}{0} = \dfrac{1}{2}\indice{J}{eq} \omega_{e/0}^2 + J_5 \omega_{mas/0}^2$
 $=\dfrac{1}{2}\left(\indice{J}{eq} k^2 + J_5\right) \omega_{mas/0}^2$.
-
- 
 \end{corrige}
-
- 
-%\question{.}
-%\ifprof 
-%\else
-%\fi
+\else
+\fi
 
  
 
